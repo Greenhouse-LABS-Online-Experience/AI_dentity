@@ -1,6 +1,19 @@
 body {
-    background-image: url("back.png");
+    background-image: url("Computerfinal.png");
+    background-repeat: no-repeat;
     background-position: 50% 0;
+    background-size: 100vw 100vh;
+    background-color: black;
+}
+
+.logocontainer {
+    position: relative;
+}
+
+.logo {
+    position: fixed;
+    bottom: 4%;
+    left: 3%;
 }
 
 .botui-app-container {
@@ -9,9 +22,9 @@ body {
 
 @import url(https://fonts.googleapis.com/css?family=Open+Sans);
 .botui-container {
-    margin-top: 100px;
-    font-size: 14px;
-    font-family: "Open Sans", sans-serif
+    margin-top: 10vh;
+    font-size: 20px;
+    font-family: 'Courier New', Courier, monospace;
 }
 
 .botui-messages-container {
@@ -63,7 +76,7 @@ body {
     outline: 0;
     border-radius: 0;
     padding: 5px 7px;
-    font-family: "Open Sans", sans-serif;
+    font-family: 'Courier New', Courier, monospace;
     background-color: transparent;
     color: white;
     border-bottom: 1px solid white
@@ -89,7 +102,7 @@ body {
     font-weight: 500;
     padding: 7px 15px;
     border-radius: 4px;
-    font-family: "Open Sans", sans-serif;
+    font-family: 'Courier New', Courier, monospace;
     background: #777979;
     box-shadow: 2px 3px 4px 0 rgba(0, 0, 0, .25)
 }
@@ -99,7 +112,7 @@ body {
     outline: 0;
     border-radius: 0;
     padding: 5px 7px;
-    font-family: "Open Sans", sans-serif;
+    font-family: 'Courier New', Courier, monospace;
     background-color: transparent;
     color: #595a5a;
     border-bottom: 1px solid #919292
@@ -110,7 +123,7 @@ body {
     outline: 0;
     border-radius: 0;
     padding: 5px 7px;
-    font-family: "Open Sans", sans-serif;
+    font-family: 'Courier New', Courier, monospace;
     background-color: transparent;
     color: #595a5a;
     border-bottom: 1px solid #919292
