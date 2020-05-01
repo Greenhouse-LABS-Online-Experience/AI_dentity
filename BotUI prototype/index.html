@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>AI_dentity</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="build/botui.min.css" />
+    <link rel="stylesheet" href="build/botui-theme-default.css" />
+</head>
+
+<body>
+
+    <div class="botui-app-container" id="conversation1">
+        <bot-ui></bot-ui>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/vue/latest/vue.min.js"></script>
+    <script src="build/botui.min.js"></script>
+
+    <script>
+        var botui = new BotUI('conversation1');
+
+        botui.message.add({
+            content: 'Hi David!'
+        }).then(function () {
+
+            botui.action.button({
+                action: [
+                    {
+                        text: 'Uh... ',
+                        value: 'uh'
+                    },
+                    {
+                        text: 'Hello?',
+                        value: 'hello'
+                    }
+                ]
+            }).then(function (res) {
+                if (res.value == 'hello') {
+                    convostart.hellofol();
+                }
+                if (res.value == 'uh') {
+                    convostart.uhfol();
+                }
+            });
+        });
+
+        var convostart = {
+            hellofol: function () {
+                botui.message.add({
+                    content: 'Whats your name?',
+                    delay: 500
+                }).then(function () {
+                    return botui.action.text({
+                        action: {
+                            placeholder: 'Your name'
+                        }
+                    });
+                }).then(function () {
+                    botui.message.add({
+                        human: true,
+                        content: 'What is yours?',
+                        delay: 500
+                    });
+                }).then(function (res) {
+                    botui.message.add({
+                        content: 'Hi',
+                        delay: 1000
+                    });
+                }).then(function () {
+                    botui.message.add({
+                        content: 'My name is Francis',
+                        delay: 1500
+                    });
+                }).then(function () {
+                    botui.message.add({
+                        content: 'How are you doing today?',
+                        delay: 1700
+                    });
+                })
+            },
+
+
+
+            
+            uhfol: function (res) {
+                botui.message.add({
+                    human: true,
+                    content: 'My name is...',
+                    delay: 500
+                }).then(function () {
+                    botui.action.text({
+                        action: {
+                            placeholder: 'My name is...'
+                        },
+                        delay: 500
+                    });
+                })
+            }
+        }
+
+
+    </script>
+
+</body>
+
+</html>
