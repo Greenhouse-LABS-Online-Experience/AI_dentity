@@ -67,12 +67,12 @@
                         content: 'Hi',
                         delay: 1000
                     });
-                }).then(function () {
+
                     botui.message.add({
                         content: 'My name is Francis',
                         delay: 1500
                     });
-                }).then(function () {
+
                     botui.message.add({
                         content: 'How are you doing today?',
                         delay: 1700
@@ -98,12 +98,12 @@
                         content: 'Oh...',
                         delay: 500
                     });
-                }).then(function () {
+
                     botui.message.add({
                         content: 'My name is Francis',
                         delay: 1000
                     });
-                }).then(function () {
+
                     botui.message.add({
                         content: 'How are you doing today?',
                         delay: 1700
@@ -126,46 +126,99 @@
                             value: 'great'
                         }
                     ]
-                }).then(function () {
-                    botui.message.add({
-                        human: true,
-                        content: 'But... who exactly are you?',
-                        delay: 500,
-                    })
-                }).then(function () {
-                    botui.message.add({
-                        content: 'I already told you',
-                        delay: 700,
-                    })
-                }).then(function () {
-                    botui.message.add({
-                        content: 'My name is Francis',
-                        delay: 1000,
-                    })
-                }).then(function () {
-                    botui.action.button({
-                        delay: 1200,
-                        action: [
-                            {
-                                text: 'Okay... and what do you do?',
-                                value: 'semihelp'
-                            },
-                            {
-                                text: 'That really is not helpfull at all...',
-                                value: 'nothelp'
-                            }
-                        ]
-                    })
                 }).then(function (res) {
-                    if (res.value == 'nothelp') {
-                        botui.message.add({
-                            content: 'My name is Francis',
-                        })
+                    if (res.value == 'great') {
+                        howgoingchoice.goingchoicefollowup();
+                    }
+                    if (res.value == 'fine') {
+                        howgoingchoice.goingchoicefollowup();
                     }
                 })
             }
         }
 
+        var howgoingchoice = {
+            goingchoicefollowup: function () {
+                botui.message.add({
+                    human: true,
+                    content: 'But... who exactly are you?',
+                    delay: 500,
+                })
+
+                botui.message.add({
+                    content: 'I already told you',
+                    delay: 1000,
+                })
+                botui.message.add({
+                    content: 'I am Francis',
+                    delay: 1000,
+                })
+
+                botui.action.button({
+                    delay: 1200,
+                    action: [
+                        {
+                            text: 'That really is not helpful',
+                            value: 'nothelp'
+                        },
+                        {
+                            text: 'Okay... and what do you do?',
+                            value: 'whatdo'
+                        }
+                    ]
+                }).then(function (res) {
+                    if (res.value == 'nothelp') {
+                        howgoingchoice.nothelp();
+                    }
+                    if (res.value == 'whatdo') {
+                        howgoingchoice.talktopeople();
+                    }
+                })
+            },
+
+            nothelp: function () {
+                botui.message.add({
+                    human: true,
+                    content: 'What do you do?',
+                    delay: 1000,
+                }).then(function () {
+                    howgoingchoice.talktopeople();
+                })
+            },
+
+            talktopeople: function () {
+                botui.message.add({
+                    content: 'I talk to people',
+                    delay: 1000,
+                })
+
+                botui.message.add({
+                    content: 'What do you do?',
+                    delay: 1200,
+                })
+
+                botui.action.button({
+                    delay: 1200,
+                    action: [
+                        {
+                            text: 'I work in IT, I program surgery machines',
+                            value: 'workit'
+                        },
+                        {
+                            text: 'I like to code and play games...',
+                            value: 'codegames'
+                        }
+                    ]
+                }).then(function (res) {
+                    if (res.value == 'nothelp') {
+                        howgoingchoice.nothelp();
+                    }
+                    if (res.value == 'whatdo') {
+                        howgoingchoice.talktopeople();
+                    }
+                })
+            }
+        }
 
     </script>
 
