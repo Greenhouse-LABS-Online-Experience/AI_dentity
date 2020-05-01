@@ -1,2 +1,5 @@
 # AI_dentity
 AI_dentity is a text based game, showing that humans can bond with machines easier than we think.
+
+# Frameworks used
+For AI_dentity, we will use the framework BotUI. This is a framework that lets you easily create a chatbot. We will however be making changes to this framework to make it suit our needs.
