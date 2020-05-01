@@ -24,7 +24,6 @@
         botui.message.add({
             content: 'Hi David!'
         }).then(function () {
-
             botui.action.button({
                 action: [
                     {
@@ -78,24 +77,91 @@
                         content: 'How are you doing today?',
                         delay: 1700
                     });
+                }).then(function () {
+                    convostart.howdoing();
                 })
             },
 
-
-
-            
-            uhfol: function (res) {
+            uhfol: function () {
                 botui.message.add({
                     human: true,
-                    content: 'My name is...',
+                    content: 'My name is',
                     delay: 500
                 }).then(function () {
-                    botui.action.text({
+                    return botui.action.text({
                         action: {
-                            placeholder: 'My name is...'
-                        },
+                            placeholder: 'Your name'
+                        }
+                    });
+                }).then(function () {
+                    botui.message.add({
+                        content: 'Oh...',
                         delay: 500
                     });
+                }).then(function () {
+                    botui.message.add({
+                        content: 'My name is Francis',
+                        delay: 1000
+                    });
+                }).then(function () {
+                    botui.message.add({
+                        content: 'How are you doing today?',
+                        delay: 1700
+                    });
+                }).then(function () {
+                    convostart.howdoing();
+                })
+            },
+
+            howdoing: function () {
+                botui.action.button({
+                    delay: 2000,
+                    action: [
+                        {
+                            text: 'I am doing fine..',
+                            value: 'fine'
+                        },
+                        {
+                            text: 'I feel great today!',
+                            value: 'great'
+                        }
+                    ]
+                }).then(function () {
+                    botui.message.add({
+                        human: true,
+                        content: 'But... who exactly are you?',
+                        delay: 500,
+                    })
+                }).then(function () {
+                    botui.message.add({
+                        content: 'I already told you',
+                        delay: 700,
+                    })
+                }).then(function () {
+                    botui.message.add({
+                        content: 'My name is Francis',
+                        delay: 1000,
+                    })
+                }).then(function () {
+                    botui.action.button({
+                        delay: 1200,
+                        action: [
+                            {
+                                text: 'Okay... and what do you do?',
+                                value: 'semihelp'
+                            },
+                            {
+                                text: 'That really is not helpfull at all...',
+                                value: 'nothelp'
+                            }
+                        ]
+                    })
+                }).then(function (res) {
+                    if (res.value == 'nothelp') {
+                        botui.message.add({
+                            content: 'My name is Francis',
+                        })
+                    }
                 })
             }
         }
