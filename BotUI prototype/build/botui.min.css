@@ -45,7 +45,7 @@ button.botui-actions-buttons-button {
 @media (min-width:400px) {
     .botui-app-container {
         width: 80vw;
-        height: 75vh;
+        height: 70vh;
         margin: 0 auto
     }
 }
