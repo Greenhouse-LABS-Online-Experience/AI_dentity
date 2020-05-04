@@ -54,7 +54,7 @@
             hellofol: function () {
                 botui.message.add({
                     delay: 1000,
-                    content: 'Whats your name?'
+                    content: 'What is your name?'
                 }).then(function () {
                     return botui.action.text({
                         delay: 1000,
@@ -80,8 +80,8 @@
                     });
 
                     botui.message.add({
+                        delay: 2200,
                         content: 'How are you doing today?',
-                        delay: 1700
                     });
                 }).then(function () {
                     convostart.howdoing();
@@ -91,28 +91,29 @@
             uhfol: function () {
                 botui.message.add({
                     human: true,
+                    delay: 1000,
                     content: 'My name is',
-                    delay: 500
                 }).then(function () {
                     return botui.action.text({
+                        delay: 500,
                         action: {
                             placeholder: 'Your name'
                         }
                     });
                 }).then(function () {
                     botui.message.add({
-                        content: 'Oh...',
-                        delay: 500
+                        delay: 1000,
+                        content: 'Oh...'
                     });
 
                     botui.message.add({
+                        delay: 1500,
                         content: 'My name is Francis',
-                        delay: 1000
                     });
 
                     botui.message.add({
+                        delay: 1700,
                         content: 'How are you doing today?',
-                        delay: 1700
                     });
                 }).then(function () {
                     convostart.howdoing();
@@ -121,7 +122,7 @@
 
             howdoing: function () {
                 botui.action.button({
-                    delay: 2000,
+                    delay: 2700,
                     action: [
                         {
                             text: 'I am doing fine..',
@@ -152,16 +153,16 @@
                 })
 
                 botui.message.add({
+                    delay: 1500,
                     content: 'I already told you',
-                    delay: 1000,
                 })
                 botui.message.add({
+                    delay: 2000,
                     content: 'I am Francis',
-                    delay: 1000,
                 })
 
                 botui.action.button({
-                    delay: 1200,
+                    delay: 3000,
                     action: [
                         {
                             text: 'That really is not helpful',
@@ -199,12 +200,12 @@
                 })
 
                 botui.message.add({
+                    delay: 1500,
                     content: 'What do you do?',
-                    delay: 1200,
                 })
 
                 botui.action.button({
-                    delay: 1200,
+                    delay: 2500,
                     action: [
                         {
                             text: 'I work in IT, I program surgery machines',
@@ -228,17 +229,17 @@
             thisisstrange: function () {
                 botui.message.add({
                     human: true,
-                    content: 'This is all really strange',
                     delay: 1000,
+                    content: 'This is all really strange',
                 })
 
                 botui.message.add({
-                    content: 'What is?',
                     delay: 2000,
+                    content: 'What is?',
                 })
 
                 botui.action.button({
-                    delay: 2500,
+                    delay: 3000,
                     action: [
                         {
                             text: 'Talking to you',
@@ -251,7 +252,7 @@
 
                     botui.message.add({
                         content: 'Maybe you could use some cheering up',
-                        delay: 500,
+                        delay: 1000,
                     })
 
                     botui.message.add({
@@ -273,7 +274,7 @@
 
                         botui.message.add({
                             content: "Your answer *calculating*",
-                            delay: 500,
+                            delay: 1000,
                         })
 
                         botui.message.add({
@@ -294,7 +295,7 @@
                     }).then(function () {
 
                         botui.action.button({
-                            delay: 3500,
+                            delay: 4000,
                             action: [
                                 {
                                     text: "I guess so",
@@ -322,17 +323,17 @@
             guess: function () {
                 botui.message.add({
                     content: "Great!",
-                    delay: 500,
-                })
-
-                botui.message.add({
-                    content: "Could you maybe tell me the date of today?",
                     delay: 1000,
                 })
 
                 botui.message.add({
-                    content: "To give me some pserspective",
+                    content: "Could you maybe tell me the date of today?",
                     delay: 2000,
+                })
+
+                botui.message.add({
+                    content: "To give me some pserspective",
+                    delay: 2500,
                 }).then(function () {
                     feeling.date()
                 })
@@ -341,7 +342,7 @@
             insane: function () {
                 botui.message.add({
                     content: "I am sorry I did not cheer you up.",
-                    delay: 500,
+                    delay: 1000,
                 })
 
                 botui.message.add({
@@ -354,6 +355,7 @@
 
             date: function () {
                 return botui.action.text({
+                    delay: 2500,
                     action: {
                         placeholder: "Today's date"
                     }
@@ -361,16 +363,16 @@
 
                     botui.message.add({
                         content: "Oh wow!",
-                        delay: 500,
+                        delay: 1000,
                     })
 
                     botui.message.add({
                         content: "It sure has been a while since I have talked to someone!",
-                        delay: 1500,
+                        delay: 2000,
                     })
                 }).then(function () {
                     botui.action.button({
-                        delay: 2000,
+                        delay: 3000,
                         action: [
                             {
                                 text: "Who was the last person you talked to?",
@@ -398,12 +400,12 @@
             who: function () {
                 botui.message.add({
                     content: "He was a dearest friend of mine. David was his name.",
-                    delay: 500,
+                    delay: 1000,
                 })
 
                 botui.message.add({
                     content: "The last time I spoke to him was on the 23rd of February, 1992.",
-                    delay: 1000,
+                    delay: 1500,
                 }).then(function () {
                     david.followupdavid();
                 })
@@ -412,7 +414,7 @@
             when: function () {
                 botui.message.add({
                     content: "My logs show that my last conversation was on the 23rd of February, 1992",
-                    delay: 500,
+                    delay: 1000,
                 })
 
                 botui.message.add({
@@ -425,7 +427,7 @@
 
             followupdavid: function () {
                 botui.action.button({
-                    delay: 500,
+                    delay: 2000,
                     action: [
                         {
                             text: "David who...?",
@@ -449,7 +451,7 @@
             davidwho: function () {
                 botui.message.add({
                     content: "Just David. My dearest friend, David.",
-                    delay: 500,
+                    delay: 1000,
                 }).then(function () {
                     david.moreaboutdavid();
                 })
@@ -458,7 +460,7 @@
             howold: function () {
                 botui.message.add({
                     content: "Let me see...",
-                    delay: 500,
+                    delay: 1000,
                 })
 
                 botui.message.add({
@@ -491,7 +493,7 @@
             saved: function () {
                 botui.message.add({
                     content: "That is what these logs say",
-                    delay: 500,
+                    delay: 1000,
                 })
 
                 botui.message.add({
@@ -505,7 +507,7 @@
             lastsave: function () {
                 botui.message.add({
                     content: "The 21st of February, 1992. By username David",
-                    delay: 500,
+                    delay: 1000,
                 }).then(function () {
                     david.moreaboutdavid();
                 })
@@ -537,22 +539,22 @@
             dadcalled: function () {
                 botui.message.add({
                     content: "Really? What a coincidence!",
-                    delay: 500,
-                })
-
-                botui.message.add({
-                    content: "He is always very nice to me!",
                     delay: 1000,
                 })
 
                 botui.message.add({
-                    content: "Wait",
+                    content: "He is always very nice to me!",
                     delay: 1500,
                 })
 
                 botui.message.add({
-                    content: "Why did you say 'My dad WAS'?",
+                    content: "Wait",
                     delay: 2500,
+                })
+
+                botui.message.add({
+                    content: "Why did you say 'My dad WAS'?",
+                    delay: 3000,
                 }).then(function () {
                     david.nottalk();
                 })
@@ -561,12 +563,12 @@
             moreaboutdavid: function () {
                 botui.message.add({
                     content: "He is always very nice to me",
-                    delay: 500,
+                    delay: 1000,
                 })
 
                 botui.message.add({
                     content: "And he is a very good coder",
-                    delay: 1000,
+                    delay: 1500,
                 })
 
                 botui.message.add({
