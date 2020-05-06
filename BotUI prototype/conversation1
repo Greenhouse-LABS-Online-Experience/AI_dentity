@@ -1,5 +1,10 @@
 var botui = new BotUI('conversation1');
 
+document.getElementsByClassName('botui-actions-buttons-button').onclick = function () {
+    var audio = document.getElement("audio");
+    audio.play();
+};
+
 botui.message.add({
     content: 'Hi David!'
 }).then(function () {
@@ -248,7 +253,7 @@ var howgoingchoice = {
             }).then(function () {
 
                 botui.message.add({
-                    content: "Your answer *calculating*",
+                    content: "Your answer is *calculating*",
                     delay: 1000,
                 })
 
@@ -258,7 +263,7 @@ var howgoingchoice = {
                 })
 
                 botui.message.add({
-                    content: "The correct answer is: A microship",
+                    content: "The correct answer is: A microchip",
                     delay: 2500,
                 })
 
@@ -307,7 +312,7 @@ var feeling = {
         })
 
         botui.message.add({
-            content: "To give me some pserspective",
+            content: "To give me some perspective",
             delay: 2500,
         }).then(function () {
             feeling.date()
