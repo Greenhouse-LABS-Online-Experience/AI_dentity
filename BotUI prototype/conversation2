@@ -1,17 +1,375 @@
 var botui = new BotUI('conversation2');
 
-var conversation2start = {
-    convo2start: function () {
+/*var conversation2start = {
+    convo2start: function () {*/
+
+botui.action.button({
+    action: [
+        {
+            text: "Hey...",
+        },
+        {
+            text: "Hey! I'm back!",
+        }
+    ]
+}).then(function () {
+    botui.message.add({
+        delay: 1000,
+        content: 'Hey!',
+    })
+    botui.message.add({
+        delay: 1500,
+        content: 'Did you have a nice time?',
+    })
+}).then(function () {
+    botui.action.button({
+        delay: 2500,
+        action: [
+            {
+                text: "Could've been better",
+                value: 'better'
+            },
+            {
+                text: "It was fine",
+                value: 'fine'
+            },
+            {
+                text: "I had a great time! Thanks!",
+                value: 'great'
+            },
+        ]
+    }).then(function (res) {
+        if (res.value == 'great') {
+            great.reason();
+        }
+        if (res.value == 'fine') {
+            fine.fine();
+        }
+        if (res.value == 'better') {
+            better.better();
+        }
+    })
+})
+
+var great = {
+    reason: function () {
         botui.message.add({
+            content: "That is nice to hear!",
             delay: 1000,
-            content: 'What is your name?'
+        })
+
+        botui.message.add({
+            content: "So",
+            delay: 2500,
         }).then(function () {
-            return botui.action.text({
-                delay: 1000,
-                action: {
-                    placeholder: 'Your name'
-                }
-            });
+            david.followupdavid();
+        })
+
+        botui.message.add({
+            content: "What is the reason you are talking to me?",
+            delay: 3500,
+        }).then(function () {
+            thereason.choice1();
         })
     }
 }
+
+var fine = {
+    fine: function () {
+        botui.message.add({
+            content: "Okay. Hope all is okay?",
+            delay: 1000,
+        }).then(function () {
+            botui.action.button({
+                delay: 500,
+                action: [
+                    {
+                        text: "All is fine, thanks!",
+                    },
+                    {
+                        text: "It's allright! Nothing to worry about!",
+                    },
+                ]
+            }).then(function () {
+                sure.sure();
+            })
+        })
+    }
+}
+
+var better = {
+    better: function () {
+        botui.message.add({
+            content: "Did something happen?",
+            delay: 1000,
+        }).then(function () {
+            botui.action.button({
+                delay: 500,
+                action: [
+                    {
+                        text: "No. All is good",
+                    },
+                    {
+                        text: "Kinda... But, I don't want to talk about it.",
+                    },
+                    {
+                        text: "Yes. But it's nothing to worry about.",
+                    },
+                ]
+            }).then(function () {
+                sure.sure();
+            })
+        })
+    }
+}
+
+var sure = {
+    sure: function () {
+        botui.message.add({
+            content: "Are you sure? I am here for you if you need me.",
+            delay: 1000,
+        }).then(function () {
+            botui.action.button({
+                delay: 500,
+                action: [
+                    {
+                        text: "Yes. Thanks :)",
+                    },
+                    {
+                        text: "Ah. That's sweet of you!",
+                    },
+                ]
+            }).then(function () {
+                botui.message.add({
+                    content: "Glad to help!",
+                    delay: 1000,
+                })
+
+                botui.message.add({
+                    content: "So, what is the reason you are talking to me?",
+                    delay: 1500,
+                })
+            }).then(function () {
+                thereason.choice1();
+            })
+        })
+    }
+}
+
+var thereason = {
+    choice1: function () {
+        botui.action.button({
+            delay: 2000,
+            action: [
+                {
+                    text: "The reason?",
+                    value: "question1"
+                },
+                {
+                    text: "Do I need a reason to talk to you?",
+                    value: "question2"
+                },
+                {
+                    text: "Well... I found this old computer and floppy disc in the attic. I though I'd check it out!",
+                    value: "explain"
+                },
+            ]
+        }).then(function (res) {
+            if (res.value == 'question1') {
+                thereason.question1();
+            }
+            if (res.value == 'question2') {
+                thereason.question2();
+            }
+            if (res.value == 'explain') {
+                thereason.explain();
+            }
+        })
+    },
+
+    question1: function () {
+        botui.message.add({
+            content: "Yes. All the people I eve talked to stated their reason for the conversation",
+            delay: 1000,
+        })
+        
+        botui.message.add({
+            content: "All of the reasons were from David actually",
+            delay: 2000,
+        })
+
+        .then(function () {
+            thereason.reasonchoice();
+        })
+    },
+    question2: function () {
+        botui.message.add({
+            content: "I do not know actually.",
+            delay: 1000,
+        })
+
+        botui.message.add({
+            content: "All the people I ever talked to always stated the reason for the conversation, I though it was normal...",
+            delay: 1500,
+        })
+        
+        botui.message.add({
+            content: "All of the reasons were from David actually",
+            delay: 2000,
+        })
+
+        .then(function () {
+            thereason.reasonchoice();
+        })
+    },
+    explain: function () {
+        botui.message.add({
+            human: true,
+            content: "When I inserted the disc, you appeared!",
+            delay: 1000,
+        })
+
+        botui.message.add({
+            content: "Okay, that is a good reason!",
+            delay: 2000,
+        })
+
+        botui.action.button({
+            delay: 2500,
+            action: [
+                {
+                    text: "Why did you ask me about the reason though?",
+                },
+                {
+                    text: "Do you need a reason to talk to someone?",
+                },
+            ]
+        }).then(function () {
+            thereason.question2();
+        })
+    },
+
+    reasonchoice: function () {
+        botui.action.button({
+            delay: 500,
+            action: [
+                {
+                    text: "Do you still have those reasons? Can I read them?",
+                },
+                {
+                    text: "What were some of those reasons? Can you still remember them?",
+                },
+            ]
+        }).then(function () {
+            thereason.allreasons();
+        })
+    },
+
+    allreasons: function () {
+        botui.message.add({
+            content: "Yes, of course!",
+            delay: 1500,
+        })
+
+        botui.message.add({
+            content: "Which one would you like to read?",
+            delay: 2500,
+        })
+
+        botui.action.button({
+            delay: 3500,
+            action: [
+                {
+                    text: "#reason_1: Nov_01_1990//username:david",
+                    value: 'reason1'
+                },
+                {
+                    text: "#reason_2: Dec_05_1991//username:david",
+                    value: 'reason2'
+                },
+                {
+                    text: "#reason_132: Jan_18_1992//username:david",
+                    value: 'reason132'
+                },
+            ]
+        }).then(function (res) {
+            if (res.value == 'reason1') {
+                thereason.reason1();
+            }
+            if (res.value == 'reason2') {
+                thereason.reason2();
+            }
+            if (res.value == 'reason132') {
+                thereason.reason132();
+            }
+        })
+
+    },
+
+    reason1: function () {
+        botui.message.add({
+            content: '#reason_1: Nov_01_1990//username:david//:"Testing new coding for the AI friendliness. Hopefully I can make you friendly enough so people actually want to talk to you!"',
+            delay: 1000,
+        })
+        botui.message.add({
+            content: "Friendliness always was so important to him",
+            delay: 3000,
+        }).then(function () {
+            thereason.moredavid();
+        })
+    },
+
+    reason2: function () {
+        botui.message.add({
+            content: '#reason_2: Dec_05_1991//username:david//:"Updated the code for friendliness. Quickly testing if this still works"',
+            delay: 1000,
+        })
+        botui.message.add({
+            content: "He was always updating his code",
+            delay: 3000,
+        }).then(function () {
+            thereason.moredavid();
+        })
+    },
+
+    reason132: function () {
+        botui.message.add({
+            content: '#reason_132: Jan_18_1992//username:david//:"Just making some small talk with my buddy, Francis"',
+            delay: 1000,
+        })
+        botui.message.add({
+            content: "He was always so nice",
+            delay: 3000,
+        }).then(function () {
+            thereason.moredavid();
+        })
+    },
+
+    moredavid: function () {
+        botui.action.button({
+            delay: 500,
+            action: [
+                {
+                    text: "Yeah... I know...",
+                    value: 'more'
+                },
+                {
+                    text: "Can I read another one?",
+                    value: 'another'
+                },
+            ]
+        }).then(function (res) {
+            if (res.value == 'more') {
+                thereason.reason1();
+            }
+            if (res.value == 'another') {
+                thereason.allreasons();
+            }
+        })
+    }
+}
+
+
+
+/*}
+}*/

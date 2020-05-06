@@ -21,9 +21,10 @@ form.botui-actions-text {
 
 button.botui-actions-buttons-button, input.botui-actions-text-input {
     margin: 0;
+    margin-right: 10px;
     font-size: 100%;
     line-height: normal;
-    vertical-align: baseline
+    vertical-align: baseline;
 }
 
 button.botui-actions-buttons-button::-moz-focus-inner, input.botui-actions-text-input::-moz-focus-inner {
@@ -52,9 +53,16 @@ button.botui-actions-buttons-button {
     -ms-overflow-style: none;
 }
 
-@media (min-width:400px) {
+.botui-app-container {
+    width: 50vw;
+    height: 62.5vh;
+    margin: 0 auto;
+    margin-top: 14vh;
+}
+
+@media (min-width: 1600px) {
     .botui-app-container {
-        width: 72vw;
+        width: 45vw;
         height: 62.5vh;
         margin: 0 auto;
         margin-top: 14vh;

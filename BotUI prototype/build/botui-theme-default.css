@@ -14,7 +14,7 @@ body {
 }
 
 .overlayimage {
-    width: 80vw;
+    width: 55vw;
     height: 80vh;
     display: block;
     margin-top: 10vh;
@@ -23,13 +23,26 @@ body {
     background-color: #323232;
 }
 
+@media (min-width:1600px) {
+    .overlayimage {
+        width: 50vw;
+    }
+}
+
 .led-box {
     height: 30px;
     width: 25%;
     margin: 10px 0;
     position: absolute;
-    left: 20px;
-    bottom: 15vh;
+    left: 14vw;
+    bottom: 12vh;
+}
+
+@media (min-width: 1600px) {
+    .led-box {
+        left: 15vw;
+        bottom: 13vh;
+    }
 }
 
 .led-yellow {
@@ -189,6 +202,8 @@ body {
 }
 
 .botui-actions-buttons-button {
+    float: right;
+    margin-left: 10px;
     border: 0;
     color: gray;
     line-height: 1;
