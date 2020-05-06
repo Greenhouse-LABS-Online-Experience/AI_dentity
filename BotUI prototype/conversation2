@@ -1,0 +1,17 @@
+var botui = new BotUI('conversation2');
+
+var conversation2start = {
+    convo2start: function () {
+        botui.message.add({
+            delay: 1000,
+            content: 'What is your name?'
+        }).then(function () {
+            return botui.action.text({
+                delay: 1000,
+                action: {
+                    placeholder: 'Your name'
+                }
+            });
+        })
+    }
+}

@@ -10,19 +10,24 @@
 </head>
 
 <body>
-
-    <div class="logocontainer">
-        <img class="logo" src='build/logo.png' width="10%" height="auto">
+    <div class="computeroverlay">
+        <img class="overlayimage" src="build/fore2.png">
     </div>
 
-    <div class="botui-app-container" id="conversation1">
+    <div class="led-box">
+        <div class="led-yellow"></div>
+    </div>
+
+    <div class="botui-app-container" id="conversation2">
         <bot-ui></bot-ui>
     </div>
 
     <script src="https://cdn.jsdelivr.net/vue/latest/vue.min.js"></script>
     <script src="build/botui.min.js"></script>
+    <script src="conversation1"></script>
+    <script src="conversation2"></script>
 
-    <script>
+    <!--<script>
         var botui = new BotUI('conversation1');
 
         botui.message.add({
@@ -679,7 +684,7 @@
 
         }
 
-    </script>
+    </script>-->
 
 </body>
 

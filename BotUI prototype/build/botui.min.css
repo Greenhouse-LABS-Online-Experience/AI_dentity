@@ -39,22 +39,35 @@ button.botui-actions-buttons-button {
 .botui-app-container {
     width: 100%;
     height: 100%;
-    line-height: 1
+    line-height: 1;
+}
+
+/*Hide scrollbar in Chrome, Safari & Opera*/
+.botui-container::-webkit-scrollbar {
+    display: none;
+}
+
+/*Hide scrollbar in IE*/
+.botui-container {
+    -ms-overflow-style: none;
 }
 
 @media (min-width:400px) {
     .botui-app-container {
-        width: 80vw;
-        height: 70vh;
-        margin: 0 auto
+        width: 72vw;
+        height: 62.5vh;
+        margin: 0 auto;
+        margin-top: 14vh;
     }
 }
 
 .botui-container {
     width: 100%;
     height: 100%;
-    overflow-y: auto;
-    overflow-x: hidden
+    position: relative;
+    
+    overflow: auto;
+    scrollbar-width: none;
 }
 
 .botui-message {
