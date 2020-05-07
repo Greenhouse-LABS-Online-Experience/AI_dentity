@@ -54,11 +54,11 @@ var convostart = {
         })
 
         botui.message.add({
-            delay: 1000,
+            delay: 1500,
             content: 'What is your name?'
         }).then(function () {
             return botui.action.text({
-                delay: 1000,
+                delay: 200,
                 action: {
                     placeholder: 'Your name'
                 }
@@ -91,12 +91,12 @@ var convostart = {
 
     uhfol: function () {
         botui.message.add({
-            delay: 1000,
+            delay: 500,
             content: "You aren't David are you?"
         })
         botui.message.add({
             human: true,
-            delay: 1000,
+            delay: 1500,
             content: 'My name is',
         }).then(function () {
             return botui.action.text({
