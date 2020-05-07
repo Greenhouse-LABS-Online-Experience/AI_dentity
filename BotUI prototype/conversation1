@@ -36,18 +36,23 @@ botui.message.add({
         if (res.value == 'hello') {
             convostart.hellofol();
             play();
-       
+
         }
         if (res.value == 'uh') {
             convostart.uhfol();
             play();
-       
+
         }
     });
 });
 
 var convostart = {
     hellofol: function () {
+        botui.message.add({
+            delay: 1000,
+            content: "You aren't David are you?"
+        })
+
         botui.message.add({
             delay: 1000,
             content: 'What is your name?'
@@ -85,6 +90,10 @@ var convostart = {
     },
 
     uhfol: function () {
+        botui.message.add({
+            delay: 1000,
+            content: "You aren't David are you?"
+        })
         botui.message.add({
             human: true,
             delay: 1000,
