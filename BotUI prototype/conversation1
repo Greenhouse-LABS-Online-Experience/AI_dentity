@@ -95,8 +95,12 @@ var convostart = {
             content: "You aren't David are you?"
         })
         botui.message.add({
-            human: true,
             delay: 1500,
+            content: "Who are you?"
+        })
+        botui.message.add({
+            human: true,
+            delay: 2500,
             content: 'My name is',
         }).then(function () {
             return botui.action.text({
