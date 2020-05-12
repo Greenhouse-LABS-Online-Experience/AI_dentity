@@ -71,6 +71,16 @@ h1 {
     }
 }
 
+.mute {
+    height: 30px;
+    width: 25%;
+    margin: 10px 0;
+    position: absolute;
+    left: 2vw;
+    top: 2vh;
+    z-index: 1000;
+}
+
 .led-box {
     height: 30px;
     width: 25%;

@@ -5,6 +5,27 @@ function playaudio() {
     audiotrack.play();
 }
 
+var audiotrack = document.getElementById("audiotrack");
+var buttonmute = document.getElementById("buttonmute")
+var isPlaying = false;
+
+function mutesound() {
+    if (isPlaying) {
+        audiotrack.pause()
+        buttonmute.innerHTML = "unmute the sound";
+    } else {
+        audiotrack.play();
+        buttonmute.innerHTML = "mute the sound";
+    }
+};
+audiotrack.onplaying = function () {
+    isPlaying = true;
+};
+audiotrack.onpause = function () {
+    isPlaying = false;
+};
+
+
 function playstartup() {
     var startup = document.getElementById("startup");
     startup.play();
@@ -705,6 +726,11 @@ var david = {
         botui.message.add({
             content: "Okay! Talk to you then!",
             delay: 2500,
+        })
+
+        botui.message.add({
+            content: "IMAGINE THAT THE PLAYER IS GONE FOR 2 HOURS",
+            delay: 3000,
         }).then(function (res) {
             conversation2start.convo2start();
         })

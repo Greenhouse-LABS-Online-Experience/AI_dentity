@@ -1,6 +1,7 @@
 var conversation2start = {
     convo2start: function () {
         botui.action.button({
+            delay: 3000,
             action: [
                 {
                     text: "Hey...",
