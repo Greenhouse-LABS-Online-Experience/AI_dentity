@@ -12,7 +12,6 @@ var conversation2start = {
             ]
         }).then(function () {
             play();
-
             botui.message.add({
                 delay: 1000,
                 content: 'Hey!',
@@ -789,6 +788,8 @@ var conversation2start = {
                 botui.message.add({
                     content: "Thanks. Talk to you soon.",
                     delay: 1000,
+                }).then(function (res) {
+                    conversation3start.convo3start();
                 })
             },
 
@@ -806,7 +807,10 @@ var conversation2start = {
                 botui.message.add({
                     content: "I'll be back",
                     delay: 2500,
+                }).then(function (res) {
+                    conversation3start.convo3start();
                 })
+                
             }
         }
 

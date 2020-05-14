@@ -1,0 +1,56 @@
+function showgame() {
+    var x = document.getElementById("splash");
+    if (x.style.display === "block") {
+        x.style.display = "none";
+    } else {
+        x.style.display = "block";
+    }
+    //playaudio();
+    playstartup();
+}
+function hidesplash() {
+    var x = document.getElementById("splashscreen");
+    if (x.style.display === "none") {
+        x.style.display = "block";
+    } else {
+        x.style.display = "none";
+    }
+}
+
+function playaudio() {
+    var audiotrack = document.getElementById("audiotrack");
+    audiotrack.play();
+}
+
+var audiotrack = document.getElementById("audiotrack");
+var buttonmute = document.getElementById("buttonmute")
+var isPlaying = false;
+
+function mutesound() {
+    if (isPlaying) {
+        audiotrack.pause()
+        buttonmute.innerHTML = "unmute the sound";
+    } else {
+        audiotrack.play();
+        buttonmute.innerHTML = "mute the sound";
+    }
+};
+audiotrack.onplaying = function () {
+    isPlaying = true;
+};
+audiotrack.onpause = function () {
+    isPlaying = false;
+};
+
+
+function playstartup() {
+    var startup = document.getElementById("startup");
+    startup.play();
+}
+
+function play() {
+    var audio = document.getElementById("audio");
+    audio.play();
+}
+
+var buttons = document.getElementsByTagName('button');
