@@ -44,36 +44,38 @@ button.botui-actions-buttons-button {
 }
 
 /*Hide scrollbar in Chrome, Safari & Opera*/
+
 .botui-container::-webkit-scrollbar {
     display: none;
 }
 
 /*Hide scrollbar in IE*/
+
 .botui-container {
     -ms-overflow-style: none;
 }
 
 .botui-app-container {
-    width: 50vw;
-    height: 62.5vh;
+    width: 30vw;
+    height: 45vh;
     margin: 0 auto;
-    margin-top: 14vh;
+    margin-top: 0px;
+    margin-top: 21vh;
 }
 
-@media (min-width: 1600px) {
+/*@media (min-width: 1600px) {
     .botui-app-container {
-        width: 45vw;
+        width: 50vw;
         height: 62.5vh;
         margin: 0 auto;
         margin-top: 14vh;
     }
-}
+}*/
 
 .botui-container {
     width: 100%;
     height: 100%;
     position: relative;
-    
     overflow: auto;
     scrollbar-width: none;
 }

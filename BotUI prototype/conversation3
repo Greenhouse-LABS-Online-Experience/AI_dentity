@@ -795,6 +795,8 @@ var conversation3start = {
                     botui.message.add({
                         delay: 1000,
                         content: "Okay! Talk to you soon!",
+                    }).then(function () {
+                        conversation4start.convo4start();
                     })
                 })
             },
@@ -820,6 +822,8 @@ var conversation3start = {
                     botui.message.add({
                         delay: 1000,
                         content: "Okay! Talk to you soon!",
+                    }).then(function () {
+                        conversation4start.convo4start();
                     })
                 })
             },

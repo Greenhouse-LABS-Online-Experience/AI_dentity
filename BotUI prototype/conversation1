@@ -691,7 +691,7 @@ var david = {
         botui.message.add({
             content: "IMAGINE THAT THE PLAYER IS GONE FOR 2 HOURS",
             delay: 3000,
-        }).then(function (res) {
+        }).then(function () {
             conversation2start.convo2start();
         })
     }
