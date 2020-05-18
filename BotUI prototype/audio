@@ -5,7 +5,7 @@ function showgame() {
     } else {
         x.style.display = "block";
     }
-    //playaudio();
+    playaudio();
     playstartup();
 }
 function hidesplash() {
@@ -20,6 +20,11 @@ function hidesplash() {
 function playaudio() {
     var audiotrack = document.getElementById("audiotrack");
     audiotrack.play();
+}
+
+function playaudio2() {
+    var audiotrack2 = document.getElementById("audiotrack2");
+    audiotrack2.play();
 }
 
 var audiotrack = document.getElementById("audiotrack");
@@ -51,6 +56,10 @@ function playstartup() {
 function play() {
     var audio = document.getElementById("audio");
     audio.play();
+}
+
+function stopplaying1(){
+    audiotrack.pause();
 }
 
 var buttons = document.getElementsByTagName('button');

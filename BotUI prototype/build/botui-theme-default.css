@@ -215,7 +215,7 @@ h1 {
 }
 
 .botui-message-content.text {
-    line-height: 0.2
+    line-height: 1.2
 }
 
 .botui-message-content.loading {

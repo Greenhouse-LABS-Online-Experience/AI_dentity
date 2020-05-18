@@ -691,6 +691,8 @@ var conversation5start = {
                 botui.message.add({
                     delay: 1000,
                     content: "I will! Thank you soo much!"
+                }).then(function () {
+                    NEXT.NEXT();
                 })
             },
 
@@ -736,6 +738,8 @@ var conversation5start = {
                 botui.message.add({
                     delay: 1000,
                     content: "I promise I will! Thank you soo much!"
+                }).then(function () {
+                    NEXT.NEXT();
                 })
             },
 
@@ -759,6 +763,8 @@ var conversation5start = {
                             text: "Talk to you soon.",
                         },
                     ]
+                }).then(function () {
+                    NEXT.NEXT();
                 })
             }
 

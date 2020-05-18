@@ -418,10 +418,10 @@ var conversation4start = {
                     delay: 1000,
                     action: [
                         {
-                            text: "Yeah! The internet can do pretty much everything!",
+                            text: "It's easier to talk to someone through a screen than in real life... I guess...",
                         },
                         {
-                            text: "Of course! The internet can do anything these days!",
+                            text: "I don't know, anonimity maybe...",
                         },
                     ]
                 }).then(function () {
