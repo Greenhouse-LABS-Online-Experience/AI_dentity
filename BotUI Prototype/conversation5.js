@@ -692,7 +692,7 @@ var conversation5start = {
                     delay: 1000,
                     content: "I will! Thank you soo much!"
                 }).then(function () {
-                    NEXT.NEXT();
+                    conversation6start.convo6start();
                 })
             },
 
@@ -739,7 +739,7 @@ var conversation5start = {
                     delay: 1000,
                     content: "I promise I will! Thank you soo much!"
                 }).then(function () {
-                    NEXT.NEXT();
+                    conversation6start.convo6start();
                 })
             },
 
@@ -764,7 +764,7 @@ var conversation5start = {
                         },
                     ]
                 }).then(function () {
-                    NEXT.NEXT();
+                    conversation6start.convo6start();
                 })
             }
 

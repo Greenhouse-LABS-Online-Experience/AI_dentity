@@ -1,0 +1,664 @@
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-header {
+    padding: 2px 16px;
+    background-color: #ECCBBD;
+    color: white;
+    border-radius: 5px 5px 0px 0px;
+}
+
+.modal-content {
+    border-radius: 5px;
+    position: relative;
+    background-color: #fefefe;
+    margin: 0 auto;
+    padding: 0;
+    border: 1px solid #888;
+    width: 90vw;
+    height: 90vh;
+    margin-top: 5vh;
+    overflow: auto;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s
+}
+
+.modal-content-slideshow {
+    border-radius: 5px;
+    position: relative;
+    background-color: #fefefe;
+    margin: 0 auto;
+    padding: 0;
+    border: 1px solid #888;
+    width: 90vw;
+    height: 90vh;
+    margin-top: 5vh;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s
+}
+
+.modal-content p {
+    color: gray;
+    padding-right: 20px;
+}
+
+.modal-body {
+    margin-top: 2.5vh;
+    margin-left: 2.5%;
+    width: 50%;
+    float: left;
+}
+
+.modal-body-slideshow {
+    width: 100%;
+}
+
+.modal-image {
+    margin-top: 10vh;
+    right: 0;
+    width: 45%;
+    height: 60vh;
+    float: left;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+@-webkit-keyframes animatetop {
+    from {
+        top: -300px;
+        opacity: 0
+    }
+    to {
+        top: 0;
+        opacity: 1
+    }
+}
+
+@keyframes animatetop {
+    from {
+        top: -300px;
+        opacity: 0
+    }
+    to {
+        top: 0;
+        opacity: 1
+    }
+}
+
+#close {
+    color: white;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    top: 50%;
+}
+
+#close:hover h1 {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/*sitewide*/
+
+h1 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 3vh;
+    color: white;
+}
+
+h2 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 2.4vh;
+    color: white;
+}
+
+p {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+    font-size: 2.2vh;
+    color: white;
+}
+
+a {
+    text-decoration: none;
+    color: #ECCBBD;
+}
+
+body {
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden;
+    height: 100%;
+}
+
+.anti-overflow {
+    overflow-x: hidden;
+    max-width: 100vw;
+}
+
+/* slideshow container */
+
+.mySlides {
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100%;
+    background-position: center;
+}
+
+.myPro {
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100%;
+    background-position: center;
+}
+
+.mySlides-modal {
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100%;
+    background-position: center;
+    border-radius: 0 0 5px 5px;
+}
+
+.slideshow-container {
+    width: 100%;
+    height: 60vh;
+    margin: auto;
+}
+
+.slideshow-container-pro {
+    width: 100%;
+    height: 60vh;
+    margin: auto;
+}
+
+#rightextra {
+    margin-right: 2.5%;
+}
+
+.slideshow-container-modal {
+    width: 100%;
+    height: 81vh;
+}
+
+/* Next & previous buttons */
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.text {
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+}
+
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+    from {
+        opacity: .4
+    }
+    to {
+        opacity: 1
+    }
+}
+
+@keyframes fade {
+    from {
+        opacity: .4
+    }
+    to {
+        opacity: 1
+    }
+}
+
+@media only screen and (max-width: 300px) {
+    .prev, .next, .text {
+        font-size: 11px
+    }
+}
+
+/*intro slide*/
+
+.intro-slide {
+    background-image: url("img/Wide1.JPG");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100vh;
+}
+
+.header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-top: 40px;
+    position: relative;
+}
+
+.top-logo {
+    margin-left: 50px;
+}
+
+.top-logo h1 {
+    font-weight: 700;
+    color: black;
+}
+
+.top-menu {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: 5%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.top-menu-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.top-menu-item {
+    right: 0;
+    display: block;
+    margin-left: 20px;
+    color: black;
+}
+
+.top-menu-item:hover {
+    color: gray;
+    cursor: pointer;
+}
+
+.float-menu {
+    height: 0px;
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+    float: right;
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: 5%;
+    z-index: 100;
+}
+
+.float-menu-item {
+    display: block;
+    margin-left: 20px;
+    color: white;
+    padding-top: 40px;
+}
+
+.float-menu-item:hover {
+    color: gray;
+    cursor: pointer;
+}
+
+/*about slide
+
+.about-slide {
+    background-color: #A2A6E8;
+    background-size: 100%;
+    margin: 0 auto;
+}
+
+.about-wrapper {
+    width: 90%;
+    margin: 0 auto;
+    height: 90vh;
+}
+
+.about-left {
+    width: 50%;
+    height: 60vh;
+    float: left;
+    margin-top: 18vh;
+    color: white;
+    display: table;
+}
+
+.about-left-text {
+    padding-right: 20px;
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.about-right {
+    position: relative;
+    float: right;
+    right: 0;
+    width: 50%;
+    height: 60vh;
+    margin-top: 20vh;
+    background-image: url("img/003.JPG");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.about-left-cv {
+    width: 70%;
+    float: left;
+    height: 60vh;
+    padding-top: 5vh;
+    color: white;
+    display: table;
+}
+<div class="slideshow-container-pro">
+
+                        <div class="myPro fade" style="background-image: url('img/photography/1.JPG');">
+                            <div class="text">
+                                <p>Long Exposure</p>
+                            </div>
+                        </div>
+
+                        <div class="myPro fade" style="background-image: url('img/photography/2.JPG');">
+                            <div class="text">
+                                <p>Flamingo</p>
+                            </div>
+                        </div>
+
+                        <a class="prev" onclick="plusSlidespro(-1)">&#10094;</a>
+                        <a class="next" onclick="plusSlidespro(1)">&#10095;</a>
+                    </div>
+*/
+
+.about-slide {
+    background-color: #A2A6E8;
+    background-size: 100%;
+    margin: 0 auto;
+}
+
+.about-wrapper {
+    width: 90%;
+    margin: 0 auto;
+    height: 100vh;
+}
+
+.about-wrapper-cv {
+    width: 90%;
+    margin: 0 auto;
+    height: 100vh;
+}
+
+.about-left {
+    width: 50%;
+    height: 80vh;
+    float: left;
+    margin-top: 10vh;
+    color: white;
+    display: table;
+    padding-right: 1%;
+}
+
+.about-left-text {
+    padding-right: 20px;
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.about-right {
+    position: relative;
+    float: left;
+    right: 0;
+    width: 49%;
+    height: 80vh;
+    margin-top: 10vh;
+    background-image: url("img/003.JPG");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.about-left-cv {
+    width: 50%;
+    height: 80vh;
+    float: left;
+    margin-top: 10vh;
+    color: white;
+    display: table;
+    padding-right: 1%;
+}
+
+.about-left-text-cv {
+    padding-right: 20px;
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.about-right-cv {
+    width: 49%;
+    height: 80vh;
+    float: left;
+    margin-top: 10vh;
+    color: white;
+    display: table;
+}
+
+.about-right-text-cv {
+    padding-right: 20px;
+    display: table-cell;
+    vertical-align: middle;
+}
+
+/*work slide*/
+
+.work-slide {
+    background-color: #ECCBBD;
+    background-size: 100%;
+    margin: 0 auto;
+}
+
+.work-wrapper {
+    width: 90%;
+    margin: 0 auto;
+    height: 100vh;
+}
+
+.hidden {
+    display: none;
+}
+
+.work-left {
+    position: relative;
+    float: left;
+    right: 0;
+    width: 40%;
+    height: 60vh;
+    margin-top: 20vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.work-right {
+    width: 40%;
+    height: 80vh;
+    float: left;
+    margin-top: 10vh;
+    color: white;
+    display: table;
+    padding-left: 20px;
+}
+
+.work-right-text {
+    padding-right: 20px;
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.project:hover {
+    cursor: pointer;
+}
+
+.project:hover .work-left {
+    box-shadow: 0 0px 8px 0 gray, 0 6px 20px 0 gray;
+}
+
+.project:hover .work-right-text {
+    text-shadow: 0 0px 8px gray;
+}
+
+.buttonparent {
+    width: 100%;
+    display: table;
+    padding-bottom: 10vh;
+    background-color: #ECCBBD;
+}
+
+.buttonmoreprojects {
+    background-color: transparent;
+    color: white;
+    border: 1px solid white;
+    border-radius: 5px;
+    color: white;
+    padding: 5px;
+    margin: 0 auto;
+    display: table;
+}
+
+.buttonmoreprojects a {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+    font-size: 2.4vh;
+}
+
+.buttonmoreprojects:hover {
+    background-color: white;
+    cursor: pointer;
+    color: #ECCBBD;
+}
+
+/*contact slide*/
+
+.contact-slide {
+    background-color: #82B56D;
+    background-size: 100%;
+    height: 100vh;
+    width: 100vw;
+    margin: 0 auto;
+}
+
+.contact-wrapper {
+    width: 90%;
+    margin: 0 auto;
+    position: relative;
+}
+
+.contact-left {
+    width: 50%;
+    height: 60vh;
+    float: left;
+    margin-top: 20vh;
+    color: white;
+    display: table;
+}
+
+.contact-left-text {
+    padding-right: 20px;
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.contact-img {
+    position: absolute;
+    float: right;
+    right: 0;
+    width: 50%;
+    height: 60vh;
+    margin-top: 20vh;
+    background-image: url("img/006.jpg");
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.fa {
+    padding: 10px;
+    font-size: 50px;
+    width: 50px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 2px;
+    border-radius: 5px;
+}
+
+.fa:hover {
+    cursor: pointer;
+}
+
+.fa-linkedin {
+    background: gray;
+    color: white;
+}
+
+.fa-linkedin:hover {
+    background: #2867B2;
+}
+
+.fa-facebook {
+    background: gray;
+    color: white;
+}
+
+.fa-facebook:hover {
+    background: #4267B2;
+}
+
+.fa-instagram {
+    background: gray;
+    color: white;
+}
+
+.fa-instagram:hover {
+    background-image: linear-gradient(to right, #405DE6, #E1306C);
+}

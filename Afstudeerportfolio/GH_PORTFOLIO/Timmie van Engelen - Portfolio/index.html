@@ -1,0 +1,870 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Timmie van Engelen - Portfolio</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,300i,400,400i,500,500i,700,700i&display=swap"
+        rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+</head>
+
+<body>
+
+    <div class="intro-slide">
+        <div class="header">
+            <div class="top-logo">
+                <h1>Timmie <span style="font-weight: 400;">van</span> Engelen</h1>
+            </div>
+            <div class="top-menu">
+                <div class="top-menu-wrapper">
+                    <h1 class="top-menu-item" onclick="toAbout()">About</h1>
+                    <h1 class="top-menu-item" onclick="toWork()">Work</h1>
+                    <h1 class="top-menu-item" onclick="toContact()">Contact</h1>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="float-menu" data-aos="fade-up">
+        <h1 class="float-menu-item about" onclick="toAbout()">About</h1>
+        <h1 class="float-menu-item work" onclick="toWork()">Work</h1>
+        <h1 class="float-menu-item contact" onclick="toContact()">Contact</h1>
+    </div>
+
+
+    <div class="anti-overflow">
+
+        <!--<div class="about-slide" id="about">
+            <div class="about-wrapper">
+                <div class="about-left">
+                    <div class="about-left-text">
+                        <h1>Creating user friendly media experiences</h1>
+                        <p>Working on different mediums to create an engaging experience for users is something I love
+                            to do. Wheter it is a website,
+                            an app or a media installation, building something with the users in mind has proven to be
+                            incredibily important.
+                            <br><br>
+                            In the three years I have spend at Fontys University for Applied Sciences I learned a lot
+                            about design, coding and
+                            user experience design. Each semester I made various projects, some more experimental, some
+                            more fleshed out and presentable.
+                            In this portfolio you will find the projects I am most proud of. These projects are mostly
+                            done in groups and I want to thank
+                            all the groupmates I have had the pleusure of working with, it were some incredible times!
+                            <br><br>
+                            I apologize to all the English visitors of this site, some of my projects had to be done in
+                            Dutch
+                            so images or videos might be in Dutch.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="about-right" data-aos="fade-left" data-aos-duration="500" data-aos-offset="300"></div>
+            </div>
+
+            <div class="about-wrapper">
+
+                <div class="about-left-cv" data-aos="fade-right" data-aos-duration="500" data-aos-offset="300">
+                    <div class="about-left-text">
+                        <h1>Curriculum Vitae</h1>
+                        <h2>Work</h2>
+                        <p>Paviljoen Geneper Parken: Kitchen Assistant (2015 - 2016)</p>
+                        <p>Pathé Theaters: Service- and VIP employee (2016 - present)</p>
+                        <h2>Education</h2>
+                        <p>HAVO diploma: De Es (2010-2012, Belgium), Novalis College (2012-2016)</p>
+                        <p>HBO: Fontys University of Applied Sciences, ICT & Media Design (2016 - present)</p>
+                        <p>Minor: Mobile Development "Smart Mobile", Fontys University of Applied Sciences (2017 - 2018)
+                        </p>
+                        <p>Minor: Digital Experience Design, Fontys University of Applied Sciences (2019 - 2020)
+                            </p>
+                        <p>Internship: Game Solutions Lab, Games for Health Europe, &happy, UX designer, web developer,
+                            concepter & designer (2018 - 2019)</p>
+                    </div>
+                </div>
+            </div>
+        </div>-->
+        <div class="about-slide" id="about">
+            <div class="about-wrapper">
+                <div class="about-left">
+                    <div class="about-left-text">
+                        <h1>Creating user friendly media experiences</h1>
+                        <p>Creating user friendly media experiences
+                            Working in different mediums to create an engaging experience for users is something I love
+                            to do. Whether it is a website, an app or a media installation, building something with the
+                            users in mind has proven to be incredibly important.
+                            <br><br>
+                            In the three years I have spent at Fontys University of Applied Sciences I learned a lot
+                            about design, coding and user experience design. Each semester I made various projects, some
+                            more experimental, some more fleshed out and presentable. In this portfolio you will find
+                            the projects I am most proud of. These projects are mostly
+                            done in groups and I want to thank
+                            all the groupmates I have had the pleasure of working with, it were some incredible times!
+                            <br><br>
+                            I apologize to all the English visitors of this site, some of my projects had to be done in
+                            Dutch
+                            so images or videos might be in Dutch.
+                        </p>
+                    </div>
+                </div>
+                <div class="about-right" data-aos="fade-left" data-aos-duration="500" data-aos-offset="100"></div>
+            </div>
+            <div class="about-wrapper-cv">
+                <div class="about-left-cv">
+                    <div class="about-left-text-cv">
+                        <h1>Curriculum Vitae</h1>
+                        <h2>Work</h2>
+                        <p>Paviljoen Geneper Parken: Kitchen Assistant (2015 - 2016)<br>
+                            Pathé Theaters: Service- and VIP employee (2016 - present)</p>
+                        <h2>Education</h2>
+                        <p>HAVO diploma: De Es (2010-2012, Belgium), Novalis College (2012-2016)<br>
+                            HBO: Fontys University of Applied Sciences, ICT & Media Design (2016 - present)</p>
+                        <p>Minor: Mobile Development "Smart Mobile", Fontys University of Applied Sciences (2017 -
+                            2018)<br>
+                            Minor: Digital Experience Design, Fontys University of Applied Sciences (2019 - 2020)
+                        </p>
+                        <p>Internship: Game Solutions Lab, Games for Health Europe, &happy, UX designer, web developer,
+                            concepter & designer (2018 - 2019)</p>
+                    </div>
+                </div>
+                <div class="about-right-cv" data-aos="fade-left" data-aos-duration="500" data-aos-offset="100">
+                    <div class="about-right-text-cv">
+                        <h1>Skillset</h1>
+                        <h2>Design</h2>
+                        <p>Adobe Photoshop, Illustrator, InDesign & Xd. Sketch</p>
+                        <h2>Coding/ Web Design</h2>
+                        <p>Html, Css, Javascript & Php. Basics of Swift, Java & React</p>
+                        <h2>Methods</h2>
+                        <p>User testing, Concepting, (Field)Research, SCRUM</p>
+                        <h2>Other Skills</h2>
+                        <p>Keynote, Ableton Live, Trakor DJ, Final Cut Pro, DJ Course/ Traktor</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="work-slide" id="work">
+            <div class="work-wrapper">
+                <div class="project" id="Btn1">
+
+                    <div class="work-left" data-aos="fade-right" data-aos-duration="500" data-aos-offset="100"
+                        style="background-image: url('sharify/sharifymin.png')"></div>
+
+                    <div class="work-right">
+                        <div class="work-right-text">
+                            <h1>Sharify: Simplify Sharing</h1>
+                            <p>Sharify was a joint effort with my classmate Mees Salomé. Both of us loved music, but
+                                there was a problem: he has Apple Music and I have Spotify...
+                                <br><br>
+                                We saw more people struggling with this problem and decided that we wanted to
+                                develop
+                                an app that lets you share music streaming links without having to worry which
+                                Streaming Service the other person has.
+                                <br><br>
+                                We had the chance to further develop this project in the next semester with some
+                                extra
+                                classmates and a real client.
+                                <br><br>
+                                Click to learn more about this project
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div id="Modal1" class="modal">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <span id="close" class="close1">
+                            <h1>&#10005;</h1>
+                        </span>
+                        <h1>Sharify: Simplify Sharing</h1>
+                    </div>
+                    <div class="modal-body">
+                        <p>For Sharify we wanted a familiar look and feel. The user experience shouldn't be that
+                            different from other streaming apps like Apple Music or Spotify. We analyzed these apps and
+                            came up with our own design guidelines how we wanted to app to look like.
+                            <br><br>
+                            It was very easy to usertest this app because most people are familiar with music-streaming
+                            services and as far as interaction went, they did not need a lot of assistance. People were
+                            enthusiastic about the idea of the app and told us it was a very useful tool for music
+                            lovers.
+                            <br><br>
+                            At the end of the semester we wanted a high fidelity prototype to show our teachers and
+                            the
+                            client. During this process,
+                            we were also developing an actual app that used Spotify's API to match text to albums
+                            and
+                            tracks. This way we could share a
+                            link via Apple Music, get the song values and "translate" it into Spotify.
+                            <br><br>
+                            To pitch our concept to our classmates, the teachers and the client, I created a video
+                            showing the members of
+                            our group explaining what the problem is we want to tackle and in what way we wanted to
+                            do
+                            that.
+                            <br><br>
+                            The video is available on this page, sadly, we only made a Dutch variant.
+                        </p>
+                    </div>
+                    <div class="modal-image"><video poster="thumbnails/thumbs.png" id="sharifyvideo"
+                            style="width: 100%; height: 100%;" src="sharify/Sharifyvideo.mov" controls></video>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <div class="work-wrapper">
+
+                <div class="project" id="Btn2">
+
+                    <div class="work-left" data-aos="fade-right" data-aos-duration="500" data-aos-offset="100"
+                        style="background-image: url('quantify/quantifymin.png')"></div>
+
+                    <div class="work-right">
+                        <div class="work-right-text">
+                            <h1>Quantify: Track your studying</h1>
+                            <p>Quantified Student asked us to create a prototype app that learns students to focus
+                                more
+                                on
+                                studying and be less distracted when studying.
+                                <br><br>
+                                With a group of student of different expertises and a lot of research, we created a
+                                prototype app which would
+                                be presented at the Quantified Student Conference.
+                                For the conference I created a video explaining our prototype. The video became a big
+                                success
+                                at the conference and has been used in various Quantified Student media.
+                                <br><br>
+                                Click to learn more about this project
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div id="Modal2" class="modal">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <span id="close" class="close2">
+                            <h1>&#10005;</h1>
+                        </span>
+                        <h1>Quantify: Track your studying</h1>
+                    </div>
+                    <div class="modal-body">
+                        <p>The Quantified Student concept was very interesting to me. How can we measure how students
+                            get distracted and what exactly distracts them. To build something meaningful for this
+                            assignment me and my groupmates decided to take a look in the mirror and ask what would
+                            distract us. With years of experience under our belts, we were confident we would create
+                            something great!
+                            <br><br>
+                            The idea of an app that tracks your study sessions was very compelling to us. We all would
+                            like this kind of app to track our own studying sessions and we noticed that tracking data
+                            was popular amongst the smartphone community. You can track your steps, heart rate and sport
+                            sessions. From the time you use your phone in a day to how many minutes of YouTube videos
+                            you watched is all trackable. Why wouldn't your study session be trackable?
+                            <br><br>
+                            At the end of the semester we wanted a high fidelity prototype build that would feature
+                            our
+                            desired tracking data. This data
+                            would be stuff like the noise levels in your session, times you picked up your phone and
+                            notifications you would get. While we were building
+                            this prototype we were also developing a real app that would track your surrounding
+                            noise in
+                            a session.
+                            <br><br>
+                            At the end of the semester was the Quantified Student Day. The video is attached to this
+                            page. It was a great
+                            success and even made it to various Quantified Student media outlets.
+                        </p>
+                    </div>
+                    <div class="modal-image"><video poster="thumbnails/thumbq.png" id="quantifyvideo"
+                            style="width: 100%; height: 100%;" src="quantify/Quantify.mov" controls></video></div>
+                </div>
+
+            </div>
+
+
+            <div class="work-wrapper">
+
+                <div class="project" id="Btn5">
+
+                    <div class="work-left" data-aos="fade-right" data-aos-duration="500" data-aos-offset="100"
+                        style="background-image: url('123Autoparts/auto.png')"></div>
+
+                    <div class="work-right">
+                        <div class="work-right-text">
+                            <h1>123Autobot</h1>
+                            <p>In this project I build a chatbot for 123autoparts.nl. The chatbot would ask you
+                                questions to see what
+                                the problem is with your car. It would do this by asking various questions about
+                                your car and go deep into the problems you were having, always keeping it understandable
+                                for everyone.
+                                <br><br>
+                                This way you maybe don't have to make a trip to the garage and you can maybe even
+                                save some money!
+                                <br><br>
+                                Click to learn more about this project
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div id="Modal5" class="modal">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <span id="close" class="close5">
+                            <h1>&#10005;</h1>
+                        </span>
+                        <h1>123Autobot</h1>
+                    </div>
+                    <div class="modal-body">
+                        <p>We got a task to build a chatbot and there wasn't a specific company or assignment
+                            linked to is.
+                            Our client worked together with a lot of companies and one of them was
+                            123autoparts.nl. On this
+                            site you can order various car parts for your old or new car.
+                            <br><br>
+                            We got the idea to build a chatbot that would ask you questions is you did not know what
+                            exactly was wrong with your car. This way we wanted to let the user check what the problem
+                            is themselves and not immediately go to the garage. Of course, if the user would not be able
+                            to see what the problem is he or she could always contact 123autoparts or go to the garage
+                            anyway.
+                            <br><br>
+                            In this semester I had learned a lot about presenting my work and Apple's presentation
+                            program
+                            "Keynote". Because of this I wanted to show off my skills in the last presentation of the
+                            year and tried
+                            my best to make a well designed, compelling presentation for our classmates, clients and
+                            teachers.
+                            <br><br>
+                            All the parties were enthusiastic about our concept and presentation, which you can check
+                            out on this page!
+                            <br><br>
+                            You can check a video showcasing the chatbot <a target="_blank"
+                                href="123Autoparts/autobot.mov">here!</a>
+                        </p>
+                    </div>
+                    <div class="modal-image"><video poster="thumbnails/thumb1.png" id="autovideo"
+                            style="width: 100%; height: 100%;" src="123Autoparts/Tim - Eindpresentatie.mp4"
+                            controls></video></div>
+                </div>
+
+            </div>
+
+            <div class="work-wrapper">
+                <div class="project" id="Btn3">
+
+                    <div class="work-left" data-aos="fade-right" data-aos-duration="1000" data-aos-offset="100"
+                        style="background-image: url('schmeck/marketing.png')"></div>
+
+                    <div class="work-right">
+                        <div class="work-right-text">
+                            <h1>Schmeck: Motivated Working</h1>
+                            <p>Futuris helps people who need care- and or work guidance. They offer housing and
+                                workplaces for people with a developmental disorder. The only problem is that some of
+                                their clients do not show up for their work because they are not motivated enough.
+                                <br><br>
+                                Our solution was to create an app that lets clients collect digital currency,
+                                or
+                                Schmeckle's,
+                                and let them trade those in for small extra's at work. Clients gather
+                                Schmeckle's
+                                for the time they are working.
+                                If a client works for an amount of days in a row, they will gain streaks an
+                                other
+                                bonuses.
+                                <br><br>
+                                There is a lot more about this project, so click on it to learn more!
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div id="Modal3" class="modal">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <span id="close" class="close3">
+                            <h1>&#10005;</h1>
+                        </span>
+                        <h1>Schmeck: Motivated Working</h1>
+                    </div>
+                    <div class="modal-body">
+                        <p>The task that Futuris gave us was simple: make a fun tool that inspires our clients to go
+                            to
+                            work.
+                            Most of the clients have autism or a mental handicap and because Futuris provides them
+                            with
+                            housing they need
+                            to have a job. Futuris provides those jobs, but the clients aren't familiar with the
+                            concept
+                            of working
+                            and showing up on time for that. Futuris tries to help them with that, but also has
+                            their
+                            hands full of other
+                            matters in the housing itself.
+                            <br><br>
+                            Through interviews we found out that a lot of the clients would play video games in
+                            their
+                            spare time. Most of
+                            them would do this until late in the night and because of this would show up late or
+                            wouldn't show up at all at their
+                            workplaces. It seemed like a good idea to motivate them to go to work with some sort of
+                            game, they enjoyed them in their
+                            free time, so maybe they'll get hooked on a mobile motivation game!
+                            <br><br>
+                            We build this mobile as a high fidelity prototype and showed this to Futuris. They were
+                            enthusiastic and wanted to see if we could realize this in code. Because at this point there
+                            wasn't that much time left we decided to build the app in React. We converted our designs
+                            into this new space and around that we build a presentation to show our exact concept and
+                            designs/prototype. The video attached is that final presentation.
+                        </p>
+                    </div>
+                    <div class="modal-image"><video poster="thumbnails/thumbsc.png" id="schmeckvideo"
+                            style="width: 100%; height: 100%;" src="schmeck/schmeck.m4v" controls></video></div>
+                </div>
+
+            </div>
+
+            <div class="work-wrapper">
+                <div class="project" id="Btn7">
+
+                    <div class="work-left" data-aos="fade-right" data-aos-duration="1000" data-aos-offset="100"
+                        style="background-image: url('bwventures/bwventures.png')"></div>
+
+                    <div class="work-right">
+                        <div class="work-right-text">
+                            <h1>BW-Ventures: Dashboard</h1>
+                            <p>BW-Ventures helps start-ups in the first steps of their start-up process. With their
+                                PreXLR
+                                tool they can help you test your customers and help you find an audience for your
+                                product.
+                                <br><br>
+                                With the tool they are able to help you create a product that is feasible, tested and
+                                ready for the market.
+                                The only problem is that this PreXLR tool was in Excel, and we needed to change that!
+                                <br><br>
+                                Click to learn more about this project!
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div id="Modal7" class="modal">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <span id="close" class="close7">
+                            <h1>&#10005;</h1>
+                        </span>
+                        <h1>BW-Ventures: Dashboard</h1>
+                    </div>
+                    <div class="modal-body">
+                        <p>For this assignment, it was clear we needed to make a dashboard in a desktop website. Because
+                            filling in the different forms
+                            was an important and time consuming task, we felt that this would be done on a desktop
+                            rather than on a phone or tablet.
+                            The essential idea of the assignment was to translate the Excel sheets to a fully
+                            functioning web version.
+                            <br><br>
+                            We started by setting up a database system in PHP and worked from there to create a fully
+                            functioning back-end, this was the part
+                            I mostly partook in. I also helped out creating some parts of the front-end.
+                            <br><br>
+                            It was very interesting testing this tool with the start-ups that BW-Ventures were actually
+                            helping, they gave very useful insights.
+                            With the help of these user tests we were able to create a tool that would help these
+                            start-ups the best way possible.
+                            <br><br>
+                            For a video of the final dashboard you can click <a href="bwventures/demo.mov"
+                                target="_blank">here!</a>
+                            <br><br>
+                            For the final presentation of our tool, a classmate and I created a video to accompany our
+                            product. He did the visuals for the
+                            video and I came up with the concepts.
+                        </p>
+                    </div>
+                    <div class="modal-image"><video poster="thumbnails/bwthumb.png" id="bwvideo"
+                            style="width: 100%; height: 100%;" src="bwventures/bwvideo.mov" controls></video></div>
+                </div>
+
+            </div>
+
+            <div class="work-wrapper">
+                <div class="project" id="Btn8">
+
+                    <div class="work-left" data-aos="fade-right" data-aos-duration="1000" data-aos-offset="100"
+                        style="background-image: url('stage/uxtest.png')"></div>
+
+                    <div class="work-right">
+                        <div class="work-right-text">
+                            <h1>User Testing Tool</h1>
+                            <p>For my internship assignment I had to create a user testing tool that would make user
+                                testing more
+                                accessible and easy to do and archive.
+                                <br><br>
+                                For this assignment is did a lot of research about user testing in general and about ux,
+                                to make the tool
+                                accessible to anyone. I also tested the tool a lot in the company itself to make sure it
+                                was up to their standards
+                                and their wishes!
+                                <br><br>
+                                Click to learn more about this project!
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div id="Modal8" class="modal">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <span id="close" class="close8">
+                            <h1>&#10005;</h1>
+                        </span>
+                        <h1>User Testing Tool</h1>
+                    </div>
+                    <div class="modal-body">
+                        <p>The process of making user testing accessible was challenging. After doing extensive research
+                            I finally started
+                            building the tool. For this I used mainly PHP and Javascript. When the database was set up I
+                            started working on the front-end
+                            and translating my research into the tool.
+                            <br><br>
+                            This process was the most time consuming. Making sure the tool had all the big user testing
+                            methods while being understandable for the company
+                            and the way they handled user tests. Testing the tool with my colleagues helped a lot, the
+                            tool was built for them in the end.
+                            <br><br>
+                            In the video that is included in this page you can watch a short demo of the tool. 
+                            <br>
+                            The final product was well received and I got a good grade for my internship. You can read my internship report 
+                            <a href="stage/stageverslag.pdf" target="_blank">here (dutch).</a>
+                        </p>
+                    </div>
+                    <div class="modal-image"><video poster="thumbnails/thumbst.png" id="stvideo"
+                            style="width: 100%; height: 100%;" src="stage/demo.mov" controls></video></div>
+                </div>
+
+            </div>
+
+            <div class="work-wrapper">
+                <div class="project" id="Btn6">
+
+                    <div class="work-left" data-aos="fade-right" data-aos-duration="1000" data-aos-offset="100"
+                        style="background-image: url('stallcatchers/stall.gif')"></div>
+
+                    <div class="work-right">
+                        <div class="work-right-text">
+                            <h1>Stallcatchers: Fight Alzhmeirs</h1>
+                            <p>The goal of Stallcatchers is to help contribute to Alzheimer research. My contribution
+                                was to build a landingpage
+                                for the Stallcatchers website!
+                                <br><br>
+                                I also created a t-shirt that was givin to Stallcatcher players during the Games For
+                                Health Congress.
+                                <br><br>
+                                Click to learn more about this project!
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div id="Modal6" class="modal">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <span id="close" class="close6">
+                            <h1>&#10005;</h1>
+                        </span>
+                        <h1>Stallcatchers: Fight Alzheimers</h1>
+                    </div>
+                    <div class="modal-body">
+                        <p>Sadly the Stallcatchers website has been renewed, but luckily I still have the local version
+                            of the landingspage.
+                            You can view it <a target="_blank" href="stallcatchers/index.html">here.</a>
+                            <br><br>
+                            Participating in the Stallcatchers project was part of my internship at Game Solutions Lab.
+                            Game Solutions Lab is
+                            activily trying to help better the world by building games and apps that help people in
+                            original and fun ways.
+                            <br><br>
+                            You can find their website <a target="_blank" href="https://gamesolutionslab.com">here.</a>
+                            <br><br>
+                            When you play Stallcatchers you are trying to see if the veins of the brains of mice aren't
+                            glugged. When you see
+                            one that doesn't flow all the way you hit the spot and the time when it happened. When a lot
+                            of users notice the same
+                            stall, the video is sent to Alzheimer researches to add this to their research. Want to try
+                            it? Sign up
+                            on <a target="_blank" href="https://stallcatchers.com/main#">this website.</a>
+                            <br><br>
+                            The t-shirt I made is attached to this page. The various names of the supporters of
+                            Stallcatchers
+                            are listed on the back of the shirt. The way they are designed is to make them appear as the
+                            stalls
+                            they are trying to catch.
+                        </p>
+                    </div>
+                    <div class="modal-image">
+                        <div class="slideshow-container-pro">
+
+                            <div class="myPro fade" style="background-image: url('stallcatchers/stall1.jpeg');">
+                            </div>
+
+                            <div class="myPro fade" style="background-image: url('stallcatchers/stall2.jpeg');">
+                            </div>
+
+                            <div class="myPro fade" style="background-image: url('stallcatchers/stall3.jpeg');">
+                            </div>
+
+                            <a class="prev" onclick="plusSlidespro(-1)">&#10094;</a>
+                            <a class="next" id="rightextra" onclick="plusSlidespro(1)">&#10095;</a>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+
+            <div class="work-wrapper">
+                <div class="project">
+
+                    <div class="work-left" data-aos="fade-right" data-aos-duration="500" data-aos-offset="100">
+                        <div class="slideshow-container">
+
+                            <div onclick="openmodal()" class="mySlides fade"
+                                style="background-image: url('img/photography/1.JPG');">
+                                <div class="text">
+                                    <p>Long Exposure</p>
+                                </div>
+                            </div>
+
+                            <div onclick="openmodal()" class="mySlides fade"
+                                style="background-image: url('img/photography/2.JPG');">
+                                <div class="text">
+                                    <p>Flamingo</p>
+                                </div>
+                            </div>
+
+                            <div onclick="openmodal()" class="mySlides fade"
+                                style="background-image: url('img/photography/3.JPG');">
+                                <div class="text">
+                                    <p>Doel</p>
+                                </div>
+                            </div>
+
+                            <div onclick="openmodal()" class="mySlides fade"
+                                style="background-image: url('img/photography/4.JPG');">
+                                <div class="text">
+                                    <p>Doel</p>
+                                </div>
+                            </div>
+
+                            <div onclick="openmodal()" class="mySlides fade"
+                                style="background-image: url('img/photography/5.JPG');">
+                                <div class="text">
+                                    <p>Light</p>
+                                </div>
+                            </div>
+
+                            <div onclick="openmodal()" class="mySlides fade"
+                                style="background-image: url('img/photography/6.JPG');">
+                                <div class="text">
+                                    <p>Light</p>
+                                </div>
+                            </div>
+
+                            <div onclick="openmodal()" class="mySlides fade"
+                                style="background-image: url('img/photography/7.JPG');">
+                                <div class="text">
+                                    <p>Movement</p>
+                                </div>
+                            </div>
+
+                            <div onclick="openmodal()" class="mySlides fade"
+                                style="background-image: url('img/photography/8.JPG');">
+                                <div class="text">
+                                    <p>Cat</p>
+                                </div>
+                            </div>
+
+                            <div onclick="openmodal()" class="mySlides fade"
+                                style="background-image: url('img/photography/9.JPG');">
+                                <div class="text">
+                                    <p>Parrot</p>
+                                </div>
+                            </div>
+
+                            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+                        </div>
+
+                    </div>
+
+                    <div class="work-right" id="Btn4">
+                        <div class="work-right-text">
+                            <h1>Photogrpahy</h1>
+                            <p>Taking photos always was a hobby of mine. But recently, analog photography caught
+                                my
+                                attention. Analog photography
+                                is taking pictures on film and letting them be developed. Every picture you take
+                                counts as there are about 36 pictures
+                                on one roll of film!
+                                <br><br>
+                                In a matter of fact, all images in this portfolio are shot on film! You can click on
+                                this
+                                project to see the pictures in full.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div id="Modal4" class="modal">
+                <div class="modal-content-slideshow">
+                    <div class="modal-header">
+                        <span id="close" class="close4">
+                            <h1>&#10005;</h1>
+                        </span>
+                        <h1>Photograpy</h1>
+                    </div>
+                    <div class="modal-body-slideshow">
+                        <div class="slideshow-container-modal">
+
+                            <div class="mySlides-modal fade" style="background-image: url('img/photography/1.JPG');">
+                                <div class="text">
+                                    <p>Long Exposure</p>
+                                </div>
+                            </div>
+
+                            <div class="mySlides-modal fade" style="background-image: url('img/photography/2.JPG');">
+                                <div class="text">
+                                    <p>Flamingo</p>
+                                </div>
+                            </div>
+
+                            <div class="mySlides-modal fade" style="background-image: url('img/photography/3.JPG');">
+                                <div class="text">
+                                    <p>Doel</p>
+                                </div>
+                            </div>
+
+                            <div class="mySlides-modal fade" style="background-image: url('img/photography/4.JPG');">
+                                <div class="text">
+                                    <p>Doel</p>
+                                </div>
+                            </div>
+
+                            <div class="mySlides-modal fade" style="background-image: url('img/photography/5.JPG');">
+                                <div class="text">
+                                    <p>Light</p>
+                                </div>
+                            </div>
+
+                            <div class="mySlides-modal fade" style="background-image: url('img/photography/6.JPG');">
+                                <div class="text">
+                                    <p>Light</p>
+                                </div>
+                            </div>
+
+                            <div class="mySlides-modal fade" style="background-image: url('img/photography/7.JPG');">
+                                <div class="text">
+                                    <p>Movement</p>
+                                </div>
+                            </div>
+
+                            <div class="mySlides-modal fade" style="background-image: url('img/photography/8.JPG');">
+                                <div class="text">
+                                    <p>Cat</p>
+                                </div>
+                            </div>
+
+                            <div class="mySlides-modal fade" style="background-image: url('img/photography/9.JPG');">
+                                <div class="text">
+                                    <p>Parrot</p>
+                                </div>
+                            </div>
+
+                            <a class="prev" onclick="plusSlidesm(-1)">&#10094;</a>
+                            <a class="next" onclick="plusSlidesm(1)">&#10095;</a>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="buttonparent">
+                <button style="display: none;" class="buttonmoreprojects" id="buttonmoreprojects"
+                    onclick="hideshow()"><a>See all my
+                        projects</a></button>
+            </div>
+
+        </div>
+
+        <div class="contact-slide" id="contact">
+            <div class="contact-wrapper">
+
+
+                <div class="contact-left">
+                    <div class="contact-left-text">
+                        <h1>Contact me!</h1>
+                        <p>You can follow and reach me on several different platforms:</p>
+
+                        <a href="https://www.facebook.com/tim.vanengelen.31?ref=bookmarks" target="_blank"
+                            class="fa fa-facebook"></a>
+                        <a href="https://www.linkedin.com/in/timmie-van-engelen-218386138/" target="_blank"
+                            class="fa fa-linkedin"></a>
+                        <a href="https://www.instagram.com/tim_van_engelen/" target="_blank"
+                            class="fa fa-instagram"></a>
+
+                        <p>
+                            Would you like to speak to me direclty? No problem!
+                            <br><br>
+                            Just send an email to this adress: timmievanengelen@hotmail.com and I'll reach out to
+                            you
+                            as soon as possible!
+                        </p>
+                    </div>
+
+                </div>
+
+                <div class="contact-img" data-aos="fade-left" data-aos-duration="500"></div>
+
+
+            </div>
+        </div>
+
+    </div>
+
+    <script src="scripts.js"></script>
+
+</body>
+
+</html>

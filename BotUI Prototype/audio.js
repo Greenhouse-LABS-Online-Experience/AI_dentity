@@ -28,6 +28,7 @@ function playaudio2() {
 }
 
 var audiotrack = document.getElementById("audiotrack");
+var audiotrack2 = document.getElementById("audiotrack2");
 var buttonmute = document.getElementById("buttonmute")
 var isPlaying = false;
 
@@ -44,6 +45,22 @@ audiotrack.onplaying = function () {
     isPlaying = true;
 };
 audiotrack.onpause = function () {
+    isPlaying = false;
+};
+
+function mutesound2() {
+    if (isPlaying) {
+        audiotrack2.pause()
+        buttonmute.innerHTML = "unmute the sound";
+    } else {
+        audiotrack2.play();
+        buttonmute.innerHTML = "mute the sound";
+    }
+};
+audiotrack2.onplaying = function () {
+    isPlaying = true;
+};
+audiotrack2.onpause = function () {
     isPlaying = false;
 };
 

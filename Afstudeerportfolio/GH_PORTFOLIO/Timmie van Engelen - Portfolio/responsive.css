@@ -1,0 +1,321 @@
+@media screen and (max-width: 1050px) and (min-height: 200px) {
+    html, body {
+        overflow-x: hidden;
+    }
+    .intro-slide {
+        background-image: url("img/Wide1.JPG");
+        background-size: cover;
+        background-position: center;
+        height: 100vh;
+    }
+    .header {
+        padding-top: 10%;
+        width: 100vw;
+        text-align: center;
+    }
+    .top-logo {
+        text-align: center;
+        width: 100%;
+        margin-left: 0;
+    }
+    .top-logo h1 {
+        font-size: 25px;
+        font-weight: 700;
+        color: white;
+        text-shadow: 2px 2px 5px black;
+        padding-right: 5px;
+        padding-left: 5px;
+    }
+    .top-menu {
+        width: 100%;
+        margin-right: 0;
+    }
+    .top-menu h1 {
+        text-shadow: 2px 2px 5px black;
+        font-size: 18px;
+    }
+    .top-menu-wrapper {
+        margin: auto;
+        display: inline;
+        position: sticky;
+        position: -webkit-sticky;
+        top: 20px;
+    }
+    .top-menu-item {
+        color: white;
+        margin-left: 10px;
+        margin-right: 10px;
+        display: inline-block;
+    }
+    .top-menu-item:hover {
+        color: black;
+    }
+    .float-menu {
+        display: none;
+    }
+    .about-slide {
+        background-color: #A2A6E8;
+        background-size: 100%;
+        margin: 0 auto;
+    }
+    .about-wrapper {
+        width: 90%;
+        margin: 0 auto;
+        height: 135vh;
+    }
+    .about-wrapper-cv {
+        width: 90%;
+        margin: 0 auto;
+        height: 156vh;
+    }
+    .about-left {
+        text-align: left;
+        width: 100%;
+        height: auto;
+        margin-top: 5vh;
+        color: white;
+    }
+    .about-left-text {
+        padding-right: 0px;
+    }
+    .about-right {
+        position: relative;
+        right: 0;
+        height: 40vh;
+        width: 100%;
+        margin-top: 1vh;
+        background-image: url("img/003.JPG");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    .about-left-cv {
+        text-align: left;
+        width: 100%;
+        height: auto;
+        float: left;
+        color: white;
+        margin-top: 1vh;
+        padding-right: 0px;
+    }
+    .about-left-text-cv {
+        text-align: left;
+        width: 100%;
+        height: auto;
+        float: left;
+        color: white;
+        margin-top: 1vh;
+        padding-right: 0px;
+    }
+    .about-right-cv {
+        position: relative;
+        right: 0;
+        width: 100%;
+        height: auto;
+        margin-top: 1vh;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    .about-right-text-cv {
+        text-align: left;
+        width: 100%;
+        height: auto;
+        float: left;
+        color: white;
+        margin-top: 1vh;
+        padding-right: 0px;
+    }
+    .myPro {
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 30vh;
+        background-position: center;
+    }
+    /*work slide*/
+    .work-slide {
+        background-color: #ECCBBD;
+        background-size: 100%;
+        margin: 0 auto;
+    }
+    .work-wrapper {
+        width: 90%;
+        margin: 0 auto;
+        height: 80vh;
+    }
+    .hidden {
+        display: none;
+    }
+    .work-left {
+        margin-top: 20px;
+        position: relative;
+        width: 100%;
+        height: 60vh;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    .work-right {
+        margin-top: 5px;
+        padding-left: 0px;
+        padding-right: 0px;
+        width: 100%;
+        height: 100%;
+        float: left;
+        color: white;
+        display: table;
+        text-align: center;
+    }
+    .work-right-text {
+        padding-right: 0px;
+        display: table-cell;
+        vertical-align: middle;
+    }
+    .modal-content-slideshow {
+        border-radius: 5px;
+        position: relative;
+        background-color: #fefefe;
+        margin: 0 auto;
+        padding: 0;
+        border: 1px solid #888;
+        width: 90vw;
+        height: 36.5vh;
+        margin-top: 28vh;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        -webkit-animation-name: animatetop;
+        -webkit-animation-duration: 0.4s;
+        animation-name: animatetop;
+        animation-duration: 0.4s
+    }
+    .slideshow-container-modal {
+        width: 100%;
+        height: 30vh;
+        margin-top: 6.5vh;
+    }
+    .slideshow-container-pro {
+        width: 100%;
+        height: 30vh;
+    }
+    #rightextra {
+        margin-right: 0;
+    }
+    .modal-content {
+        border-radius: 5px;
+        position: relative;
+        background-color: #fefefe;
+        margin: 0 auto;
+        padding: 0;
+        border: 1px solid #888;
+        width: 90vw;
+        height: 90vh;
+        margin-top: 5vh;
+        overflow: auto;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        -webkit-animation-name: animatetop;
+        -webkit-animation-duration: 0.4s;
+        animation-name: animatetop;
+        animation-duration: 0.4s
+    }
+    .modal-header {
+        padding: 1px 5vw;
+        background-color: #ECCBBD;
+        color: white;
+        border-radius: 5px 5px 0px 0px;
+        position: fixed;
+        width: 80vw;
+        height: 8.5vh;
+        z-index: 100;
+    }
+    
+    .modal-body {
+        margin-top: 47vh;
+        margin-left: 0%;
+        width: 90%;
+        height: 90vh;
+        float: left;
+        padding-left: 5%;
+        text-align: center;
+    }
+    .modal-body-slideshow {
+        width: 100%;
+    }
+    .modal-image {
+        margin-top: 8.5vh;
+        margin-right: 0;
+        top: 0;
+        width: 90vw;
+        height: auto;
+        position: absolute;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    @media screen and (max-width: 600px) and (min-height: 200px) {
+        .modal-header h1 {
+            font-size: 2.3vh;
+        }
+        .modal-body {
+            margin-top: 38vh;
+            margin-left: 0%;
+            width: 90%;
+            height: 90vh;
+            float: left;
+            padding-left: 5%;
+            text-align: center;
+        }
+        .modal-header {
+            padding: 1px 5vw;
+            background-color: #ECCBBD;
+            color: white;
+            border-radius: 5px 5px 0px 0px;
+            position: fixed;
+            width: 80vw;
+            height: 6.5vh;
+            z-index: 100;
+        }
+        .modal-image {
+            margin-top: 6.5vh;
+            margin-right: 0;
+            top: 0;
+            width: 90vw;
+            height: auto;
+            position: absolute;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+    }
+    /*contact slide*/
+    .contact-slide {
+        background-color: #82B56D;
+        background-size: 100%;
+        height: 100vh;
+        width: 100vw;
+        margin: 0 auto;
+    }
+    .contact-wrapper {
+        width: 90%;
+        position: relative;
+    }
+    .contact-left {
+        text-align: center;
+        width: 100%;
+        height: 50%;
+        float: left;
+        margin-top: 47vh;
+        color: white;
+        display: table;
+    }
+    .contact-left-text {
+        display: block;
+        padding-right: 0px;
+    }
+    .contact-img {
+        right: 0;
+        width: 100%;
+        height: 40vh;
+        margin-top: 5vh;
+        background-image: url("img/006.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+}

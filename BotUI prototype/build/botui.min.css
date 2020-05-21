@@ -25,6 +25,7 @@ button.botui-actions-buttons-button, input.botui-actions-text-input {
     font-size: 100%;
     line-height: normal;
     vertical-align: baseline;
+    color: #DF63EF;
 }
 
 button.botui-actions-buttons-button::-moz-focus-inner, input.botui-actions-text-input::-moz-focus-inner {
@@ -63,14 +64,31 @@ button.botui-actions-buttons-button {
     margin-top: 21vh;
 }
 
-/*@media (min-width: 1600px) {
+@media only screen and (max-width: 400px) {
     .botui-app-container {
-        width: 50vw;
-        height: 62.5vh;
+        width: 90vw;
+        height: 80vh;
         margin: 0 auto;
-        margin-top: 14vh;
+        background-image: url("mobilefirst.png");
+        background-position: center;
+        background-size: 100% 100%;
+        border-radius: 5px;
+        border: solid 5px #1D1D1D;
+        margin-top: 5vh;
     }
-}*/
+}
+
+@media screen and (min-width: 401px) and (max-width: 800px) {
+    .botui-app-container {
+        width: 90vw;
+        height: 90vh;
+        margin: 0 auto;
+        background-image: none;
+        border-radius: none;
+        border: none;
+        margin-top: 5vh;
+    }
+}
 
 .botui-container {
     width: 100%;

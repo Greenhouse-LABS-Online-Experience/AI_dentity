@@ -1,0 +1,101 @@
+@media screen and (max-width: 1050px) and (min-height: 200px) {
+    html, body {
+        overflow-x: hidden;
+    }
+    h2 {
+        font-family: 'Poppins', sans-serif;
+        font-weight: 800;
+        font-size: 3.5vh;
+        color: white;
+    }
+    .intro-slide {
+        background-size: cover;
+        background-position: center;
+        height: 100vh;
+    }
+    .topheader {
+        padding-top: 50vh;
+        width: 100vw;
+        text-align: center;
+    }
+    .top-header-menu-item {
+        color: white;
+        margin-left: 10px;
+        margin-right: 10px;
+        display: inline-block;
+        float: left;
+    }
+    .top-menu-item {
+        color: #EE4B6A;
+        margin-left: 10px;
+        margin-right: 10px;
+        display: inline-block;
+    }
+    .top-header-menu-item:hover {
+        color: #EE4B6A;
+    }
+    .top-menu-item:hover {
+        color: black;
+    }
+    .intro-text {
+        position: absolute;
+        display: inline;
+        top: 30%;
+        width: 100%;
+        left: 0;
+        text-align: center;
+        z-index: 1000;
+    }
+    .header {
+        background-color: white;
+        padding-top: 5px;
+        box-shadow: 0 2px 2px -2px gray;
+    }
+    .top-menu {
+        width: 100%;
+        margin-right: 0;
+    }
+    .top-menu h1 {
+        text-shadow: 0px 0px 0px transparent;
+        font-size: 18px;
+        text-align: center;
+    }
+    .top-menu-wrapper {
+        margin: auto;
+        display: inline;
+        position: sticky;
+        position: -webkit-sticky;
+    }
+
+
+    .block-full {
+        width: 100%;
+        float: left;
+        margin-top: 2vh;
+        color: white;
+        display: table;
+    }
+    .block-left {
+        width: 100%;
+        float: left;
+        color: white;
+        display: table;
+    }
+    .block-right {
+        width: 100%;
+        float: left;
+        color: white;
+        display: table;
+    }
+
+
+
+
+    .modal-content {
+        margin: auto;
+        display: block;
+        width: 80vw;
+        height: auto;
+        margin-top: 30vh;
+    }
+}
