@@ -59,6 +59,24 @@ function hidesplash() {
     }
 }
 
+function showgame2() {
+    var x = document.getElementById("splash2");
+    if (x.style.display === "block") {
+        x.style.display = "none";
+    } else {
+        x.style.display = "block";
+    }
+    playstartup();
+}
+function hidesplash2() {
+    var x = document.getElementById("splashscreen");
+    if (x.style.display === "none") {
+        x.style.display = "block";
+    } else {
+        x.style.display = "none";
+    }
+}
+
 function playaudio() {
     var audiotrack = document.getElementById("audiotrack");
     audiotrack.play();

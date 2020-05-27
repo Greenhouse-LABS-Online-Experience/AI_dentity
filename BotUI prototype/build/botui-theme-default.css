@@ -48,7 +48,11 @@ h1 {
 }
 
 .splash {
-    display: none;
+    display: block;
+}
+
+.splash2 {
+    display: block;
 }
 
 .computeroverlay {

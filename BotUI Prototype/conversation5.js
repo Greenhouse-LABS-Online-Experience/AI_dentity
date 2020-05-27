@@ -1,7 +1,6 @@
-var botui = new BotUI('conversation5');
-
-//var conversation5start = {
-    //convo5start: function () {
+//var botui = new BotUI('conversation5');
+var conversation5start = {
+    convo5start: function () {
 
         botui.action.button({
             delay: 1000,
@@ -775,5 +774,5 @@ var botui = new BotUI('conversation5');
         }
 
 
-    //}
-//}
+    }
+}

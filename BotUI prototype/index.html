@@ -23,7 +23,8 @@
             <h1>You play as a character, but choices you make are of impact on the story and the characters'
                 personality.
             </h1>
-            <button class="button" onclick="showgame(), hidesplash()">Play the game</button>
+            <a href="regularstory.html" class="button" onclick="showgame(), hidesplash()">Play the game</a>
+            <a href="fastpass.html" class="button" onclick="showgame2(), hidesplash2()">Fastpass mode</a>
         </div>
     </div>
 
@@ -36,24 +37,7 @@
 
     <audio id="startup" src="sounds/sound1.wav"></audio>
 
-    <div id="splash" class="splash">
 
-
-        <div class="mute">
-            <!--<div class="mutebutton"><button id="buttonmute" class="button" onclick="mutesound()">mute the
-                    sound</button>></div>-->
-            <button class="button" id="mute_all" onclick="mute()">Mute sounds</button>
-            <button class="button" id="unmute_all" onclick="unmute()">Play Sounds</button>
-        </div>
-
-        <div class="computeroverlay">
-        </div>
-
-        <div class="botui-app-container" id="conversation5">
-            <bot-ui></bot-ui>
-        </div>
-
-    </div>
     <!--load in the BotUI framework-->
     <script src="https://cdn.jsdelivr.net/vue/latest/vue.min.js"></script>
     <script src="build/botui.min.js"></script>
@@ -70,6 +54,7 @@
     <script src="conversation6.js"></script>
     <script src="conversation7.js"></script>
     <script src="conversation8.js"></script>
+    <script src="fastpass.js"></script>
 </body>
 
 </html>

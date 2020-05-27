@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>AI_dentity</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="build/botui.min.css" />
+    <link rel="stylesheet" href="build/botui-theme-default.css" />
+    <script src="https://cdn.jsdelivr.net/vue/latest/vue.min.js"></script>
+    <script src="build/botui.min.js"></script>
+</head>
+
+<body>
+    <div id="splash" class="splash">
+
+        <div class="mute">
+            <!--<div class="mutebutton"><button id="buttonmute" class="button" onclick="mutesound()">mute the
+                    sound</button>></div>-->
+            <button class="button" id="mute_all" onclick="mute()">Mute sounds</button>
+            <button style="background-color: gray; color: white;" class="button" id="unmute_all" onclick="unmute()">Play Sounds</button>
+        </div>
+
+        <div class="computeroverlay">
+        </div>
+
+        <div class="botui-app-container" id="conversation1">
+            <bot-ui></bot-ui>
+        </div>
+
+    </div>
+    <audio loop id="audiotrack" src="sounds/systemshock2.wav"></audio>
+    <audio loop id="audiotrack2" src="sounds/connect.wav"></audio>
+    <audio loop id="audiotrack3" src="sounds/Lk42.wav"></audio>
+    <audio loop id="audiotrack4" src="sounds/EndingIT.wav"></audio>
+
+    <audio id="audio" src="sounds/sound2.mp3"></audio>
+
+    <audio id="startup" src="sounds/sound1.wav"></audio>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+    <script src="conversation1.js"></script>
+    <script src="conversation2.js"></script>
+    <script src="conversation3.js"></script>
+    <script src="conversation4.js"></script>
+    <script src="conversation5.js"></script>
+    <script src="conversation6.js"></script>
+    <script src="conversation7.js"></script>
+    <script src="conversation8.js"></script>
+    <!--load in the BotUI framework-->
+
+    <!--load in the audio-->
+    <script src="audio.js"></script>
+</body>
