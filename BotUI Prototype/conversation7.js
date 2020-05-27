@@ -1,5 +1,3 @@
-var botui = new BotUI('conversation7');
-
 var conversation7start = {
     convo7start: function () {
 

@@ -783,7 +783,7 @@ var conversation4start = {
                     delay: 1000,
                     content: "You can trust me, I'll be caruful!",
                 }).then(function () {
-                    moreaboutinternet.lookinto();
+                    oninternet.lookinto();
                 })
             },
 
@@ -792,7 +792,7 @@ var conversation4start = {
                     delay: 1000,
                     content: "I can handle myself, I promise!",
                 }).then(function () {
-                    moreaboutinternet.lookinto();
+                    oninternet.lookinto();
                 })
             },
 
@@ -801,7 +801,7 @@ var conversation4start = {
                     delay: 1000,
                     action: [
                         {
-                            text: "Alright, I'll look into it",
+                            text: "All right, I'll look into it",
                         },
                         {
                             text: "Okay, I trust you. Let me look into it",

@@ -89,7 +89,7 @@ var conversation2start = {
                                 text: "All is fine, thanks!",
                             },
                             {
-                                text: "It's allright! Nothing to worry about!",
+                                text: "It's all right! Nothing to worry about!",
                             },
                         ]
                     }).then(function () {
@@ -197,7 +197,7 @@ var conversation2start = {
 
             question1: function () {
                 botui.message.add({
-                    content: "Yes. All the people I eve talked to stated their reason for the conversation",
+                    content: "Yes. All the people I ever talked to stated their reason for the conversation",
                     delay: 1000,
                 })
 
@@ -810,7 +810,7 @@ var conversation2start = {
                 }).then(function (res) {
                     conversation3start.convo3start();
                 })
-                
+
             }
         }
 

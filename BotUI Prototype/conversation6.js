@@ -1,5 +1,3 @@
-var botui = new BotUI('conversation6');
-
 var conversation6start = {
     convo6start: function () {
 
@@ -19,10 +17,12 @@ var conversation6start = {
             if (res.value == 'allowed') {
                 allowed.allowedstart();
                 play();
+                playaudio1();
             }
             if (res.value == 'notallowed') {
                 notallowed.notallowedstart();
                 play();
+                playaudio2();
             }
         })
 

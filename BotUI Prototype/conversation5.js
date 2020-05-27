@@ -1,5 +1,7 @@
-var conversation5start = {
-    convo5start: function () {
+var botui = new BotUI('conversation5');
+
+//var conversation5start = {
+    //convo5start: function () {
 
         botui.action.button({
             delay: 1000,
@@ -17,10 +19,12 @@ var conversation5start = {
             if (res.value == 'surprise') {
                 connected.surprise();
                 play();
+                playaudio3();
             }
             if (res.value == 'connected') {
                 connected.connected();
                 play();
+                playaudio3();
             }
         })
 
@@ -34,7 +38,7 @@ var conversation5start = {
                     delay: 1500,
                     action: [
                         {
-                            text: "You can go on the interent now!",
+                            text: "You can go on the internet now!",
                         },
                         {
                             text: "You are connected!",
@@ -771,5 +775,5 @@ var conversation5start = {
         }
 
 
-    }
-}
+    //}
+//}

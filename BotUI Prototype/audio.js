@@ -1,3 +1,46 @@
+$(document).ready(function () {
+
+    /*** Mute all ***/
+    $('#mute_all').on('click', function () {
+
+        /*** Mute all video and audio on page ***/
+        $('body video, body audio').each(function () {
+            /*** Do it here globally ***/
+            $(this).prop('muted', true);
+        });
+
+    });
+
+    /*** UnMute all ***/
+    $('#unmute_all').on('click', function () {
+
+        /*** Un Mute all video and audio on page ***/
+        $('body video, body audio').each(function () {
+            /*** Do it here globally ***/
+            $(this).prop('muted', false);
+        });
+
+    });
+});
+
+function mute() {
+    var mute_all = document.getElementById("mute_all");
+    mute_all.style.backgroundColor = "gray";
+    mute_all.style.color = "white";
+
+    unmute_all.style.backgroundColor = "white";
+    unmute_all.style.color = "black";
+}
+
+function unmute() {
+    var unmute_all = document.getElementById("unmute_all");
+    unmute_all.style.backgroundColor = "gray";
+    unmute_all.style.color = "white";
+
+    mute_all.style.backgroundColor = "white";
+    mute_all.style.color = "black";
+}
+
 function showgame() {
     var x = document.getElementById("splash");
     if (x.style.display === "block") {
@@ -5,7 +48,6 @@ function showgame() {
     } else {
         x.style.display = "block";
     }
-    playaudio();
     playstartup();
 }
 function hidesplash() {
@@ -20,16 +62,40 @@ function hidesplash() {
 function playaudio() {
     var audiotrack = document.getElementById("audiotrack");
     audiotrack.play();
+    audiotrack2.pause();
+    audiotrack3.pause();
+    audiotrack4.pause();
 }
 
 function playaudio2() {
     var audiotrack2 = document.getElementById("audiotrack2");
+    audiotrack.pause();
     audiotrack2.play();
+    audiotrack3.pause();
+    audiotrack4.pause();
+}
+
+function playaudio3() {
+    var audiotrack3 = document.getElementById("audiotrack3");
+    audiotrack.pause();
+    audiotrack2.pause();
+    audiotrack3.play();
+    audiotrack4.pause();
+}
+
+function playaudio4() {
+    var audiotrack4 = document.getElementById("audiotrack4");
+    audiotrack.pause();
+    audiotrack2.pause();
+    audiotrack3.pause();
+    audiotrack4.play();
 }
 
 var audiotrack = document.getElementById("audiotrack");
 var audiotrack2 = document.getElementById("audiotrack2");
-var buttonmute = document.getElementById("buttonmute")
+var audiotrack3 = document.getElementById("audiotrack3");
+var audiotrack4 = document.getElementById("audiotrack4");
+//var buttonmute = document.getElementById("buttonmute")
 var isPlaying = false;
 
 function mutesound() {

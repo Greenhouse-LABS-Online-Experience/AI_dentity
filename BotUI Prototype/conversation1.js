@@ -63,10 +63,11 @@ var convostart = {
 
             botui.message.add({
                 delay: 2200,
-                content: 'How are you doing today?',
+                content: 'I will put some music on!',
             });
+
         }).then(function () {
-            convostart.howdoing();
+            convostart.music();
         })
     },
 
@@ -103,14 +104,53 @@ var convostart = {
 
             botui.message.add({
                 delay: 1700,
-                content: 'How are you doing today?',
+                content: 'I will put some music on!',
             });
+
         }).then(function () {
-            convostart.howdoing();
+            convostart.music();
         })
     },
 
+    music: function () {
+        botui.action.button({
+            delay: 3500,
+            action: [
+                {
+                    text: 'Okay...',
+                    value: 'yes'
+                },
+                {
+                    text: 'Uh...?',
+                    value: 'no'
+                }
+            ]
+        }).then(function (res) {
+            if (res.value == 'yes') {
+                convostart.howdoing();
+                playaudio();
+                play();
+            }
+            if (res.value == 'no') {
+                convostart.howdoing();
+                play();
+                playaudio();
+            }
+        });
+    },
+
     howdoing: function () {
+
+        botui.message.add({
+            delay: 1000,
+            content: 'Love this track!',
+        });
+
+        botui.message.add({
+            delay: 1200,
+            content: 'How are you doing today?',
+        });
+
         botui.action.button({
             delay: 2700,
             action: [

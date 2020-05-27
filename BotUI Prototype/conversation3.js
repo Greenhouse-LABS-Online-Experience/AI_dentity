@@ -13,7 +13,6 @@ var conversation3start = {
             ]
         }).then(function () {
             playaudio2();
-            stopplaying1();
             play();
             botui.message.add({
                 delay: 1000,
