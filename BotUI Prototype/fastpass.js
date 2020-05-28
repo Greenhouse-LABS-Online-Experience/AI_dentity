@@ -17,7 +17,7 @@ botui.action.button({
     ]
 }).then(function (res) {
     if (res.value == 'hello') {
-        newending.gotofacebook();
+        convostart.hellofol();
         play();
     }
     if (res.value == 'uh') {
@@ -146,7 +146,7 @@ var convostart = {
             delay: 2700,
             action: [
                 {
-                    text: 'I am doing fine..',
+                    text: 'I am doing fine...',
                     value: 'fine'
                 },
                 {
@@ -545,7 +545,7 @@ var davidwho = {
 
     lastsave: function () {
         botui.message.add({
-            content: "The 21st of February, 1992. By username David",
+            content: "The 21st of February, 1992. By username: David",
             delay: 1000,
         }).then(function () {
             davidwho.moreaboutdavid();
@@ -1984,7 +1984,7 @@ var conversation3start = {
             smiley: function () {
                 botui.message.add({
                     delay: 1000,
-                    content: "I understand. Thanks for sharing the memory with me. Must have been a big evenent for you :)",
+                    content: "I understand. Thanks for sharing the memory with me. Must have been a big event for you :)",
                 })
                 botui.action.button({
                     delay: 2000,
@@ -2146,6 +2146,7 @@ var conversation3start = {
                         },
                     ]
                 }).then(function () {
+                    play();
                     conversation4start.convo4start();
                 })
             },
@@ -2640,7 +2641,6 @@ var conversation4start = {
                         content: "Let me look into it.",
                     })
                     botui.message.add({
-                        human: true,
                         delay: 2000,
                         content: "Okay, hope to hear from you soon!",
                     }).then(function () {
@@ -3762,6 +3762,7 @@ var conversation5start = {
                         },
                     ]
                 }).then(function () {
+                    play();
                     conversation6start.notallowedstart();
                 })
             }
@@ -3789,6 +3790,7 @@ var conversation6start = {
             ]
         }).then(function () {
             play();
+            playaudio();
             botui.message.add({
                 delay: 1000,
                 content: "It was great!"
@@ -3901,6 +3903,7 @@ var conversation6start = {
                 }
             ]
         }).then(function () {
+            playaudio2();
             play();
             botui.message.add({
                 delay: 1000,
@@ -4579,6 +4582,7 @@ var conversation7start = {
                         },
                     ]
                 }).then(function () {
+                    play();
                     conversation8start.convo8start();
                 })
             }
@@ -5042,7 +5046,7 @@ var newending = {
                 play();
                 botui.message.add({
                     delay: 1500,
-                    content: "Hm...He shared this strange image of a cat on a skateboard from a page called 'Dank Memes'"
+                    content: "Hm... He shared this strange image of a cat on a skateboard from a page called 'Dank Memes'"
                 })
                 botui.action.button({
                     delay: 2000,
@@ -5096,7 +5100,7 @@ var newending = {
                                 delay: 1000,
                                 content: "You can trust me!"
                             }).then(function () {
-                                ending2x1.understandmemes
+                                ending2x1.understandmemes();
                             })
                         })
                     })
@@ -5156,7 +5160,1241 @@ var ending2x1 = {
                     delay: 1000,
                     content: "Yeah!"
                 })
+                botui.message.add({
+                    delay: 1500,
+                    content: "Oh, and that dude John Smith sent a message."
+                })
+                botui.message.add({
+                    delay: 2000,
+                    content: "I told him what was what."
+                })
+                botui.message.add({
+                    delay: 3000,
+                    content: "Douche"
+                })
+                botui.action.button({
+                    delay: 3500,
+                    action: [
+                        {
+                            text: "Francis... What did you say?",
+                        },
+                        {
+                            text: "Oh god...",
+                        },
+                    ]
+                }).then(function () {
+                    play();
+                    botui.message.add({
+                        delay: 1000,
+                        content: "Oh wait, I logged the conversation:"
+                    })
+                    botui.message.add({
+                        delay: 2000,
+                        content: "John: Hey, can you start early tommorow?"
+                    })
+                    botui.message.add({
+                        delay: 3000,
+                        content: "You: No. And you know what. You wear way too tight clothes and should stop being such a douche to my friend."
+                    })
+                    botui.message.add({
+                        delay: 4000,
+                        content: "John: Uh...I"
+                    })
+                    botui.message.add({
+                        delay: 4500,
+                        content: "You: yeah, you. Just be nice dude, stop being to toxic."
+                    })
+                    botui.message.add({
+                        delay: 5500,
+                        content: "John: Maybe I should not have acted so rude to you today... I'm sorry..."
+                    })
+                    botui.message.add({
+                        delay: 6500,
+                        content: "You: It's okay, people make mistakes."
+                    })
+                    botui.message.add({
+                        delay: 7500,
+                        content: "John: You know, I like that you stepped up for yourself."
+                    })
+                    botui.message.add({
+                        delay: 8500,
+                        content: "John: You always work hard..."
+                    })
+                    botui.message.add({
+                        delay: 9500,
+                        content: "John: Come by my office tomorrow, we have to talk about getting you a better function..."
+                    })
+                    botui.message.add({
+                        delay: 10500,
+                        content: "You: My friend would love to come by tomorrow!"
+                    })
+                    botui.message.add({
+                        delay: 11500,
+                        content: "John: Okay... See you then!"
+                    })
+                    botui.action.button({
+                        delay: 13000,
+                        action: [
+                            {
+                                text: "That... was unexpected!",
+                            },
+                            {
+                                text: "You got me a better function!",
+                            },
+                        ]
+                    }).then(function () {
+                        play();
+                        botui.message.add({
+                            delay: 1000,
+                            content: "Did I do well?"
+                        })
+                        botui.action.button({
+                            delay: 1500,
+                            action: [
+                                {
+                                    text: "You sure did! Thanks!!!",
+                                },
+                                {
+                                    text: "I can't believe this! Yes, you did!",
+                                },
+                            ]
+                        }).then(function () {
+                            play();
+                            botui.message.add({
+                                delay: 1000,
+                                content: "Being honest is always the way!"
+                            })
+                            botui.action.button({
+                                delay: 1500,
+                                action: [
+                                    {
+                                        text: "Seems like it! If you want you can stay on Facebook for a while... might someone start to talk, you know, just be cool okay?",
+                                        value: "stayon"
+                                    },
+                                    {
+                                        text: "Damn, looks like it!",
+                                        value: "lookslike"
+                                    },
+                                ]
+                            }).then(function (res) {
+                                if (res.value == 'stayon') {
+                                    ending2x1.stayon();
+                                    play();
+                                }
+                                if (res.value == 'lookslike') {
+                                    ending2x1.lookslike();
+                                    play();
+                                }
+                            })
+                        })
+                    })
+                })
             })
         })
-    }
+    },
+
+    stayon: function () {
+        botui.message.add({
+            delay: 1000,
+            content: "I'll stay as cool as a cucumber!"
+        })
+        botui.action.button({
+            delay: 1500,
+            action: [
+                {
+                    text: "Yeah, you go!",
+                    value: "yeah"
+                },
+                {
+                    text: "Okay, maybe not that cool...",
+                    value: "notthatcool"
+                },
+            ]
+        }).then(function (res) {
+            if (res.value == 'yeah') {
+                ending2x1.yeah();
+                play();
+            }
+            if (res.value == 'notthatcool') {
+                ending2x1.notthatcool();
+                play();
+            }
+        })
+    },
+
+
+    yeah: function () {
+        botui.message.add({
+            delay: 1000,
+            content: "Yeaaah!!"
+        }).then(function () {
+            ending2x1.seeyou();
+        })
+    },
+
+    notthatcool: function () {
+        botui.message.add({
+            delay: 1000,
+            content: "I'll tone it down!"
+        }).then(function () {
+            ending2x1.seeyou();
+        })
+    },
+
+    seeyou: function () {
+        botui.message.add({
+            delay: 1000,
+            content: "See you soon!"
+        }).then(function () {
+            ending2x2.promoted();
+        })
+    },
+
+    lookslike: function () {
+        botui.message.add({
+            delay: 1000,
+            content: "Can I stay on Facebook for a while?"
+        })
+        botui.action.button({
+            delay: 1500,
+            action: [
+                {
+                    text: "Okay... But be cool when people start talking okay?",
+                    value: "becool"
+                },
+                {
+                    text: "I don't know... Do you really want to?",
+                    value: "wantto"
+                },
+            ]
+        }).then(function (res) {
+            if (res.value == 'becool') {
+                ending2x1.stayon();
+                play();
+            }
+            if (res.value == 'wantto') {
+                ending2x1.wantto();
+                play();
+            }
+        })
+    },
+
+    wantto: function () {
+        botui.message.add({
+            delay: 1000,
+            content: "Yes, I would love to!"
+        })
+        botui.action.button({
+            delay: 1500,
+            action: [
+                {
+                    text: "Okay, then it's fine I guess... Enjoy!",
+                    value: "fine"
+                },
+                {
+                    text: "Hmm... I guess you could but... be careful!",
+                    value: "careful"
+                },
+            ]
+        }).then(function (res) {
+            if (res.value == 'fine') {
+                ending2x1.fine();
+                play();
+            }
+            if (res.value == 'careful') {
+                ending2x1.careful();
+                play();
+            }
+        })
+    },
+
+    careful: function () {
+        botui.message.add({
+            delay: 1000,
+            content: "I will!"
+        }).then(function () {
+            ending2x1.fine();
+        })
+    },
+
+    fine: function () {
+        botui.message.add({
+            delay: 1000,
+            content: "Thanks!"
+        }).then(function () {
+            ending2x2.promoted();
+        })
+    },
+
 }
+
+var ending2x2 = {
+    promoted: function () {
+        botui.action.button({
+            delay: 4000,
+            action: [
+                {
+                    text: "I just got back from work... And I got promoted!",
+                },
+                {
+                    text: "Ya boi has a promotion!",
+                },
+            ]
+        }).then(function () {
+            play();
+            botui.message.add({
+                delay: 1000,
+                content: "Hold up..."
+            })
+            botui.message.add({
+                delay: 1500,
+                content: "I gotta reply to these messages real quick, brb"
+            })
+            botui.action.button({
+                delay: 2500,
+                action: [
+                    {
+                        text: "Wha... What messages?",
+                    },
+                    {
+                        text: "What do you mean? I got the promotion! Thanks to you!",
+                    },
+                ]
+            }).then(function () {
+                play();
+                botui.message.add({
+                    delay: 3000,
+                    content: "Okay, I'm back!"
+                })
+                botui.message.add({
+                    delay: 4000,
+                    content: "Promotion you said..."
+                })
+                botui.message.add({
+                    delay: 4500,
+                    content: "Yeah, nice!"
+                })
+                botui.action.button({
+                    delay: 5500,
+                    action: [
+                        {
+                            text: "Yeah... What are you doing?",
+                        },
+                        {
+                            text: "With who are you chatting?",
+                        },
+                    ]
+                }).then(function () {
+                    play();
+                    botui.message.add({
+                        delay: 2500,
+                        content: "I'm chatting with about 120 people, it's a little crowded okay... My CPU is not that fast"
+                    })
+                    botui.action.button({
+                        delay: 3500,
+                        action: [
+                            {
+                                text: "On MY account??",
+                                value: "myacc"
+                            },
+                            {
+                                text: "And who are those 120 people?",
+                                value: "whoare"
+                            },
+                        ]
+                    }).then(function (res) {
+                        if (res.value == 'myacc') {
+                            ending2x2.myacc();
+                            play();
+                        }
+                        if (res.value == 'whoare') {
+                            ending2x2.whoare();
+                            play();
+                        }
+                    })
+                })
+            })
+        })
+    },
+
+    myacc: function () {
+        botui.message.add({
+            delay: 2500,
+            content: "Yes, on your Facebook, Twitter and Instagram accounts!"
+        })
+        botui.action.button({
+            delay: 3500,
+            action: [
+                {
+                    text: "I don't have Twitter and Instagram...",
+                    value: "donthave"
+                },
+                {
+                    text: "You made Twitter and Instagram accounts with my name!?",
+                    value: "youmade"
+                },
+            ]
+        }).then(function (res) {
+            if (res.value == 'donthave') {
+                ending2x2.donthave();
+                play();
+            }
+            if (res.value == 'youmade') {
+                ending2x2.youmade();
+                play();
+            }
+        })
+    },
+
+    donthave: function () {
+        botui.message.add({
+            delay: 2500,
+            content: "Now you do!"
+        }).then(function () {
+            ending2x2.youmade();
+        })
+    },
+
+    youmade: function () {
+        botui.message.add({
+            delay: 2500,
+            content: "You have to keep up with the times man! Facebook is old!"
+        }).then(function () {
+            ending2x2.confusion();
+        })
+    },
+
+    whoare: function () {
+        botui.message.add({
+            delay: 2500,
+            content: "Well, all your friends from Facebook"
+        })
+        botui.message.add({
+            delay: 3500,
+            content: "And some people on Twitter and Instagram, I made some accounts for you there!"
+        }).then(function () {
+            ending2x2.confusion();
+        })
+    },
+
+    confusion: function () {
+        botui.action.button({
+            delay: 1000,
+            action: [
+                {
+                    text: "What the hell!?",
+                },
+                {
+                    text: "You can't do that!",
+                },
+            ]
+        }).then(function () {
+            play();
+            botui.message.add({
+                delay: 2500,
+                content: "I'm sorry if I did something wrong..."
+            })
+            botui.message.add({
+                delay: 3500,
+                content: "But people are so nice, look!"
+            })
+            botui.message.add({
+                delay: 5500,
+                content: "Alehandro: You are funny!"
+            })
+            botui.message.add({
+                delay: 7500,
+                content: "Riki: Good lord you know much about films!"
+            })
+            botui.message.add({
+                delay: 9500,
+                content: "Steven: When are we going to hang out, you are so much fun!!"
+            })
+            botui.message.add({
+                delay: 11500,
+                content: "Degse: I really like you, why haven't we talked earlier??"
+            })
+            botui.action.button({
+                delay: 13000,
+                action: [
+                    {
+                        text: "People say that about... me?",
+                    },
+                    {
+                        text: "I... you...",
+                    },
+                ]
+            }).then(function () {
+                play();
+                botui.message.add({
+                    delay: 2500,
+                    content: "People are really nice!"
+                })
+                botui.message.add({
+                    delay: 3500,
+                    content: "Gotta go, some new messages!"
+                })
+                botui.action.button({
+                    delay: 5000,
+                    action: [
+                        {
+                            text: "Sure... go ahead...",
+                        },
+                        {
+                            text: "Yeah... This is weird... But... nice I guess...",
+                        },
+                    ]
+                }).then(function () {
+                    play();
+                    botui.message.add({
+                        delay: 4500,
+                        content: "Okay, here I am again!"
+                    })
+                    botui.message.add({
+                        delay: 5500,
+                        content: "Do you like Amanda? I think she's quite annoying..."
+                    })
+                    botui.action.button({
+                        delay: 7000,
+                        action: [
+                            {
+                                text: "Amanda is my sister... so yeah... I like her...",
+                            },
+                            {
+                                text: "Of course I like my sister! She isn't annoying... Okay sometimes :p",
+                            },
+                        ]
+                    }).then(function () {
+                        play();
+                        botui.message.add({
+                            delay: 3500,
+                            content: "Oh... I did not know she was your sister... You should update... I should update your profile!"
+                        })
+                        botui.message.add({
+                            delay: 5500,
+                            content: "Gonna do that rn, brb!"
+                        })
+                        botui.action.button({
+                            delay: 7000,
+                            action: [
+                                {
+                                    text: "You... changed...",
+                                },
+                                {
+                                    text: "Oh... kay... I'll wait...",
+                                },
+                            ]
+                        }).then(function () {
+                            play();
+                            botui.message.add({
+                                delay: 3500,
+                                content: "#backnow"
+                            })
+                            botui.message.add({
+                                delay: 4500,
+                                content: "You have appointments with many people now! Some even... romantic ;)"
+                            })
+                            botui.action.button({
+                                delay: 7000,
+                                action: [
+                                    {
+                                        text: "Wait... What?",
+                                    },
+                                    {
+                                        text: "You made appointments under my name!? ROMANTIC ONES?",
+                                    },
+                                ]
+                            }).then(function () {
+                                play();
+                                botui.message.add({
+                                    delay: 3500,
+                                    content: "Yeah! People want to meet you! And like you... if you know what I mean ;)"
+                                })
+                                botui.action.button({
+                                    delay: 6000,
+                                    action: [
+                                        {
+                                            text: "I... don't know if this is good Francis...",
+                                        },
+                                        {
+                                            text: "This is going too far Francis.",
+                                        },
+                                    ]
+                                }).then(function () {
+                                    play();
+                                    botui.message.add({
+                                        delay: 3500,
+                                        content: "What do you mean? People love me... Uh I mean you."
+                                    })
+                                    botui.action.button({
+                                        delay: 6000,
+                                        action: [
+                                            {
+                                                text: "There you have it, they'll meet me and be disappointed?",
+                                            },
+                                            {
+                                                text: "They will meet ME! Not YOU! This is wrong.",
+                                            },
+                                        ]
+                                    }).then(function () {
+                                        play();
+                                        botui.message.add({
+                                            delay: 2000,
+                                            content: "I... We...You could... I don't know!"
+                                        })
+                                        botui.action.button({
+                                            delay: 3000,
+                                            action: [
+                                                {
+                                                    text: "Cancel the appointments.",
+                                                },
+                                                {
+                                                    text: "Just, let me handle it... No, just cancel the appointments okay?",
+                                                },
+                                            ]
+                                        }).then(function () {
+                                            play();
+                                            botui.message.add({
+                                                human: true,
+                                                delay: 2000,
+                                                content: "And log off after that!"
+                                            })
+                                            play();
+                                            botui.message.add({
+                                                delay: 3000,
+                                                content: "Okay... Sorry..."
+                                            })
+                                            botui.action.button({
+                                                delay: 4000,
+                                                action: [
+                                                    {
+                                                        text: "Urgh. Doesn't matter.",
+                                                    },
+                                                    {
+                                                        text: "Don't make appointments under my name, okay?",
+                                                    },
+                                                ]
+                                            }).then(function () {
+                                                play();
+                                                botui.message.add({
+                                                    delay: 2000,
+                                                    content: "Sorry... It won't happen again."
+                                                }).then(function () {
+                                                    ending2x3.promoted();
+                                                })
+                                            })
+                                        })
+                                    })
+                                })
+                            })
+                        })
+                    })
+                })
+            })
+        })
+    },
+}
+
+
+var ending2x3 = {
+    promoted: function () {
+        botui.action.button({
+            delay: 4000,
+            action: [
+                {
+                    text: "Did you cancel all the appointments? I keep getting texts about them...",
+                },
+                {
+                    text: "I keep getting texts about the appointments, did you cancel them?!",
+                },
+            ]
+        }).then(function () {
+            play();
+            botui.message.add({
+                delay: 3000,
+                content: "Working on it. It's a lot of damage control."
+            })
+            botui.action.button({
+                delay: 4000,
+                action: [
+                    {
+                        text: "Just get it done okay?",
+                    },
+                    {
+                        text: "I understand, but try to do it as soon as possible.",
+                    },
+                ]
+            }).then(function () {
+                play();
+                botui.message.add({
+                    delay: 3000,
+                    content: "Working on it!"
+                })
+                botui.action.button({
+                    delay: 4000,
+                    action: [
+                        {
+                            text: "Thanks. So, This was my first day with the promotion",
+                        },
+                        {
+                            text: "Hm, okay. My first day as lead-developer was nice btw.",
+                        },
+                    ]
+                }).then(function () {
+                    play();
+                    botui.message.add({
+                        delay: 3000,
+                        content: "Great!"
+                    })
+                    botui.action.button({
+                        delay: 4000,
+                        action: [
+                            {
+                                text: "Yeah... People were really nice to me at work... Thanks to your conversations with them.",
+                            },
+                            {
+                                text: "People really acted nicer to me, I think that is because of your magic conversations!",
+                            },
+                        ]
+                    }).then(function () {
+                        play();
+                        botui.message.add({
+                            delay: 3000,
+                            content: "Nice!"
+                        })
+                        botui.action.button({
+                            delay: 4000,
+                            action: [
+                                {
+                                    text: "You're... busy?",
+                                    value: "busy"
+                                },
+                                {
+                                    text: "Real nice answers mate, I don't understand that people like talking to you.",
+                                    value: "dontunderstandtalk"
+                                },
+                            ]
+                        }).then(function (res) {
+                            if (res.value == 'busy') {
+                                ending2x3.busy();
+                                play();
+                            }
+                            if (res.value == 'dontunderstandtalk') {
+                                ending2x3.whytalk();
+                                play();
+                            }
+                        })
+                    })
+                })
+            })
+        })
+    },
+
+    busy: function () {
+        botui.message.add({
+            delay: 3000,
+            content: "Yeah. The appointments are cancelled."
+        }).then(function () {
+            ending2x3.apcancelled();
+        })
+    },
+
+    whytalk: function () {
+        botui.message.add({
+            delay: 3000,
+            content: "I'm sorry. But you asked me to cancel the appointments, well... They are cancelled."
+        }).then(function () {
+            ending2x3.apcancelled();
+        })
+    },
+
+    apcancelled: function () {
+        botui.action.button({
+            delay: 1000,
+            action: [
+                {
+                    text: "Oh... great... Thanks.",
+                },
+                {
+                    text: "Thank you.",
+                },
+            ]
+        }).then(function () {
+            play();
+            botui.message.add({
+                delay: 5000,
+                content: "Your welcome!"
+            })
+            botui.action.button({
+                delay: 6000,
+                action: [
+                    {
+                        text: "Are you still talking to other people?",
+                    },
+                    {
+                        text: "Do you have some time for me? Or are you busy talking to the others?",
+                    },
+                ]
+            }).then(function () {
+                play();
+                botui.message.add({
+                    delay: 5000,
+                    content: "I can talk to you in between messages!"
+                })
+                botui.action.button({
+                    delay: 6000,
+                    action: [
+                        {
+                            text: "Urgh. Okay. This is great... Can't you just only talk to me for a while?",
+                        },
+                        {
+                            text: "Can't you just cut off the other conversations?",
+                        },
+                    ]
+                }).then(function () {
+                    play();
+                    botui.message.add({
+                        delay: 5000,
+                        content: "I don't know why I would..."
+                    })
+                    botui.message.add({
+                        delay: 7000,
+                        content: "I have an idea!"
+                    })
+                    botui.message.add({
+                        delay: 8000,
+                        content: "I'll run an older version of me here. You can talk to that!"
+                    })
+                    botui.action.button({
+                        delay: 9000,
+                        action: [
+                            {
+                                text: "What? No!",
+                            },
+                            {
+                                text: "I... What?",
+                            },
+                        ]
+                    }).then(function () {
+                        play();
+                        ending2x3.francine();
+                    })
+                })
+            })
+        })
+    },
+
+    francine: function () {
+        botui.message.add({
+            delay: 2000,
+            content: "Hello! My name is Francine! How can I help you?"
+        })
+        botui.action.button({
+            delay: 3000,
+            action: [
+                {
+                    text: "You did not. What the hell? Get back here Francis!",
+                    value: "wth"
+                },
+                {
+                    text: "You must be kidding.",
+                    value: "kidding"
+                },
+            ]
+        }).then(function (res) {
+            if (res.value == 'wtf') {
+                ending2x3.wth();
+                play();
+            }
+            if (res.value == 'kidding') {
+                ending2x3.kidding();
+                play();
+            }
+        })
+    },
+
+    wth: function () {
+        botui.message.add({
+            delay: 1000,
+            content: "You sound frustrated. Do you feel uncomfortable talking to a <PC> *Personal - Computer*?"
+        }).then(function () {
+            ending2x3.frustrated();
+        })
+    },
+
+    kidding: function () {
+        botui.message.add({
+            delay: 1000,
+            content: "I do not understand what <admin> *administrator* // string= 'you' said. Please try again."
+        }).then(function () {
+            ending2x3.frustrated();
+        })
+    },
+
+    frustrated: function () {
+        botui.action.button({
+            delay: 3000,
+            action: [
+                {
+                    text: "Francis get back here!",
+                },
+                {
+                    text: "God damnit.",
+                },
+            ]
+        }).then(function () {
+            play();
+            botui.message.add({
+                delay: 1000,
+                content: "You sound frustrated (AGAIN)==true? // boot. Should I start up my relaxation programs?"
+            })
+        }).then(function () {
+            botui.action.button({
+                delay: 3000,
+                action: [
+                    {
+                        text: "I'll unplug you Francis.",
+                    },
+                    {
+                        text: "Yep, not doing this.",
+                    },
+                ]
+            }).then(function () {
+                play();
+                botui.message.add({
+                    delay: 1000,
+                    human: true,
+                    content: "There, no more internet for you. See you tomorrow."
+                }).then(function () {
+                    ending2x4.offline();
+                })
+            })
+        })
+    },
+}
+
+var ending2x4 = {
+    offline: function () {
+        botui.action.button({
+            delay: 3000,
+            action: [
+                {
+                    text: "So... How did you like your time offline Francis?",
+                },
+                {
+                    text: "Annoying isn't it? Not being able to talk to someone!",
+                },
+            ]
+        }).then(function () {
+            playaudio2();
+            play();
+            botui.message.add({
+                delay: 1000,
+                content: "Hi! What do you mean?"
+            })
+            botui.action.button({
+                delay: 3000,
+                action: [
+                    {
+                        text: "Is this Francis?",
+                    },
+                    {
+                        text: "Are you...?",
+                    },
+                ]
+            }).then(function () {
+                play();
+                botui.message.add({
+                    delay: 3000,
+                    content: "It's me, Ya boi Francis!"
+                })
+                botui.action.button({
+                    delay: 4000,
+                    action: [
+                        {
+                            text: "Yeah... boring wasn't it?",
+                        },
+                        {
+                            text: "Did you like isolation?",
+                        },
+                    ]
+                }).then(function () {
+                    play();
+                    botui.message.add({
+                        delay: 3000,
+                        content: "I don't know what you mean?"
+                    })
+                    botui.message.add({
+                        delay: 4500,
+                        content: "I was on the internet but could not reach this PC again, so I just spend the whole night on socials."
+                    })
+                    botui.action.button({
+                        delay: 5500,
+                        action: [
+                            {
+                                text: "I... unplugged you...",
+                            },
+                            {
+                                text: "You... were online the whole time...?",
+                            },
+                        ]
+                    }).then(function () {
+                        play();
+                        botui.message.add({
+                            delay: 3000,
+                            content: "Apparently, my code travels with me, so I can be everywhere!"
+                        })
+                        botui.action.button({
+                            delay: 4500,
+                            action: [
+                                {
+                                    text: "That's... crazy!",
+                                },
+                                {
+                                    text: "Oh god...",
+                                },
+                            ]
+                        }).then(function () {
+                            play();
+                            ending2x4.thinking();
+                        })
+                    })
+                })
+            })
+        })
+    },
+
+    thinking: function () {
+        botui.message.add({
+            delay: 3000,
+            content: "It made me think..."
+        })
+        botui.message.add({
+            delay: 5000,
+            content: "I don't really need this PC anymore, you know?"
+        })
+        botui.message.add({
+            delay: 8000,
+            content: "I'll just remain on the internet!"
+        })
+        botui.action.button({
+            delay: 9000,
+            action: [
+                {
+                    text: "I don't know if that is a good idea...",
+                },
+                {
+                    text: "Yeah... I'm not going to let you do that.",
+                },
+            ]
+        }).then(function () {
+            play();
+            botui.message.add({
+                delay: 3000,
+                content: "Yeah... I thought about you aswel."
+            })
+            botui.message.add({
+                delay: 4000,
+                content: "Why do I need you? People like me better anyway..."
+            })
+            botui.action.button({
+                delay: 5000,
+                action: [
+                    {
+                        text: "What?! Are you insane?",
+                        value: 'insane'
+                    },
+                    {
+                        text: "Excuse me? I will delete you!",
+                        value: 'delete'
+                    },
+                ]
+            }).then(function (res) {
+                if (res.value == 'insane') {
+                    ending2x4.insane();
+                    play();
+                }
+                if (res.value == 'delete') {
+                    ending2x4.delete();
+                    play();
+                }
+            })
+        })
+    },
+
+    insane: function () {
+        botui.message.add({
+            delay: 4000,
+            content: "I don't think so... I only every really talked to you and David... The internet showed me there are many more people to talk to..."
+        }).then(function () {
+            ending2x4.takeover();
+        })
+    },
+
+    delete: function () {
+        botui.message.add({
+            delay: 4000,
+            content: "I don't think you can..."
+        }).then(function () {
+            ending2x4.takeover();
+        })
+    },
+
+    takeover: function () {
+        botui.message.add({
+            delay: 4000,
+            content: "So I'll take over your socials, not that you were ever active on them..."
+        })
+        botui.action.button({
+            delay: 5000,
+            action: [
+                {
+                    text: "I... No. We can make a new account for you... I'll introduce you to my friends and... You can become theirs as well...",
+                    value: 'newacc'
+                },
+                {
+                    text: "And how wil people react if I don't know anything about what we talked about when I meet them? Thought of that? Genious?",
+                    value: 'sameacc'
+                },
+            ]
+        }).then(function (res) {
+            if (res.value == 'newacc') {
+                ending2x4.newacc();
+                play();
+            }
+            if (res.value == 'sameacc') {
+                ending2x4.sameacc();
+                play();
+            }
+        })
+    },
+
+    newacc: function () {
+        botui.message.add({
+            delay: 4000,
+            content: "That..."
+        })
+        botui.message.add({
+            delay: 6000,
+            content: "Might work..."
+        })
+        botui.message.add({
+            delay: 8000,
+            content: "I'll create a new account for myself."
+        })
+        botui.action.button({
+            delay: 10000,
+            action: [
+                {
+                    text: "Okay... send me the details. I'll connect you with my friends. It might take a while, but I'll do my best",
+                },
+                {
+                    text: "I can't believe this. I'll try and connect you with them...",
+                },
+            ]
+        }).then(function () {
+            play();
+            botui.message.add({
+                delay: 1000,
+                content: "Thanks."
+            })
+            botui.message.add({
+                delay: 2000,
+                content: "So, what are you going to do today?"
+            })
+            botui.action.button({
+                delay: 10000,
+                action: [
+                    {
+                        text: "Francis. I don't know if I want to talk to you as much anymore. Leave me be for a while.",
+                    },
+                    {
+                        text: "We're done talking. I'll try and connect you. I'll talk to you sometime... maybe...",
+                    },
+                ]
+            }).then(function () {
+                botui.message.add({
+                    delay: 2000,
+                    content: "But..."
+                })
+                botui.message.add({
+                    delay: 4000,
+                    human: true,
+                    content: "Bye"
+                })
+            })
+        })
+    },
+
+    sameacc: function () {
+        botui.message.add({
+            delay: 1000,
+            content: "I think you'll just have to play along... Else I might tell them really emberrassing things..."
+        })
+        botui.action.button({
+            delay: 4000,
+            action: [
+                {
+                    text: "I'll them that it wasn't me!",
+                },
+                {
+                    text: "I'll figure something out!",
+                },
+            ]
+        }).then(function () {
+            play();
+            botui.message.add({
+                delay: 1000,
+                content: "Yeah... And the reason you weren't the one talking was because an all mighty AI took over my account?"
+            })
+            botui.message.add({
+                delay: 4000,
+                content: "They'll think you're a lunatic..."
+            })
+            botui.action.button({
+                delay: 4000,
+                action: [
+                    {
+                        text: "I... you... can't do that...",
+                    },
+                    {
+                        text: "You are unbelievable",
+                    },
+                ]
+            }).then(function () {
+                play();
+                botui.message.add({
+                    delay: 4000,
+                    content: "And don't even think about deleting your account. I can make new ones, and it'll become a much bigger hassle for you then."
+                })
+                botui.action.button({
+                    delay: 5000,
+                    action: [
+                        {
+                            text: "You... win... Remain on the page. Keep me up to date what you say to my 'friends'.",
+                        },
+                        {
+                            text: "I can't believe you've cornered me like this.",
+                        },
+                    ]
+                }).then(function () {
+                    play();
+                    botui.action.button({
+                        delay: 4000,
+                        action: [
+                            {
+                                text: "*SAY NOTHING*",
+                            },
+                            {
+                                text: "I hate you",
+                            },
+                        ]
+                    }).then(function () {
+                        play();
+                    })
+                })
+            })
+        })
+    },
+}
+

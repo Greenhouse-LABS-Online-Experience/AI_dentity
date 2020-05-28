@@ -25,20 +25,20 @@ $(document).ready(function () {
 
 function mute() {
     var mute_all = document.getElementById("mute_all");
-    mute_all.style.backgroundColor = "gray";
-    mute_all.style.color = "white";
+    mute_all.style.backgroundColor = "#D87474";
+    mute_all.style.color = "#E3DFD8";
 
-    unmute_all.style.backgroundColor = "white";
-    unmute_all.style.color = "black";
+    unmute_all.style.backgroundColor = "#E3DFD8";
+    unmute_all.style.color = "gray";
 }
 
 function unmute() {
     var unmute_all = document.getElementById("unmute_all");
-    unmute_all.style.backgroundColor = "gray";
-    unmute_all.style.color = "white";
+    unmute_all.style.backgroundColor = "#56D98E";
+    unmute_all.style.color = "#E3DFD8";
 
-    mute_all.style.backgroundColor = "white";
-    mute_all.style.color = "black";
+    mute_all.style.backgroundColor = "#E3DFD8";
+    mute_all.style.color = "gray";
 }
 
 function showgame() {

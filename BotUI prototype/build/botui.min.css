@@ -57,12 +57,12 @@ button.botui-actions-buttons-button {
 }
 
 .botui-app-container {
-    width: 46vw;
-    height: 66vh;
+    width: 32vw;
+    height: 51.7vh;
     margin: 0 auto;
     margin-top: 0px;
     margin-top: 0px;
-    margin-top: 15vh;
+    margin-top: 20vh;
 }
 
 @media only screen and (max-width: 400px) {
@@ -91,7 +91,7 @@ button.botui-actions-buttons-button {
     }
 }
 
-@media only screen and (max-width: 1000px) {
+/*@media only screen and (max-width: 1000px) {
     .botui-app-container {
         width: 50vw;
         height: 66vh;
@@ -100,7 +100,7 @@ button.botui-actions-buttons-button {
         margin-top: 0px;
         margin-top: 15vh;
     }
-}
+}*/
 
 .botui-container {
     width: 100%;
