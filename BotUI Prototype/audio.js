@@ -41,6 +41,15 @@ function unmute() {
     mute_all.style.color = "gray";
 }
 
+function hidestart() {
+    var x = document.getElementById("intro");
+    if (x.style.display === "none") {
+        x.style.display = "block";
+    } else {
+        x.style.display = "none";
+    }
+}
+
 function showgame() {
     var x = document.getElementById("splash");
     if (x.style.display === "block") {
@@ -49,14 +58,6 @@ function showgame() {
         x.style.display = "block";
     }
     playstartup();
-}
-function hidesplash() {
-    var x = document.getElementById("splashscreen");
-    if (x.style.display === "none") {
-        x.style.display = "block";
-    } else {
-        x.style.display = "none";
-    }
 }
 
 function showgame2() {

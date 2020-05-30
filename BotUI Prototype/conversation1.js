@@ -1,3 +1,4 @@
+//if you want to know how the BotUI code works, check fastpass.html AND fastpass.js
 var botui = new BotUI('conversation1');
 
 botui.message.add({

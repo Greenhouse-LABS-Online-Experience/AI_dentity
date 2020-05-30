@@ -1,4 +1,4 @@
-//var botui = new BotUI('conversation5');
+//if you want to know how the BotUI code works, check fastpass.html AND fastpass.js
 var conversation5start = {
     convo5start: function () {
 

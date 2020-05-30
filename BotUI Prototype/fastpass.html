@@ -1,49 +1,66 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="utf-8">
     <title>AI_dentity</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <!--load in css/botui css-->
     <link rel="stylesheet" href="build/botui.min.css" />
     <link rel="stylesheet" href="build/botui-theme-default.css" />
     <link rel="stylesheet" href="build/extrastyle.css" />
-        <!--load in the BotUI framework-->
-        <script src="https://cdn.jsdelivr.net/vue/latest/vue.min.js"></script>
-        <script src="build/botui.min.js"></script>
+
+    <!--load in the BotUI framework-->
+    <script src="https://cdn.jsdelivr.net/vue/latest/vue.min.js"></script>
+    <script src="build/botui.min.js"></script>
 </head>
 
 <body>
+
+    <div class="intro" id="intro">
+        <!--introslide with text-->
+        <div class="start">
+            <a class="start-button" onclick="hidestart()">Start</a>
+        </div>
+        <div class="storyoverlay"></div>
+    </div>
+
+    <!--splash screen that is auto hidden-->
     <div id="splash" class="splash">
 
+        <!--mute buttons to mute ALL audio-->
         <div class="mute">
-            <!--<div class="mutebutton"><button id="buttonmute" class="button" onclick="mutesound()">mute the
-                    sound</button>></div>-->
             <button class="learn-more" id="mute_all" onclick="mute()">Mute sounds</button>
-            <button class="learn-more" style="background-color: #56D98E; color: white;" id="unmute_all" onclick="unmute()">Play Sounds</button>
+            <button class="learn-more" style="background-color: #56D98E; color: white;" id="unmute_all"
+                onclick="unmute()">Play Sounds</button>
         </div>
 
+        <!--background-image that scales in width-->
         <div class="computeroverlay">
         </div>
 
+        <!--the botui interface, change the ID to select the conversation you want-->
         <div class="botui-app-container" id="fastpass">
             <bot-ui></bot-ui>
         </div>
 
     </div>
 
-
+    <!--all audiofiles are loaded in the HTML, but used in AUDIO.JS-->   
     <audio loop id="audiotrack" src="sounds/systemshock2.wav"></audio>
     <audio loop id="audiotrack2" src="sounds/connect.wav"></audio>
     <audio loop id="audiotrack3" src="sounds/Lk42.wav"></audio>
     <audio loop id="audiotrack4" src="sounds/EndingIT.wav"></audio>
-
     <audio id="audio" src="sounds/sound2.mp3"></audio>
-
     <audio id="startup" src="sounds/sound1.wav"></audio>
 
+    <!--load in JQuery-->  
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+
+    <!--load in fastpass.js, the full conversation is in here-->
     <script src="fastpass.js"></script>
 
-    <!--load in the audio-->
+    <!--load in the audio.js page that plays the right audio at the right moment-->
     <script src="audio.js"></script>
 </body>

@@ -1,13 +1,17 @@
+//start a new botUI. The string between the brackets needs to be the same as the ID on the HTML page
 var botui = new BotUI('fastpass');
 
+//add a message from the BOT
 botui.message.add({
     content: 'Hi!'
 })
+//create a button where the player can choose the answer, you can put as many answers in here as you want
 botui.action.button({
     delay: 500,
     action: [
         {
             text: 'Uh... ',
+            //only give it a value if you are going to use the value, see below
             value: 'uh'
         },
         {
@@ -15,23 +19,28 @@ botui.action.button({
             value: 'hello'
         }
     ]
+//use res to get the two values
 }).then(function (res) {
+    //if the value is the same as the string, the functions will run
     if (res.value == 'hello') {
         convostart.hellofol();
         play();
     }
     if (res.value == 'uh') {
         convostart.uhfol();
+        //play(); is used when the click sound is made, this is interchangable with other sounds
         play();
     }
 });
 
-
+//a var is created for each major conversation point
 var convostart = {
+    //a function is created for minor conversation points
     hellofol: function () {
         botui.message.add({
             delay: 1500,
             content: 'What is your name?'
+        //the function below is an input field for the player
         }).then(function () {
             return botui.action.text({
                 delay: 200,
@@ -39,8 +48,10 @@ var convostart = {
                     placeholder: 'Your name'
                 }
             });
+        //use the then function if the bot has to say something after the player when there is value choice made, see above. If you don't do this, the program will run through the i.e. input field
         }).then(function () {
             botui.message.add({
+                //use human: true when you want to add a human message without having the player choose what to say
                 human: true,
                 delay: 1000,
                 content: 'What is yours?'
@@ -97,7 +108,7 @@ var convostart = {
                 delay: 1700,
                 content: 'I will put some music on!',
             });
-
+        //here you are able to switch to another function, even in another var if you want
         }).then(function () {
             convostart.music();
         })

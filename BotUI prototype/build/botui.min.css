@@ -91,6 +91,18 @@ button.botui-actions-buttons-button {
     }
 }
 
+@media screen and (min-width: 2000px) and (max-width: 4000px) {
+    .botui-app-container {
+        width: 20vw;
+        height: 52vh;
+        margin: 0 auto;
+        background-image: none;
+        border-radius: none;
+        border: none;
+        margin-top: 20vh;
+    }
+}
+
 /*@media only screen and (max-width: 1000px) {
     .botui-app-container {
         width: 50vw;
