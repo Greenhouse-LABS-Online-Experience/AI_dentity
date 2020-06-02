@@ -733,6 +733,7 @@ var david = {
             content: "IMAGINE THAT THE PLAYER IS GONE FOR 2 HOURS",
             delay: 3000,
         }).then(function () {
+            //start the next conversation
             conversation2start.convo2start();
         })
     }
@@ -1550,6 +1551,7 @@ var conversation2start = {
                     content: "I'll be back",
                     delay: 2500,
                 }).then(function (res) {
+
                     conversation3start.convo3start();
                 })
 
