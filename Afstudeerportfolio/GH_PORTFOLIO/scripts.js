@@ -12,9 +12,16 @@ function toProces() {
         'slow');
 }
 
-function toContact() {
+function toProduct() {
     $('html,body').animate({
-        scrollTop: $(".contact-slide").offset().top
+        scrollTop: $(".product-section").offset().top
+    },
+        'slow');
+}
+
+function toReflectie() {
+    $('html,body').animate({
+        scrollTop: $(".reflectie-section").offset().top
     },
         'slow');
 }
@@ -143,3 +150,30 @@ AOS.init({
     mirror: false, // whether elements should animate out while scrolling past them
     anchorPlacement: 'top-bottom', // defines which position of the element regarding to window should trigger the animation
 });
+
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+    showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+    showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("dot");
+    if (n > slides.length) { slideIndex = 1 }
+    if (n < 1) { slideIndex = slides.length }
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex - 1].style.display = "block";
+    dots[slideIndex - 1].className += " active";
+}

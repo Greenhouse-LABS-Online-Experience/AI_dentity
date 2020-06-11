@@ -8,6 +8,18 @@
         font-size: 3.5vh;
         color: white;
     }
+    .artparent {
+        width: 100%;
+        float: left;
+    }
+    .audioparent {
+        width: 100%;
+        float: left;
+    }
+    .track {
+        float: left;
+        width: 100%;
+    }
     .intro-slide {
         background-size: cover;
         background-position: center;
@@ -97,5 +109,8 @@
         width: 80vw;
         height: auto;
         margin-top: 30vh;
+    }
+    .modal {
+        height: 100%;
     }
 }

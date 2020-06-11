@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Timmie van Engelen - Afstudeerportfolio - SCRUM</title>
+
+    <script src="jquery-3.5.1.min.js"></script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,300i,400,400i,500,500i,700,700i&display=swap"
+        rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+</head>
+
+<body>
+
+    <div class="header" id="header">
+        <div class="top-menu">
+            <div class="top-menu-wrapper">
+                <div class="dropdown">
+                    <h1 class="top-menu-item"><a class="linkpage" href="index.html#inleiding">Inleiding</a></h1>
+                    <div class="dropdown-content">
+                        <a href="index.html#opdracht">De opdracht</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <h1 class="top-menu-item"><a class="linkpage" href="index.html#proces">Proces</a></h1>
+                    <div class="dropdown-content">
+                        <a href="index.html#verkenningsfase">Verkenningsfase</a>
+                        <a href="index.html#analysefase">Analysefase</a>
+                        <a href="index.html#conceptfase">Conceptfase</a>
+                        <a href="index.html#conceptfase2">Conceptfase II</a>
+                        <a href="index.html#realiseren">Realiseren in Code</a>
+                        <a href="index.html#testen">Testen</a>
+                        <a href="index.html#afronding">Afronding</a>
+                        <a href="index.html#meten">Meten</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <h1 class="top-menu-item"><a class="linkpage" href="index.html#reflectie">Reflectie</a></h1>
+                    <div class="dropdown-content">
+                        <a href="scrum.html">SCRUM</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="proces-section" style="height: 100%">
+
+        <div class="proces-slide">
+            <div class="block-wrapper" data-aos="fade-right" data-aos-duration="1000" data-aos-offset="100">
+                <div class="block-full">
+                    <div class="block-full-text">
+                        <h3>Het DOT Framework
+                        </h3>
+                        <p>
+                            Het Development Oriented Triangulation (DOT)-framework kan helpen bij het structureren van
+                            je onderzoeksactiviteiten om te komen van een vraag naar een oplossing. Het framework geeft
+                            ruimte voor triangulatie om tot een passende en gevalideerde oplossing te komen.
+                            <br><br>
+                            Hieronder kort de verschillende onderzoekstechnieken:
+                            <br><br>
+                            Bij <strong>BIEB onderzoek</strong> doe je onderzoek doen naar al eerder onderzochte zaken.
+                            Denk aan
+                            literatuuronderzoek of het interviewen van een expert.
+                            <br><br>
+                            Bij <strong>VELD onderzoek</strong> wil je te weten komen wat de context van de
+                            onderzoeksvraag is. Hierbij
+                            horen methodes zoals interviewen of het gebruik van een focus groep.
+                            <br><br>
+                            Bij <strong>WERKPLAATS onderzoek</strong> ga je experimenteren met het ontwikkelen van een
+                            oplossing. Denk
+                            hierbij aan brainstormsessies, prototypes bouwen en het ontwerpen van interacties.
+                            <br><br>
+                            Bij <strong>LAB onderzoek</strong> wordt jouw oplossing of product getest met de doelgroep
+                            om te kijken of
+                            het wat toevoegt. Hierbij kan je denken aan user testen of A/B testen.
+                            <br><br>
+                            Bij <strong>SHOWROOM onderzoek</strong> wordt er gekeken of jouw oplossing/ product zich
+                            onderscheid van
+                            andere producten. Heeft de oplossing die jij hebt bedacht ook daadwerkelijk voor verandering
+                            gezorgd? Hierbij kan je denken aan peer reviews of een benchmark test.
+                            <br><br>
+                            Bronnen voor deze bijlage/ het portfolio:
+                            <br><br>
+                            hbo-ict open-oio. (z.d.). DOT-framework - Lesmateriaal - Wikiwijs. Geraadpleegd op 8 juni
+                            2020, van <a class="link" href="https://maken.wikiwijs.nl/127721/DOT_framework">https://maken.wikiwijs.nl/127721/DOT_framework</a> 
+                            <br><br>
+                            ICT research methods. (z.d.). Geraadpleegd op 8 juni 2020, van
+                            <a class="link" href="http://ictresearchmethods.nl/Main_Page">http://ictresearchmethods.nl/Main_Page</a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+
+        <!-- The Close Button -->
+        <span class="close">&times;</span>
+
+        <!-- Modal Content (The Image) -->
+        <img class="modal-content" id="img01">
+
+        <!-- Modal Caption (Image Text) -->
+        <div id="caption"></div>
+    </div>
+
+    <script src="scripts.js"></script>
+    <script>AOS.init();</script>
+    <script>
+
+        // Get the modal
+        var modal = $("#myModal");
+        var modalImg = modal.find('.modal-content');
+
+        // Get the image and insert it inside the modal - use its "alt" text as a caption
+        var img = $(".image-regular");
+        var captionBox = $("#caption");
+
+        img.click(function () {
+            modalImg.attr('src', $(this).attr('src'));
+            captionBox.text($(this).attr('alt'));
+            modal.show();
+        });
+
+        // Get the elements that closes the modal
+        var modalCloser = $(".close");
+
+        // When the user clicks on the close element, close the modal
+        modalCloser.click(function () {
+            modal.hide();
+        });
+
+
+        window.onscroll = function () { myFunction() };
+
+        var header = document.getElementById("header");
+        var sticky = header.offsetTop;
+
+        function myFunction() {
+            if (window.pageYOffset > sticky) {
+                header.classList.add("sticky");
+            } else {
+                header.classList.remove("sticky");
+            }
+        }
+    </script>
+
+</body>
+
+</html>

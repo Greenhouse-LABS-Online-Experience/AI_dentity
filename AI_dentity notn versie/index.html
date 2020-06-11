@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-168919976-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('set', 'anonymize_ip', false );
+        gtag('set', 'allow_google_signals', false );
+        gtag('config', 'UA-168919976-1');
+    </script>
+
+    <meta charset="utf-8">
+    <title>AI_dentity</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="build/botui.min.css" />
+    <link rel="stylesheet" href="build/botui-theme-default.css" />
+</head>
+
+<body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+
+    <div id="splashscreen" class="splashscreen">
+        <div class="parentsplash">
+            <img class="logo" src="logo.png">
+            <h1>In this game you play as an introverted character. You don't have many friends and apart from your job
+                at a
+                local IT company, you spend most of your time gaming or working on computers. <br><br>
+                One day, you find an old PC with a floppy disc in the attic of the house you grew up in. You plug the PC
+                in and insert the floppy disc. The next events take place seconds after that.<br><br></h1>
+            <h1>You play as a character, but choices you make are of impact on the story and the characters'
+                personality.
+            </h1>
+            <a href="fastpass.html" class="button" onclick="showgame2(), hidesplash2()">Play the game</a>
+        </div>
+    </div>
+
+    <audio loop id="audiotrack" src="sounds/systemshock2.wav"></audio>
+    <audio loop id="audiotrack2" src="sounds/connect.wav"></audio>
+    <audio loop id="audiotrack3" src="sounds/Lk42.wav"></audio>
+    <audio loop id="audiotrack4" src="sounds/EndingIT.wav"></audio>
+
+    <audio id="audio" src="sounds/sound2.mp3"></audio>
+
+    <audio id="startup" src="sounds/sound1.wav"></audio>
+
+
+    <!--load in the BotUI framework-->
+    <script src="https://cdn.jsdelivr.net/vue/latest/vue.min.js"></script>
+    <script src="build/botui.min.js"></script>
+
+    <!--load in the audio-->
+    <script src="audio.js"></script>
+
+    <!--load in all conversations-->
+    <script src="conversation1.js"></script>
+    <script src="conversation2.js"></script>
+    <script src="conversation3.js"></script>
+    <script src="conversation4.js"></script>
+    <script src="conversation5.js"></script>
+    <script src="conversation6.js"></script>
+    <script src="conversation7.js"></script>
+    <script src="conversation8.js"></script>
+    <script src="fastpass.js"></script>
+</body>
+
+</html>

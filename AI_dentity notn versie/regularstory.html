@@ -1,0 +1,61 @@
+<!--if you want to know how the BotUI code works, check fastpass.html AND fastpass.js-->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>AI_dentity</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <!--load in css/botui css-->
+    <link rel="stylesheet" href="build/botui.min.css" />
+    <link rel="stylesheet" href="build/botui-theme-default.css" />
+
+    <!--load in the BotUI framework-->
+    <script src="https://cdn.jsdelivr.net/vue/latest/vue.min.js"></script>
+    <script src="build/botui.min.js"></script>
+</head>
+
+<body>
+    <!--splash screen that is auto hidden-->
+    <div id="splash" class="splash">
+        <!--mute buttons to mute ALL audio-->
+        <div class="mute">
+            <button class="button" id="mute_all" onclick="mute()">Mute sounds</button>
+            <button style="background-color: gray; color: white;" class="button" id="unmute_all" onclick="unmute()">Play
+                Sounds</button>
+        </div>
+
+        <!--background-image that scales in width-->
+        <div class="computeroverlay">
+        </div>
+
+        <!--The id is the conversation you load in, for this instance, conversation1. In conversation 1, on the end, is the link to the second conversation-->
+        <div class="botui-app-container" id="conversation1">
+            <bot-ui></bot-ui>
+        </div>
+    </div>
+    <!--all audiofiles are loaded in the HTML, but used in AUDIO.JS-->
+    <audio loop id="audiotrack" src="sounds/systemshock2.wav"></audio>
+    <audio loop id="audiotrack2" src="sounds/connect.wav"></audio>
+    <audio loop id="audiotrack3" src="sounds/Lk42.wav"></audio>
+    <audio loop id="audiotrack4" src="sounds/EndingIT.wav"></audio>
+    <audio id="audio" src="sounds/sound2.mp3"></audio>
+    <audio id="startup" src="sounds/sound1.wav"></audio>
+
+    <!--load in JQuery-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+
+    <!--load in all the conversations-->
+    <script src="conversation1.js"></script>
+    <script src="conversation2.js"></script>
+    <script src="conversation3.js"></script>
+    <script src="conversation4.js"></script>
+    <script src="conversation5.js"></script>
+    <script src="conversation6.js"></script>
+    <script src="conversation7.js"></script>
+    <script src="conversation8.js"></script>
+
+    <!--load in the audio-->
+    <script src="audio.js"></script>
+</body>

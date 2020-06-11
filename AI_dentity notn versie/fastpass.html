@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-168919976-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('set', 'anonymize_ip', false );
+        gtag('set', 'allow_google_signals', false );
+        gtag('config', 'UA-168919976-1');
+    </script>
+
+    <meta charset="utf-8">
+    <title>AI_dentity</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <!--load in css/botui css-->
+    <link rel="stylesheet" href="build/botui.min.css" />
+    <link rel="stylesheet" href="build/botui-theme-default.css" />
+    <link rel="stylesheet" href="build/extrastyle.css" />
+
+    <!--load in the BotUI framework-->
+    <script src="https://cdn.jsdelivr.net/vue/latest/vue.min.js"></script>
+    <script src="build/botui.min.js"></script>
+</head>
+
+<body>
+
+    <div class="intro" id="intro">
+        <!--introslide with text-->
+        <div class="start">
+            <a class="start-button" onclick="hidestart()">Start</a>
+        </div>
+        <div class="storyoverlay"></div>
+    </div>
+
+    <div class="spannerd-overlay">
+        <span class="spannerd"><a style="text-decoration: none; color: white;" target="_blank" href="https://forms.gle/KNarRtDDZCyNRhH48">Give feedback! [ENG]</a></span>
+        <span class="spannerd"><a style="text-decoration: none; color: white" target="_blank" href="https://forms.gle/93BxybwwPFm9kNqq8">Geef feedback! [NED]</a></span>
+        <span style="background-color:#6300a7 ;" class="spannerd"><a style="text-decoration: none; color: white" target="_blank" href="https://www.greenhousegroup.com/en">Check out Greenhouse!</a></span>
+    </div>
+
+    <div id="myNav" class="overlaymenu1">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">exit;</a>
+        <div class="overlay-content">
+            <a id="mute_all1">Mute</a>
+            <a id="unmute_all1">Unmute</a>
+            <a target="_blank" href="https://forms.gle/KNarRtDDZCyNRhH48">Give feedback! [ENG]</a>
+            <a target="_blank" href="https://forms.gle/93BxybwwPFm9kNqq8">Geef feedback! [NED]</a>
+            <a target="_blank" href="https://www.greenhousegroup.com/en">Check out Greenhouse! [Francis likes this site a lot!]</a>
+        </div>
+    </div>
+
+    <div class="spannerd-overlay1">
+        <span class="spannerd" onclick="openNav()">options</span>
+    </div>
+
+    <script>
+        function openNav() {
+            document.getElementById("myNav").style.display = "block";
+        }
+
+        function closeNav() {
+            document.getElementById("myNav").style.display = "none";
+        }
+    </script>
+
+    <!--splash screen that is auto hidden-->
+    <div id="splash" class="splash">
+
+        <!--mute buttons to mute ALL audio-->
+        <div class="mute">
+            <button class="learn-more" id="mute_all" onclick="mute()">Mute sounds</button>
+            <button class="learn-more" style="background-color: #56D98E; color: white;" id="unmute_all"
+                onclick="unmute()">Play Sounds</button>
+        </div>
+
+        <!--background-image that scales in width-->
+        <div class="computeroverlay">
+        </div>
+
+        <!--the botui interface, change the ID to select the conversation you want-->
+        <div class="botui-app-container" id="fastpass">
+            <bot-ui></bot-ui>
+        </div>
+
+    </div>
+
+    <!--all audiofiles are loaded in the HTML, but used in AUDIO.JS-->
+    <audio loop id="audiotrack" src="sounds/systemshock2.wav"></audio>
+    <audio loop id="audiotrack2" src="sounds/connect.wav"></audio>
+    <audio loop id="audiotrack3" src="sounds/Lk42.wav"></audio>
+    <audio loop id="audiotrack4" src="sounds/EndingIT.wav"></audio>
+    <audio id="audio" src="sounds/sound2.mp3"></audio>
+    <audio id="startup" src="sounds/sound1.wav"></audio>
+
+    <!--load in JQuery-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+
+    <!--load in fastpass.js, the full conversation is in here-->
+    <script src="fastpass.js"></script>
+
+    <!--load in the audio.js page that plays the right audio at the right moment-->
+    <script src="audio.js"></script>
+</body>

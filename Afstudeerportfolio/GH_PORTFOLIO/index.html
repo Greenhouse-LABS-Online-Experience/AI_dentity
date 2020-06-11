@@ -19,39 +19,68 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!--<meta charset="UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/coco-ssd"></script>
+    <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
+
+    <script src="https://unpkg.com/babel-standalone@6.26.0/babel.min.js"></script>-->
 </head>
 
 <body>
-
     <div class="intro-slide">
         <div class="topheader">
-            <div class="top-menu">
+            <div class="top-menu-intro">
                 <div class="top-menu-wrapper">
                     <div class="dropdown">
-                        <h1 id="dropdown" class="top-header-menu-item" onclick="toIntro()">Inleiding</h1>
+                        <h1 class="top-header-menu-item" onclick="toIntro()">Inleiding</h1>
                         <div class="dropdown-content">
                             <a href="#opdracht">De opdracht</a>
+                            <a href="#bedrijfscoaches">Bedrijfscoaches</a>
                         </div>
                     </div>
                     <div class="dropdown">
-                        <h1 class="top-header-menu-item" id="dropdown" onclick="toProces()">Proces</h1>
+                        <h1 class="top-header-menu-item" onclick="toProces()">Proces</h1>
                         <div class="dropdown-content">
                             <a href="#verkenningsfase">Verkenningsfase</a>
                             <a href="#analysefase">Analysefase</a>
+                            <a href="#conceptfase">Conceptfase</a>
+                            <a href="#conceptfase2">Conceptfase II</a>
+                            <a href="#realiseren">Realisatiefase</a>
+                            <a href="#testen">Testfase</a>
+                            <a href="#meten">Meetfase</a>
                         </div>
                     </div>
-                    <h1 class="top-header-menu-item" onclick="toContact()">Reflectie</h1>
+                    <div class="dropdown">
+                        <h1 class="top-header-menu-item" onclick="toProduct()">Het Product</h1>
+                        <div class="dropdown-content">
+                            <a href="#hetspel">Het spel</a>
+                            <a href="#soundtrack">Soundtrack</a>
+                            <a href="#marketing">Marketing</a>
+                            <a href="#hetonderzoek">Onderzoek</a>
+                        </div>
+                    </div>
+                    <div class="dropdown">
+                        <h1 class="top-header-menu-item" onclick="toReflectie()">Reflectie</h1>
+                        <div class="dropdown-content">
+                            <a href="scrum.html">SCRUM</a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
+
         <div class="overlayimage">
 
         </div>
-        <div class="crt">
-            <div class="intro-text" data-aos="fade-right" data-aos-duration="800">
-                <h2>Afstudeerportfolio<br>Timmie <span style="font-weight: 200;">van</span> Engelen</span></h2>
-            </div>
+
+        <div class="intro-text">
+            <h2 style="margin-bottom: 0px;" data-aos="fade-right" data-aos-duration="1500"><span style="font-weight: 200;">De vervagende grens tussen</span><br>mens <span style="font-weight: 200;">en</span> technologie</span></h2>
+            <h5 style="color: white;" data-aos="fade-right" data-aos-duration="2000">Timmie van Engelen - 2020 - Greenhouse</h5>
         </div>
+
     </div>
 
     <div class="header" id="header">
@@ -61,16 +90,36 @@
                     <h1 class="top-menu-item" onclick="toIntro()">Inleiding</h1>
                     <div class="dropdown-content">
                         <a href="#opdracht">De opdracht</a>
+                        <a href="#bedrijfscoaches">Bedrijfscoaches</a>
                     </div>
                 </div>
                 <div class="dropdown">
-                    <h1 class="top-menu-item" id="dropdown" onclick="toProces()">Proces</h1>
+                    <h1 class="top-menu-item" onclick="toProces()">Proces</h1>
                     <div class="dropdown-content">
                         <a href="#verkenningsfase">Verkenningsfase</a>
                         <a href="#analysefase">Analysefase</a>
+                        <a href="#conceptfase">Conceptfase</a>
+                        <a href="#conceptfase2">Conceptfase II</a>
+                        <a href="#realiseren">Realisatiefase</a>
+                        <a href="#testen">Testfase</a>
+                        <a href="#meten">Meetfase</a>
                     </div>
                 </div>
-                <h1 class="top-menu-item" onclick="toContact()">Reflectie</h1>
+                <div class="dropdown">
+                    <h1 class="top-menu-item" onclick="toProduct()">Product</h1>
+                    <div class="dropdown-content">
+                        <a href="#hetspel">Het spel</a>
+                        <a href="#soundtrack">Soundtrack</a>
+                        <a href="#marketing">Marketing</a>
+                        <a href="#hetonderzoek">Onderzoek</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <h1 class="top-menu-item" onclick="toReflectie()">Reflectie</h1>
+                    <div class="dropdown-content">
+                        <a href="scrum.html">SCRUM</a>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -79,157 +128,1136 @@
         <div class="block-wrapper" data-aos="fade-right" data-aos-duration="1000" data-aos-offset="100">
             <div class="block-full">
                 <div class="block-full-text">
-                    <h3>Inleiding</h3>
-                    <p>In het voorjaar van 2020 ben ik, Timmie van Engelen, begonnen aan mijn stage bij het brand &
+                    <h3 id="inleiding">Inleiding</h3>
+                    <p>
+                        In het voorjaar van 2020 ben ik, Timmie van Engelen, begonnen aan mijn stage bij het brand &
                         performance bureau Greenhouse in Eindhoven. Greenhouse heeft klanten zoals Kruidvat, Toto en
-                        Toyota en met meer dan 500 experts werken zij aan nieuwe marketingtechnieken binnen
-                        verschillende landschappen. Er zijn afdelingen gewijd aan Conversational, AI, Copy en nog veel
-                        meer. De afdeling waarbinnen ik stage ging lopen was “Labs”, onder leiding van Tim Deynen.
+                        Toyota en werkt met meer dan 500 experts aan nieuwe marketingtechnieken binnen verschillende
+                        landschappen. Er zijn afdelingen gewijd aan Conversational, AI, Copy en nog veel meer. De
+                        afdeling waarbinnen ik stage ging lopen was “Labs”, onder leiding van Tim Deynen die ook mijn
+                        bedrijfsbegeleider is.
                         <br><br>
-                        Labs is de afdeling binnen Greenhouse waar gekeken wordt naar de toekomst en innovatieve
-                        producten gemaakt worden die niet direct voor een klant zijn, maar voor Greenhouse van belang
+                        Labs is de afdeling binnen Greenhouse waar gekeken wordt naar de toekomst en waar producten
+                        gemaakt worden die niet direct toepasbaar zijn voor klanten, maar voor Greenhouse van belang
                         zijn om het innovatieve en vooruitstrevende karakter waar zij om bekend staan te tonen aan de
                         buitenwereld.
+                    </p>
                     <h1 id="opdracht">De opdracht</h1>
                     <p>
-                        Samen met Tim Deynen ben ik gaan kijken wat een relevante en interessante opdracht zou kunnen
-                        zijn om mee aan de slag te gaan. Na een aantal gesprekken kwam hier een bevinding uit: de grens
-                        tussen mens en techniek is aan het vervagen. Aan de hand van deze bevinding is er een opdracht
-                        opgesteld die, door de crisisomstandigheden, tijdens het proces nog drastisch zou gaan
-                        veranderen.
+                        De opdracht is ontstaan nadat ik samen met Tim Deynen ben gaan kijken wat een relevante en
+                        interessante opdracht zou kunnen zijn voor Labs. Na een aantal gesprekken kwam hier een
+                        bevinding uit: de grens tussen mens en techniek is aan het vervagen. Aan de hand van deze
+                        bevinding is er een hoofdvraag over opgesteld die, door de crisisomstandigheden, tijdens het
+                        proces nog drastisch zou gaan veranderen.
                     </p>
-                    <h4>“Hoe ontwikkel je een interactieve installatie die laat zien dat de grens tussen
-                        mens en
-                        techniek aan het vervagen is?”
+                    <h4>“Hoe ontwikkel je een online experience die laat zien dat de grens tussen mens en techniek aan
+                        het vervagen is?”
                     </h4>
-                    <p>De opdracht is uitgevoerd in een groep van drie studenten. Mathijs van der Kuijp is een Media
-                        Design student en Olivier Duijs is een CMD student, beide deden een meeloopstage. In een groep
-                        van drie zijn wij onze individuele krachten gaan bundelen om tot een volledig uitgewerkt product
-                        te komen.
+                    <p>
+                        Door de coronacrisis zijn verschillende (sub)deelvragen met betrekking tot de interactieve
+                        installatie komen te vervallen. Ook zijn er enkele (sub)deelvragen komen te vervallen door het
+                        inzien van de irrelevantie ervan. Alle beantwoorde deelvragen staan in het portfolio.
                         <br><br>
-                        Omdat de opdracht door de Covid-19 crisis voor een deel veranderd is had dit als gevolg dat het
-                        Project Initialisatie Bestand niet geheel meer klopt. Gaandeweg het portfolio wordt uitgelegd
-                        wat er precies veranderd is.
+                        De opdracht is uitgevoerd in een groep van drie studenten. Mathijs van der Kuijp, een Media
+                        Design student, en Olivier Duijs, een CMD student. Voor hen was het een meeloopstage. In de
+                        groep zijn wij onze individuele krachten gaan bundelen om tot een volledig uitgewerkt product te
+                        komen. Het portfolio focust zich enkel op de (deel)producten die ik heb gemaakt, indien dit niet
+                        zo is staat dit er altijd bij vermeld.
+                        <br><br>
+                        De opdracht is door de coronacrisis voor een deel veranderd met als gevolg dat het Project
+                        Initialisatie Bestand niet geheel meer klopte. Gaandeweg het portfolio wordt uitgelegd wat er
+                        precies veranderd is en hoe wij ons hierop hebben aangepast.
                     </p>
-                    <a target="_blank" href="files/PiD_v1.pdf" class="button">Project Initialisatie Bestand versie 1</a>
+                    <a target="_blank" href="files/PiD_v1.pdf" class="button">Project Initialisatie Bestand versie
+                        1</a>
+                    <a target="_blank" href="files/onderzoeksbundel1.pdf" class="button">Volledig onderzoek</a>
+                    <a style="background-color: #FFAD02;" target="_blank" href="files/leeswijzerv2.pdf"
+                        class="button">Leeswijzer</a>
+
+                    <h1 id="bedrijfscoaches">Het belang van bedrijfscoaches</h1>
+                    <p>
+                        Gedurende het stageproces zijn er drie coaches geweest die gebonden waren aan ons concept.
+                        Hierbij was mijn stagebegeleider, Tim Deynen, ook een coach. Deze coaches waren van groot belang
+                        tijdens het proces. Wanneer ik naar hen refereer is het belangrijk dat begrepen wordt waarom er
+                        keuzes gemaakt zijn op basis van hun feedback. Hier volgt een korte beschrijving van de coaches:
+                        <br><br>
+                        <strong>Erik Driessen</strong> is Head of Digital Analytics binnen Greenhouse. Daarnaast
+                        experimenteert hij graag
+                        met nieuwe technieken en weet ontzettend veel van
+                        sci-fi-futuristic-retro-films-boeken-en-series. Een perfecte match met de opdracht!
+                        <br><br>
+                        <strong>Jos van den Manakker</strong> is Creative Developer binnen Greenhouse. Naast zijn
+                        voorliefde voor Digital
+                        Out Of Home weet hij ook ontzettend veel van interactieve installaties, hij is er zelfs mee
+                        afgestudeerd op Fontys ICT! Wederom een perfecte match voor deze opdracht!
+                        <br><br>
+                        <strong>Tim Deynen</strong> is tegenwoordig Head of Labs, maar heeft een lang verleden met
+                        Greenhouse. Naast
+                        Projectmanager is hij onder andere ook Creative Partnership Lead geweest. Nu managed hij een
+                        heleboel studenten die ontzettend vette opdrachten doen bij Greenhouse Labs. Zijn kennis in het
+                        medialandschap was van onschatbare waarde voor het project.
+                    </p>
                 </div>
             </div>
         </div>
     </div>
 
     <div class="proces-section">
-
-        <div class="proces-slide">
-            <div class="block-wrapper" data-aos="fade-right" data-aos-duration="1000" data-aos-offset="100">
-                <div class="block-left">
-                    <div class="block-left-text">
-                        <h3>Het proces</h3>
-                        <p>
-                            Het proces dat doorlopen is tijdens de stage is op te delen in vijf verschillende fases. Als
-                            eerst de Verkenningsfase, waarin gekeken wordt wat het probleem is en wat potentiële
-                            oplossingen
-                            hiervoor zouden zijn. Hierna komt de Analysefase, waarin gekeken wordt welke van de gevonden
-                            oplossingen het beste zou zijn. Daarna komt de Conceptfase, waarin uit de eerder gekozen
-                            oplossing een concept gecreëerd zal worden. Vervolgens wordt dit concept gerealiseerd in de
-                            Realisatiefase. Het gerealiseerde concept zal in de Testfase getest en geïmplementeerd
-                            worden.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="proces-slide">
+        <div class="proces-slide" id="fase1">
             <div class="block-wrapper" data-aos="fade-right" data-aos-duration="1000" data-aos-offset="100">
                 <div class="block-full">
                     <div class="block-full-text">
+                        <h3 id="proces">Het proces</h3>
+                        <p>
+                            Het proces dat doorlopen is tijdens de stage is op te delen in vijf verschillende fases.
+                            Hieronder zullen deze fase doorlopen worden. In het proces is het DOT Framework gehandhaafd,
+                            wilt u meer te weten komen over dit framework kunt u de DOT bijlage pagina inzien.
+                        </p>
                         <h1 id="verkenningsfase">Verkenningsfase</h1>
                         <p>
-                            In de verkenningsfase is de opdracht meer vorm gaan krijgen. Het maken van een interactieve
-                            installatie rondom het thema “de vervagende grens tussen mens en techniek” is erg breed, er
-                            zou
-                            dus onderzoek gedaan moeten worden naar verschillende technieken en trends die op dit moment
-                            relevant zijn voor zowel Greenhouse als in het algemeen.
-                            Om een zo uitgebreid mogelijk beeld te krijgen van de verschillende trends en technieken
-                            zijn we
-                            er alle drie onderzoek naar gaan doen.
+                            <strong>In de verkenningsfase is er gedivergeerd.</strong> Een installatie maken rondom het
+                            onderwerp “de vervagende grens tussen mens en techniek” is namelijk erg breed. Om deze reden
+                            is er door de gehele groep literatuuronderzoek <a class="linkdot" target="_blank"
+                                href="DOTframework.html">(BIEB onderzoek)</a> gedaan naar verschillende
+                            trends en technieken rondom het onderwerp.
                             <br><br>
                             In mijn technologisch landschap onderzoek ben ik gaan kijken naar bekende onderwerpen zoals
-                            AI
-                            en data privacy, maar ik heb ook gekeken naar wat meer obscure onderwerpen zoals biohacking
-                            en
-                            daten met een virtueel karakter. Op deze manier had ik voor mezelf een breed spectrum aan
-                            onderwerpen, dit samengevoegd met de onderzoeken van mijn twee andere groepsgenoten gaf ons
-                            een
-                            duidelijk en uitgebreid beeld van alle mogelijke richtingen die de installatie op zou kunnen
-                            gaan.
+                            Artificial Intelligence (AI) en data privacy, maar daarnaast heb ik ook gekeken naar minder
+                            bekende onderwerpen zoals biohacking en daten met een virtueel persoon. Op deze manier had
+                            ik voor mezelf een breed spectrum aan onderwerpen. De onderzoeken van alle groepsgenoten
+                            zijn samengevoegd. Dit schetste een duidelijk en uitgebreid beeld van alle mogelijke
+                            richtingen die de installatie op zou kunnen gaan.
+                        </p>
+                        <a target="_blank" href="files/Technologischlandschap_onderzoek.pdf"
+                            class="button">Technologisch Landschap Onderzoek</a>
+                        <div class="conclusie" id="conclusie">
+                            <h5>Conclusie van het onderzoek</h5>
+                            <p>Uit dit onderzoek is veel data vergaard. In de conclusie ga ik in op enkele trends,
+                                technieken, gevaren en kansen. Om het volledige beeld te krijgen raad ik u ten zeerste
+                                aan het gehele onderzoek door te nemen.
+                            </p>
+                            <h6>
+                                Behandelde deelvraag:
+                                Wat zijn de grote technologische trends met betrekking tot de vervaging tussen mens en
+                                technologie?
+                            </h6>
+                            <p>
+                                Wat ik uit dit onderzoek heb kunnen leren is dat technologie zich ontzettend snel aan
+                                het ontwikkelen is. Er zijn technieken zoals AI en virtual reality waar men al decennia
+                                lang in aan het ontwikkelen is, maar er zijn ook ontzettend veel nieuwe technieken zoals
+                                deep faking of virtuele influencers. Hierbij integreert technologie zich ook steeds meer
+                                in ons leven. Daten met virtuele karakters of het denken dat je telefoon trilt (terwijl
+                                dit niet zo is) is steeds normaler aan het worden.
+                                <br><br>
+                                Er zijn veel technieken naar voren gekomen uit dit onderzoek, en het antwoord op de
+                                behandelde deelvraag is daarom erg uitgebreid. Alle technieken die ik heb gevonden zijn
+                                terug te vinden in het technologisch landschap onderzoek.
+                            </p>
+                            <h6>
+                                Behandelde deelvraag:
+                                Wat zijn de kansen en gevaren van deze technologische trends?
+                            </h6>
+                            <p>
+                                Bij kansen moet je denken aan extended reality of virtual reality die enorm kunnen
+                                helpen in de zorg- of educatiesector. AI wordt nu al ingezet in verschillende chatbots
+                                om klanten te helpen en het integreren van biohacking kan van grote waarde zijn voor de
+                                zorg.
+                                <br><br>
+                                Echter zijn er naast deze kansen ook veel gevaren. Denk aan deep fake technologie die
+                                gebruikt wordt voor malafide doeleinden of het niet meer kunnen onderscheiden van AI en
+                                echte mensen. Zal technologie de ontwikkeling van kinderen bevorderen of juist
+                                verslechteren?
+                                <br><br>
+                                Voor alle gevonden kansen en gevaren kunt u terecht in het volledige technologisch
+                                landschap onderzoek.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
+        <div class="proces-slide" id="fase2">
+            <div class="block-wrapper" data-aos="fade-right" data-aos-duration="1000" data-aos-offset="100">
+                <div class="block-full">
+                    <div class="block-full-text" id="whitetext">
+                        <h1 id="analysefase">Analysefase</h1>
+                        <p>
+                            Na de verkenningsfase waren er tientallen trends en technieken verzameld. Het was belangrijk
+                            deze te filteren op relevantie voor Greenhouse. Het onderwerp van de installatie moest
+                            natuurlijk ook passend zijn bij Greenhouse. Dit is bepaald door het interviewen van
+                            verschillende Greenhouse medewerkers <a class="linkdot" target="_blank"
+                                href="DOTframework.html">(VELD onderzoek)</a> over de gevonden trends en technologieën.
+                            <br><br>
+                            Om te bepalen welke onderwerpen nou precies relevant waren en om interactiviteit aan de
+                            interviews te geven is er een schaal opgesteld. De schaal liep van niet relevant tot
+                            relevant voor Greenhouse. Op deze schaal zouden de medewerkers de gevonden onderwerpen neer
+                            kunnen leggen. Door de ingevulde schalen te vergelijken kon er gezien worden welke
+                            onderwerpen de medewerkers het meest relevant voor Greenhouse vonden.
+                            <br><br>
+                            Dit is een samenvatting van de schalen uit de vijf interviews.
+                        </p>
+                        <a target="_blank" href="files/interviews_1_plan.pdf" class="button">Interview Template -
+                            Testplan</a>
+                        <a target="_blank" href="audiobestanden.html" class="button">Audiobestanden interviews</a>
+                        <div class="image-container">
+                            <img class="image-regular" src="img/Mapping – 1.png" alt="Deze mapping is samengesteld door per kaart het gemiddelde te pakken
+                                waar
+                                deze geplaatst werd.">
+                            <!--<div class="overlay">
+                                    <div class="text">Deze mapping is samengesteld door per kaart het gemiddelde te pakken
+                                        waar
+                                        deze geplaatst werd.</div>
+                                </div>-->
+                        </div>
+                        <div class="conclusie" id="conclusie">
+                            <h5>Conclusie van het onderzoek</h5>
+                            <br>
+                            <h6>
+                                Behandelde deelvraag:
+                                Welke kansen en gevaren zijn relevant voor Greenhouse? M.a.w. Wat is relevant voor de
+                                interactieve installatie?
+
+                            </h6>
+                            <p>
+                                Uit deze interviews is gekomen dat AI en Data Privacy de twee onderwerpen zijn die voor
+                                Greenhouse het meest relevant zijn. AI omdat hier de toekomst in ligt en men voor een
+                                groot deel nog niet weet wat de potentie van deze techniek is, maar ook omdat Greenhouse
+                                hier al veel mee werkt. Data Privacy omdat er op dit moment veel gebeurt rondom dit
+                                onderwerp, denk aan de nieuwe privacywetten (AVG).
+                            </p>
+                        </div>
+                        <p>
+                            Nadat deze technieken zijn vastgesteld zijn er nog extra interviews gehouden met
+                            verschillende experts binnen Greenhouse om op deze manier een helder beeld te krijgen van de
+                            mogelijkheden binnen beide afdelingen en al na te denken over een concept door concept
+                            sessies te houden met concepters.
+                            <br><br>
+                            Om meer te weten te komen over beide onderwerpen en zo een relevant en goed concept te
+                            bedenken ben ik naar beide onderwerpen literatuuronderzoek <a class="linkdot"
+                                target="_blank" href="DOTframework.html">(BIEB onderzoek)</a> gaan doen.
+
+                        </p>
+                        <a id="onderzoekenaidata"target="_blank" href="files/AI_onderzoek.pdf" class="button">Onderzoek naar AI</a>
+                        <a target="_blank" href="files/data_privacy_onderzoek.pdf" class="button">Onderzoek naar Data &
+                            Privacy</a>
+                        <div class="conclusie" id="conclusie">
+                            <h5>Conclusie van het AI onderzoek</h5>
+                            <br>
+                            <h6>
+                                Behandelde deelvragen: Wat houdt Artificial Intelligence in?<br>
+                                Hoe kijken mensen naar AI?<br>
+                                Zijn er verschillende soorten AI? En zo ja, welke zijn dat?
+                            </h6>
+                            <p>
+                                AI is een bepaald algoritme dat voor zichzelf kan denken, hier hoeven vaak geen mensen
+                                aan te pas te komen.
+                                <br><br>
+                                Er is weak en strong AI. Weak AI is nog niet geheel autonoom, het kan niet geheel
+                                zelfstandig beslissingen maken zoals mensen dat kunnen. Strong AI kan dit wel. Er zijn
+                                drie kenmerken aan strong AI:
+                                <br><br>
+                                - Het samenvatten van kennis en deze elders toepassen.<br>
+                                - Toekomstplannen maken op basis van kennis en ervaringen.<br>
+                                - Zichzelf aanpassen aan de omgeving.
+                                <br><br>
+                                We beschikken nu alleen nog over weak AI. Denk hierbij aan AI dat gebruikt wordt in
+                                chatbots, bestelling systemen of adverteren.
+                                <br><br>
+                                Er is veel misconceptie over AI. Zal het alle banen overnemen? Gaat het de wereld
+                                overnemen? Mensen zoals Elon Musk en Stephen Hawking hebben hun angsten al geuit over
+                                AI, maar zijn deze wel relevant? Omdat we nu alleen nog over Weak AI beschikken hebben
+                                we nog de controle, maar wat als deze wegvalt? Dan kunnen de angsten van de heren Musk
+                                en Hawking extreem relevant worden.
+                                <br><br>
+                                Het is belangrijk dat mensen op de hoogte worden gesteld van AI. Niet alleen om te laten
+                                zien wat de toekomst kan worden, maar ook om te laten zien wat er in het heden precies
+                                gebeurt en wat we nu kunnen doen om AI in te toekomst in goede banen te leiden en
+                                daarbij ook ethisch verantwoord te maken.
+                            </p>
+                            <h5>Conclusie van het data privacy onderzoek</h5>
+                            <br>
+                            <h6>
+                                Behandelde deelvragen: Wat houdt Data en Privacy in?<br>Hoe belangrijk vinden
+                                wij privacy?
+                            </h6>
+                            <p>
+                                Data privacy is een uitgebreid begrip. Breed genomen gaat het over de privacy van de
+                                data van mensen. Denk hierbij aan WhatsApp berichten, zoekgeschiedenis maar ook de
+                                online bankgegevens van een persoon.
+                                <br><br>
+                                Mensen vinden hun privacy belangrijk, vooral op het internet. Wetten zoals de AVG wet
+                                moeten ervoor gaan zorgen dat deze privacy gewaarborgd blijft. Echter zijn er vaak
+                                bedrijven die het grijs gebied opzoeken of bedrijven die zich niet bewust zijn van de
+                                veranderingen die zij door moeten gaan.
+                                <br><br>
+                                Zo is in 2016 de presidentiële verkiezingscampagne beïnvloed door persoonsgegevens van
+                                Facebook te gebruiken. Een ander voorbeeld is een programma dat voorspelde of een
+                                crimineel nog een tweede misdrijf zou plegen. Dit programma kreeg een bias (voorkeur)
+                                dat mensen met een donkere huidskleur eerder een tweede misdrijf zouden plegen. Dit zijn
+                                twee totaal verschillende voorbeelden met compleet andere redenen waarom het fout is
+                                gegaan. Aan big data zitten namelijk veel gevaren. Het kan slechte data zijn, slecht
+                                geanalyseerd worden of verkregen worden op een malafide manier.
+                                <br><br>
+                                Omdat deze data een enorme impact kan hebben op iemands leven, maar ook belangrijke
+                                gebeurtenissen kan beïnvloeden zoals de verkiezingen is het enorm belangrijk dat mensen,
+                                maar ook bedrijven zich bewust zijn van de regels en het ethisch correcte rondom data.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="proces-slide" id="fase3">
+            <div class="block-wrapper" data-aos="fade-right" data-aos-duration="1000" data-aos-offset="100">
+                <div class="block-full">
+                    <div class="block-full-text">
+                        <h1 id="conceptfase">Conceptfase</h1>
+                        <p>
+                            In de conceptfase is er als eerste gekeken naar andere interactieve installaties. Hiervoor
+                            ben ik onderzoek gaan doen naar populaire Glow installaties en heb ik de kick-off van de
+                            Glow academy bezocht. Op deze manier heb ik een goed beeld gekregen waaraan interactieve
+                            installaties moeten voldoen, maar ook waar op gelet moet worden bij het bouwen van een
+                            installatie.
+                            <br><br>
+                            Verder heb ik ook onderzoek <a class="linkdot" target="_blank"
+                                href="DOTframework.html">(BIEB onderzoek + interview: VELD onderzoek)</a> gedaan naar de
+                            doelgroepen die op de twee evenementen komen waar de installatie gepresenteerd zou worden:
+                            NextM en Dutch Technology Week: Night of the Nerds.
+                            <br><br>
+                            Door de coronacrisis was het niet meer mogelijk om een installatie te maken, daarom zijn de
+                            bovengenoemde onderzoeken niet meer relevant voor het eindproduct en zijn bijgevoegd als
+                            bijlage.
+                        </p>
+                        <a target="_blank" href="files/AI_onderzoek.pdf" class="button">BIJLAGE GLOW</a>
+                        <p>
+                            Vervolgens zijn er concept sessies gehouden met concepters binnen Greenhouse. Zo zijn er al
+                            snel verschillende concepten ontstaan. Er was nog geen concrete keuze gemaakt tussen AI of
+                            data privacy. We wilden de mogelijkheid blijven houden om voor beide onderwerpen concepten
+                            te bedenken en vervolgens te kijken welke het beste was.
+                            <br><br>
+                            Het concept proces <a class="linkdot" target="_blank" href="DOTframework.html">(WERKPLAATS
+                                onderzoek)</a> resulteerde in een lijst met concepten waarvan wij dachten dat ze
+                            duidelijk lieten zien dat de grens tussen mens en techniek aan het vervagen is.
+                        </p>
+                        <a target="_blank" href="files/concepten_document.pdf" class="button">Verschillende concepten
+                            document</a>
+                        <p>
+                            Helaas begon rond deze tijd het Coronavirus Greenhouse en dus ook de stage in de greep te
+                            krijgen. Op 10 maart kregen de medewerkers te horen dat ze thuis verder moesten gaan werken.
+                            Dit betekende ook dat de evenementen waar de installatie zou komen te staan in gevaar
+                            liepen. We waren ons hiervan bewust en hebben de conceptfase verder doorgezet met de
+                            gedachte dat de installatie ook omzetbaar zouden moeten zijn naar een online omgeving.
+                        </p>
+                        <h5>Drie concepten</h5>
+                        <p>
+                            Er waren drie concepten die ons en de coaches het meest geschikt leken voor zowel een
+                            interactieve installatie als een online experience. Om hier een bewuste en gegronde keuze in
+                            te maken is ieder groepslid één concept gaan uitwerken <a class="linkdot" target="_blank"
+                                href="DOTframework.html">(WERKPLAATS onderzoek)</a>. De twee concepten die Olivier en
+                            Mathijs uit hadden gewerkt zijn hieronder weergegeven.
+                        </p>
+                        <div class="image-container">
+                            <img class="image-regular" src="img/conceptenolenmat.png"
+                                alt="De concepten die Olivier en Mathijs hebben uitgewerkt.">
+                            <!--<div class="overlay">
+                                    <div class="text">Deze mapping is samengesteld door per kaart het gemiddelde te pakken
+                                        waar
+                                        deze geplaatst werd.</div>
+                                </div>-->
+                        </div>
+                        <p>
+                            Met het derde concept ben ik aan de slag gegaan.
+                        </p>
+                        <h5>AI Bril</h5>
+                        <p>
+                            In het AI bril concept kijken twee AI’s naar één object. De AI’s zijn beide getraind met een
+                            andere dataset, hierdoor zullen zij anders naar het object kijken. Denk bijvoorbeeld aan een
+                            Democratische en een Republikeinse AI. Hoe kijken zij naar objecten zoals de Amerikaanse
+                            vlag, een dollar of een geweer?
+                            <br><br>
+                            Dit concept is online ook goed uit te werken. Met gebruik van de webcam is het mogelijk om
+                            te analyseren welk object de gebruiker presenteert. Vervolgens kunnen twee vooraf getrainde
+                            datasets hier hun mening over geven.
+                            <br><br>
+                            Hieronder enkele designs, het concept bestand en een demo voor de object detection die
+                            gebruik maakt van Tensorflow.
+                        </p>
+                        <a target="_blank" href="files/angels_vs_demons_concept.pdf" class="button">Concept document AI
+                            Bril</a>
+                        <a target="_blank" href=https://www.timmievanengelen.nl/Objectdet/ class="button">Object
+                            detection demo</a>
+                        <div class="image-container">
+                            <img class="image-regular" src="img/AvsD designs – 1.png"
+                                alt="Verschillende designs voor het AI Bril concept.">
+                            <!--<div class="overlay">
+                                    <div class="text">Deze mapping is samengesteld door per kaart het gemiddelde te pakken
+                                        waar
+                                        deze geplaatst werd.</div>
+                                </div>-->
+                        </div>
+                        <!-- Load our React component
+                        <script src="detect.js" type="text/babel"></script>
+                    
+                        <!-- We will put our React component inside this div.
+                        <div id="root"></div> -->
+                        <h5 id="coronagevolgen">De gevolgen van Covid-19</h5>
+                        <p>
+                            In de week dat er een keuze gemaakt zou worden welke van deze concepten we zouden gaan
+                            uitwerken werd bekendgemaakt dat de evenementen waar de installatie op gepresenteerd zou
+                            worden officieel niet meer zouden doorgaan. We gingen dus switchen naar een online
+                            experience.
+                            <br><br>
+                            Deze verandering bracht veel negatieve gevolgen met zich mee. De concepten die we hadden
+                            bedacht waren in eerste niet bedoeld als online experience. Dit zorgde ervoor dat we
+                            concepten zijn gaan ombuigen om ook toepasbaar te zijn in een online omgeving. Hierdoor had
+                            ik niet meer het gevoel dat deze concepten de beste keuze waren voor een online experience.
+                            <br><br>
+                            Er is rekening gehouden met de eventuele gevolgen van corona, maar uiteindelijk was het
+                            nodig om een nieuw concept te bedenken voor een online experience. Om in te spelen op de
+                            situatie ben ik naar de voordelen van een online experience gaan kijken, op basis daarvan is
+                            er een nieuw concept bedacht.
+                        </p>
+                        <div class="image-container">
+                            <img class="image-regular" src="img/Voordelenonline.png"
+                                alt="De voordelen van een online experience.">
+                            <!--<div class="overlay">
+                                    <div class="text">Deze mapping is samengesteld door per kaart het gemiddelde te pakken
+                                        waar
+                                        deze geplaatst werd.</div>
+                                </div>-->
+                        </div>
+                        <h5 id="textbased">Een text-based oplossing</h5>
+                        <p>
+                            Al sinds het eerste semester van ICT & Media Design had ik het idee om ooit een text-based
+                            spel te maken. Dit inspireerde mij in een nieuw concept voor de opdracht <a class="linkdot"
+                                target="_blank" href="DOTframework.html">(WERKPLAATS onderzoek)</a>. Door middel van een
+                            text based spel zou de speler een band op gaan bouwen met een AI. Een spel is hier een goed
+                            middel voor door de interactie die je met het personage gaat hebben, zoals veel videogames
+                            al jaren hebben gedaan.
+                            <br><br>
+                            Ik heb voor dit concept inspiratie gehaald uit andere, moderne text based games zoals <a
+                                class="link" target="_blank" href="https://aidungeon.io/">AI Dungeon</a> en <a
+                                class="link" target="_blank"
+                                href="https://store.steampowered.com/app/585290/Lifeline/">Lifeline.</a>
+                        </p>
+                        <div class="image-container">
+                            <img class="image-regular" src="img/Inspiratie – 2.png"
+                                alt="Voor het concept hebben we inspiratie gehaald uit AI Dungeon en Lifeline.">
+                            <!--<div class="overlay">
+                                    <div class="text">Deze mapping is samengesteld door per kaart het gemiddelde te pakken
+                                        waar
+                                        deze geplaatst werd.</div>
+                                </div>-->
+                        </div>
+                        <p>
+                            Dit concept speelde goed in op de omschakeling naar een online omgeving. Door de eerder
+                            genoemde voordelen zou het voor de speler een stuk gemakkelijker zijn om een band op te
+                            bouwen met een AI in de online experience dan op een installatie op een evenement.
+                            <br><br>
+                            Ik heb dit concept voorgelegd aan mijn groepsgenoten en zij vonden het een ontzettend gaaf
+                            idee. Na verschillende concept sessies ontstond er een ambitieus, maar ontzettend vet
+                            concept. In onze wekelijkse meeting met de coaches kreeg het concept een go!
                         </p>
                     </div>
                 </div>
             </div>
         </div>
 
+        <div class="proces-slide" id="fase4">
+            <div class="block-wrapper" data-aos="fade-right" data-aos-duration="1000" data-aos-offset="100">
+                <div class="block-full">
+                    <div class="block-full-text" id="whitetext">
+                        <h1 id="conceptfase2">Conceptfase II</h1>
+                        <div class="image-container">
+                            <img class="image-regular" src="img/aivsdata.png" alt="AI tegenover data privacy.">
+                            <!--<div class="overlay">
+                                    <div class="text">Deze mapping is samengesteld door per kaart het gemiddelde te pakken
+                                        waar
+                                        deze geplaatst werd.</div>
+                                </div>-->
+                        </div>
+                        <p>
+                            Er is gekozen om het concept om AI te laten draaien en niet om data privacy. AI gaf ons de
+                            mogelijkheid om te laten zien wat de toekomst kan zijn van technologie op een persoonlijke
+                            manier. Data privacy bleek ook niet de beste keuze voor Greenhouse te zijn, een bedrijf dat
+                            adverteert op basis van data.
+                        </p>
+                        <div class="image-container">
+                            <img class="image-regular" src="img/kadersconcept.png"
+                                alt="De kaders waarbinnen het concept moest blijven.">
+                            <!--<div class="overlay">
+                                    <div class="text">Deze mapping is samengesteld door per kaart het gemiddelde te pakken
+                                        waar
+                                        deze geplaatst werd.</div>
+                                </div>-->
+                        </div>
+                        <p>
+                            In de tweede conceptfase <a class="linkdot" target="_blank"
+                                href="DOTframework.html">(WERKPLAATS onderzoek)</a> zijn er eerst kaders opgesteld, deze
+                            waren erg breed. We wilden zo ruim mogelijk blijven denken in deze eerste fase. Op deze
+                            manier konden we wilde ideeën uitwerken en kijken wat we hierna de beste en meest
+                            aansluitende vonden. Er waren enkele concepten die we goed genoeg vonden om verder mee te
+                            gaan.
+                        </p>
+                        <div class="image-container">
+                            <img class="image-regular" src="img/verschillendeconcepten.png"
+                                alt="Verschillende verhalen.">
+                            <!--<div class="overlay">
+                                    <div class="text">Deze mapping is samengesteld door per kaart het gemiddelde te pakken
+                                        waar
+                                        deze geplaatst werd.</div>
+                                </div>-->
+                        </div>
+                        <p>
+                            Na het uitdenken van deze drie concepten waren wij en de coaches het eens over het
+                            onderwerp: een AI zijn die zijn identiteit aan het zoeken is, een soort existentiële crisis.
+                            <br><br>
+                            Het concept is uitgedacht en er is een kort verhaal omheen geschreven. De coaches waren hier
+                            tevreden mee.
+                        </p>
+                        <div id="moscow" class="image-container">
+                            <img class="image-regular" src="img/hetverhaal.png"
+                                alt="Het verhaal/ concept van AI_dentity">
+                            <!--<div class="overlay">
+                                    <div class="text">Deze mapping is samengesteld door per kaart het gemiddelde te pakken
+                                        waar
+                                        deze geplaatst werd.</div>
+                                </div>-->
+                        </div>
+                        <p>
+                            Omdat we verschillende ideeën hadden over het uiteindelijke product stelden onze coaches
+                            voor om een MoSCoW methode op te stellen met de belangrijkste zaken die het minable viable
+                            product (MVP) zou moeten bevatten.
+                        </p>
+                        <div id="moscow" class="image-container">
+                            <img class="image-regular" src="img/MoSCoW – 1.png" alt="De MoSCoW methode voor AI_dentity">
+                            <!--<div class="overlay">
+                                    <div class="text">Deze mapping is samengesteld door per kaart het gemiddelde te pakken
+                                        waar
+                                        deze geplaatst werd.</div>
+                                </div>-->
+                        </div>
+                        <h5 id="hetverhaal">Het verhaal</h5>
+                        <p>
+                            De basis voor het concept was het verhaal. Wanneer het verhaal niet goed was zou alles
+                            eromheen minderwaardig zijn. Uit verschillende interviews <a class="linkdot" target="_blank"
+                                href="DOTframework.html">(VELD onderzoek)</a> met copywriters hebben we tips gekregen
+                            hoe we dit schrijfproces het beste aan konden gaan pakken. Wat hieruit kwam was dat er als
+                            eerst een rode draad opgesteld moest worden voor het verhaal, en dit het liefst uitgewerkt
+                            in een flowchart. De flowchart tool Whimsical werd ons hiervoor aangeraden, hier werkten
+                            Greenhouse medewerkers voornamelijk mee om flowcharts voor conversational applicaties op te
+                            zetten. De coaches wilden hierin ook graag de interactiepunten zien.
+                            <br><br>
+                            Met z’n drieën hebben we deze flowchart opgesteld. We hebben dit gebaseerd op de three act
+                            structure. Dit is een van de meest gebruikte modellen voor het vertellen van een verhaal.
+                            Het deelt het verhaal op in drie segmenten: introductie (de setup van het verhaal),
+                            confrontatie (spanningsopbouw) en de resolutie (afnemende actie, het slot). Zo hebben we het
+                            verhaal dan ook opgedeeld.
+                        </p>
+                        <a target="_blank" href="files/Flowcharts.zip" class="button">ZIP bestand van de flowcharts</a>
+                        <div class="image-container">
+                            <img class="image-regular" src="img/Three act structure – 1.png"
+                                alt="De 'three acts' dat het verhaal doorloopt">
+                            <!--<div class="overlay">
+                                    <div class="text">Deze mapping is samengesteld door per kaart het gemiddelde te pakken
+                                        waar
+                                        deze geplaatst werd.</div>
+                                </div>-->
+                        </div>
+                        <p>
+                            Deze flowcharts hebben we grondig besproken met onze coaches en de copywriters. Toen deze
+                            geheel klopten zijn vervolgens de losse gesprekken geschreven <a class="linkdot"
+                                target="_blank" href="DOTframework.html">(WERKPLAATS onderzoek)</a>.
+                        </p>
+                        <a target="_blank" href="audiobestanden.html" class="button">Audiobestanden conceptsessies</a>
+                        <h5 id="deflowcharts">De flowcharts</h5>
+                        <p>
+                            Het verhaal is opgedeeld in de three acts. Ik nam de eerste act voor mijn rekening, Mathijs
+                            de tweede en Olivier zou de derde act schrijven. Al snel kwamen we erachter dat deze manier
+                            ervoor zorgde dat de stukken die we individueel schreven niet genoeg cohesie hadden. Er is
+                            vervolgens besloten om Olivier en mij het verhaal te laten schrijven terwijl Mathijs aan de
+                            slag ging met het framework dat gebruikt zou worden om de website te gaan bouwen. Olivier
+                            ging act 3 schrijven en ik act 1 en 2.
+                        </p>
+                        <h5>De flowcharts: Conversational design</h5>
+                        <p>
+                            Voor het schrijven van de gesprekken heb ik inspiratie gehaald uit films zoals Her,
+                            Ex-Machina en I, Robot om de AI charismatisch te maken. Games zoals Skyrim en Fallout hebben
+                            mij geholpen in de gespreksstructuur. In deze spellen kun je namelijk ook kiezen wat je als
+                            speler antwoord. Mijn ervaring met deze spellen heeft het mij geholpen om de schaal van het
+                            gehele gesprek te bevatten en in controle te houden.
+                        </p>
+                        <div class="image-container">
+                            <img class="image-regular" src="img/telltale.png" alt="Keuzemoment in een Telltale spel">
+                            <!--<div class="overlay">
+                                    <div class="text">Deze mapping is samengesteld door per kaart het gemiddelde te pakken
+                                        waar
+                                        deze geplaatst werd.</div>
+                                </div>-->
+                        </div>
+                        <p>
+                            Een goed voorbeeld van de gespreksstructuur die ik wilde gebruiken komt voor in de Telltale
+                            Games spellen. Zij laten vaak keuzes belangrijk lijken, terwijl ze dit niet zijn. Je kan dan
+                            bijvoorbeeld kiezen om een karakter te redden, en enkele minuten later sterven zijn alsnog.
+                            Het verhaal verandert niet door de keuze, maar de context van het verhaal verandert hierdoor
+                            wel.
+                            <br><br>
+                            Tijdens het schrijven van de gesprekken is er contact gehouden met de copywriters en coaches
+                            om zo steeds te blijven checken of de kwaliteit goed was. Toen Olivier en ik de gesprekken
+                            allebei volledig hadden afgerond hebben we op elkaars gesprekken feedback gegeven. Wat we
+                            zagen was dat nog niet alles één tone of voice had waardoor sommige stukken als
+                            onsamenhangend ervaren konden worden. Op aanraden van een copywriter hebben we besloten om
+                            twee persona’s te maken: een voor de AI en een voor de speler. Op deze manier konden we voor
+                            beide karakters een tone of voice opstellen. In het tone of voice draaiboek is per gesprek
+                            gekeken wat de tone of voice is en welke emoties de karakters ervaren.
+                            <br><br>
+                            Aan de hand van deze twee hulpmiddelen is Olivier het gehele verhaal gaan “tone of voice
+                            checken” om cohesie aan het verhaal toe te brengen.
+                        </p>
+                        <a target="_blank" href="files/tone_of_voice.pdf" class="button">Tone of voice per gesprek</a>
+                        <div class="image-container">
+                            <img class="image-regular" src="img/Personas – 1.png"
+                                alt="De persona's waarmee het verhaal gecontroleerd werd">
+                            <!--<div class="overlay">
+                                    <div class="text">Deze mapping is samengesteld door per kaart het gemiddelde te pakken
+                                        waar
+                                        deze geplaatst werd.</div>
+                                </div>-->
+                        </div>
+                        <div class="conclusie" id="conclusie">
+                            <h5>Conclusie van het schrijven van het verhaal</h5>
+                            <br>
+                            <h6>
+                                Door het onderzoeken en schrijven van het verhaal is de volgende deelvraag behandeld:
+                                Hoe schrijf je een verhaal voor een text-based spel?
+                            </h6>
+                            <p>
+                                Er is antwoord gevonden op deze vraag door <a class="linkdot" target="_blank"
+                                    href="DOTframework.html">WERKPLAATS onderzoek</a> te doen. Samen met copywriters en
+                                andere medewerkers van Greenhouse is er gekeken hoe we het verhaal het beste konden
+                                schrijven. Door ons vast te houden aan de bekende Three Act Structure, persona’s te
+                                gebruiken en aan het einde een tone of voice check te doen hebben we een verhaal
+                                geschreven dat duidelijk weergeeft dat de grens tussen mens en technologie aan het
+                                vervagen is en daarbij spannend en meeslepend is.
+                            </p>
+                        </div>
+                        <h5 id="hetdesign">Het design</h5>
+                        <p>
+                            Nadat het verhaal geschreven was en de gesprekken uitgewerkt waren was het tijd om het
+                            design van de website te gaan ontwerpen <a class="linkdot" target="_blank"
+                                href="DOTframework.html">(WERKPLAATS onderzoek)</a>. Vanaf het begin dat dit concept
+                            gekozen was wilden we iets retro-futuristisch maken dat populair geworden is door games
+                            zoals Fallout en Alien Isolation.
+                        </p>
+                        <div class="image-container">
+                            <img class="image-regular" src="img/Inspiratie – 1.png" alt="Inspiratie retro futurisme">
+                            <!--<div class="overlay">
+                                    <div class="text">Deze mapping is samengesteld door per kaart het gemiddelde te pakken
+                                        waar
+                                        deze geplaatst werd.</div>
+                                </div>-->
+                        </div>
+                        <p>
+                            Ik heb deze stijl als uitgangspunt gepakt tijdens het ontwerpproces. In de eerst instantie
+                            ben ik oude computer modellen gaan zoeken die in Blender geïmporteerd konden worden.
+                            Uiteindelijk is er gekozen voor een ontwerp dat ik heb gemaakt in Adobe Xd. Uit de testen
+                            kwam naar voren dat gebruikers dit het beste vonden en het gaf meer mogelijkheden voor de
+                            responsiviteit van de website.
+                        </p>
+                        <div class="image-container">
+                            <img class="image-regular" src="img/Voorbeeld demo – 1.png" alt="Eerste design in Adobe Xd">
+                            <!--<div class="overlay">
+                                    <div class="text">Deze mapping is samengesteld door per kaart het gemiddelde te pakken
+                                        waar
+                                        deze geplaatst werd.</div>
+                                </div>-->
+                        </div>
+                        <p>
+                            Om het verhaal in te leiden heb ik in Blender een intro slide gemaakt dat een sfeerimpressie
+                            moet geven over het verhaal <a class="linkdot" target="_blank"
+                                href="DOTframework.html">(WERKPLAATS onderzoek)</a>.
+                        </p>
+                        <div class="image-container">
+                            <img class="image-regular" src="img/Vergelijking sc's – 1.png"
+                                alt="Eerste design storycards, gemaakt in Blender">
+                            <!--<div class="overlay">
+                                    <div class="text">Deze mapping is samengesteld door per kaart het gemiddelde te pakken
+                                        waar
+                                        deze geplaatst werd.</div>
+                                </div>-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="proces-slide" id="fase5">
+            <div class="block-wrapper" data-aos="fade-right" data-aos-duration="1000" data-aos-offset="100">
+                <div class="block-full">
+                    <div class="block-full-text">
+                        <h1 id="realiseren">Realisatiefase <a class="linkdot" target="_blank"
+                                href="DOTframework.html">(WERKPLAATS onderzoek)</a></h1>
+                        <p>
+                            In de weken dat het verhaal is geschreven door Olivier en mij is Mathijs bezig geweest met
+                            het onderzoeken van de beste tools en technieken die we konden gebruiken voor het realiseren
+                            van ons concept in een webomgeving. Uit dit onderzoek is gekomen dat Dialog Flow de meest
+                            voor de hand liggende keuze was. Er is gesproken met verschillende AI en conversational
+                            medewerkers en zij beaamden deze keuze.
+                            <br><br>
+                            Echter na het bekijken en testen met Dialog Flow leek dit ons niet de beste oplossing. Wat
+                            al naar voren kwam in de gesprekken met de medewerkers was dat het voornamelijk op voice
+                            gericht was en bedoeld is voor smart speakers/ assistants. Het was mogelijk om het ook in
+                            web te implementeren. Dit leek ons echter te omslachtig en te veel werk gezien de lengte en
+                            vertakkingen van het verhaal.
+
+                            Een ander framework trok mijn aandacht: BotUI. BotUI is een chatbot framework gebaseerd op
+                            Javascript. Zelf heb ik hier al een keer een bot mee opgezet en dat ging erg gemakkelijk. In
+                            BotUI moet er veel zelf gecodeerd worden, maar hierdoor heb je wel meer controle. Dit was
+                            belangrijk in ons concept. Er werd namelijk veel gedaan met muziek, de lay-out en andere
+                            visuele aspecten. In Dialog Flow was dit allemaal een stuk lastiger om aan te passen. Dit
+                            was een van de redenen dat er uiteindelijk gekozen is voor BotUI. Daarbij kwam ook dat de
+                            leercurve van BotUI minder hoog was dan die van Dialog Flow, dit vooral omdat Mathijs en ik
+                            al veel ervaring hadden met Javascript. Dit was belangrijk omdat het verhaal snel omgezet
+                            moest worden naar een online omgeving om het zo snel mogelijk te kunnen testen met de
+                            doelgroep. Daarnaast wilden we, ondanks de beperkte tijd die nu door de coronacrisis was
+                            ontstaan, een compleet product afleveren aan Greenhouse. Hierdoor moest er snel een
+                            prototype ontwikkeld worden.
+                        </p>
+                        <div class="image-container">
+                            <img class="image-regular" src="img/BotUI vs Dialog Flow – 1.png"
+                                alt="De voor- en nadelen van BotUI en Dialog Flow">
+                            <!--<div class="overlay">
+                                    <div class="text">Deze mapping is samengesteld door per kaart het gemiddelde te pakken
+                                        waar
+                                        deze geplaatst werd.</div>
+                                </div>-->
+                        </div>
+                        <p>
+                            Nadat er voor dit framework gekozen is ben ik aan de slag gegaan met het invoegen van de
+                            gesprekken in een prototype.
+                            <br><br>
+                            Om de code makkelijk deelbaar te maken binnen de groep en naar onze coaches toe heb ik een
+                            GitHub opgezet. Op deze manier was het mogelijk dat ik de focus legde op het invoegen van
+                            het verhaal en de lay-out, terwijl Mathijs de database aan het opstellen was.
+                        </p>
+                        <a target="_blank" href="https://github.com/Greenhouse-LABS-Online-Experience/AI_dentity"
+                            class="button">Link naar GitHub</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
         <div class="proces-slide">
             <div class="block-wrapper" data-aos="fade-right" data-aos-duration="1000" data-aos-offset="100">
                 <div class="block-full">
                     <div class="block-full-text">
-                        <h1 id="analysefase">Analysefase</h1>
+                        <h1 id="testen">Testfase <a class="linkdot" target="_blank" href="DOTframework.html">(LAB
+                                onderzoek)</a></h1>
                         <p>
-                            Nu er tientallen technieken en trends waren gevonden was het belangrijk om deze te filteren
-                            op
-                            relevantie. Zelf hadden we al een goed beeld van de grootste en relevantste trends, denk aan
-                            data privacy. Maar we wilden iets creëren dat niet alleen relevant was, maar ook aansluit
-                            bij
-                            Greenhouse. Om dit voor ons helder te krijgen zijn we interviews gaan houden met Greenhouse
-                            medewerkers van verschillende afdelingen. Op deze manier zouden we een uitgebreid en
-                            concreet
-                            beeld krijgen van de trends en technieken die intern bij Greenhouse als belangrijk en
-                            relevant
-                            worden gezien. Om dit op een interactieve manier te doen hebben we een grote schaal
-                            uitgeprint
-                            met rechts “relevant” en links “niet relevant”. Vervolgens hebben we alle trends en
-                            technieken
-                            samengevoegd tot een 20-tal kaartjes. De geïnterviewde medewerker kon op deze manier de
-                            kaartjes
-                            neerleggen op de relevantie-schaal en zo laten zien wat zij denken dat het meest relevant is
-                            voor Greenhouse.
+                            Nadat er twee gesprekken in het prototype waren gezet is er nagedacht over het testen
+                            hiervan. Door de corona situatie was niet tactisch om fysiek te testen. Er is besloten om
+                            door middel van videobellen te testen. Hiernaast zou er ook een vragenlijst gemaakt worden
+                            zodat mensen zonder te videobellen ook kunnen testen.
                             <br><br>
-                            In totaal zijn er vijf interviews geweest waarin de relevantie-schaal is gebruikt. De
-                            resultaten
-                            kunt u in de afbeelding terugvinden. Dit is een samenvatting van de vijf interviews, alle
-                            losse
-                            interviews zijn terug te lezen in de bijlagen met daarbij ook de individueel ingevulde
-                            schalen.
-                            Ook is het testplan beschikbaar.
+                            Er is ook een doelgroeponderzoek uitgevoerd om vast te stellen wie de doelgroep was van het
+                            spel.
+                        </p>
+                        <div class="conclusie" id="conclusie">
+                            <h5>Conclusie van het onderzoek</h5>
+                            <br>
+                            <h6>
+                                Behandelde deelvraag: Wat is de doelgroep voor de online experience/ text-based games?
+
+                            </h6>
+                            <p>
+                                Door onderzoek te doen naar text-based games en de doelgroep hierbij is vastgesteld dat
+                                de doelgroep voor ons spel vooral zal liggen bij mannelijke en vrouwelijke spelers van
+                                15 tot 45 jaar. De doelgroep houdt over het algemeen van fictie (denk aan sci-fi of role
+                                playing) en speelt graag videogames. Binnen deze groep ligt het dan wel binnen de
+                                “casual gamers”. Dit vanwege de laagdrempeligheid van het spel.
+                                <br><br>
+                                De eerder onderzochte doelgroepen worden echter niet vergeten. Mochten de evenementen in
+                                de toekomst toch nog (online) plaatsvinden is het goed om ook deze doelgroepen in het
+                                achterhoofd te houden. Deze waren:
+                                <br><br>
+                                Night of the Nerds: Middelbare scholieren zoekende naar een vervolgopleiding
+                                NextM: Klanten, partners en medewerkers van Greenhouse.
+                            </p>
+                        </div>
+                        <p>
+                            Hieronder de lijst met de belangrijkste punten die we te weten wilden komen door het testen.
+                            <br><br>
+                            - Brengt het verhaal de emoties over die wij willen overbrengen?<br>
+                            - Is het spel makkelijk in gebruik, is het intuïtief?<br>
+                            - Wordt de juiste sfeer over gebracht met het design, de muziek en de interactie?<br>
+                            - Wordt er een band opgebouwd met de AI?
+                            <br><br>
+                            Om de antwoorden op deze vragen te krijgen zijn er testen ingepland. In de eerste testronde
+                            werd er gekeken naar de eerste twee gesprekken van het verhaal. Dit omdat deze al volledig
+                            uitgewerkt waren in het prototype. In de tweede testronde is er gekeken naar het gehele
+                            verhaal of alleen het einde ervan, deze waren toen geheel uitgewerkt.
+                        </p>
+                        <a target="_blank" href="files/testplan_aidentity_ronde1.pdf" class="button">Testplan ronde
+                            1</a>
+                        <a target="_blank" href="files/testdocument_aidentity_ronde1.pdf" class="button">Testdocument
+                            ronde
+                            1</a>
+                        <p>
+                            De resultaten van de eerste ronde zijn hier in te zien.
+                        </p>
+                        <a target="_blank" href="files/Testen/resultaten_1.pdf" class="button">Testresultaten ronde
+                            1</a>
+                        <a target="_blank" href="files/Testen/vragenlijst_antwoorden.pdf" class="button">Vragenlijst
+                            resultaten</a>
+                        <a target="_blank" href="audiobestanden.html" class="button">Audiobestanden testen</a>
+                        <p>
+                            In de tweede testronde zijn er vooral notities gemaakt tijdens het spelen. Dit omdat de
+                            testen een stuk langer zouden duren door de toegevoegde gesprekken en omdat in de eerste
+                            testronde de meeste feedback kwam tijdens het spelen van het spel.
+                        </p>
+                        <a target="_blank" href="files/Testen/Testplan - ronde 2 - AI_dentity.pdf"
+                            class="button">Testplan ronde 2</a>
+                        <a target="_blank" href="files/Testen/resultaten_2.pdf" class="button">Testresultaten ronde
+                            2</a>
+                        <a target="_blank" href="audiobestanden.html" class="button">Audiobestanden testen</a>
+                        <p>
+                            Aan de hand van de testen is er een veranderplan opgesteld. In dit veranderplan stonden de
+                            belangrijkste punten die het meest genoemd werden in de testen.
                         </p>
                         <div class="image-container">
-                            <img class="image-regular" src="img/Mapping.png" alt="Deze mapping is samengesteld door per kaart het gemiddelde te pakken
-                            waar
-                            deze geplaatst werd.">
+                            <img class="image-regular" src="img/Veranderplan – 1.png"
+                                alt="Het veranderplan dat is opgesteld uit de twee testrondes">
+                            <!--<div class="overlay">
+                                    <div class="text">Deze mapping is samengesteld door per kaart het gemiddelde te pakken
+                                        waar
+                                        deze geplaatst werd.</div>
+                                </div>-->
+                        </div>
+                        <div class="conclusie" id="conclusie">
+                            <h5>Conclusie naar aanleiding van het realiseren in code en het testen van het prototype
+                            </h5>
+                            <h6>
+                                Door het spel vorm te geven, te realiseren en te testen is er antwoord gegeven op de
+                                volgende deelvraag:
+                                Hoe verwerk je een verhaal in een online experience?
+
+                            </h6>
+                            <p>
+                                Het geschreven verhaal is in de website gezet door gebruik te maken van BotUI. Dit
+                                framework gaf ons vrijheid om zowel visueel als auditief in te spelen op het verhaal.
+                                <br><br>
+                                De gesprekken in de website zijn getest met medewerkers van Greenhouse en mensen uit de
+                                doelgroep. Op deze manier is het verhaal verbeterd en is de website
+                                gebruiksvriendelijker gemaakt.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="proces-slide" id="fase6">
+            <div class="block-wrapper" data-aos="fade-right" data-aos-duration="1000" data-aos-offset="100">
+                <div class="block-full">
+                    <div class="block-full-text">
+                        <h1 id="meten">Meetfase <a class="linkdot" target="_blank" href="DOTframework.html">(SHOWROOM
+                                onderzoek)</a></h1>
+                        <p>
+                            Nadat het product getest was en de belangrijkste feedback uit deze tests verwerkt was is er
+                            gekeken of het product ook daadwerkelijk mensen bewust maakte van de vervagende grens tussen
+                            mens en techniek. Om dit zo structureel mogelijk aan te pakken en de coronamaatregelen op te
+                            volgen is er gekozen voor het maken van een vragenlijst die ingevuld diende te worden na het
+                            spelen van het spel.
+                            <br><br>
+                            Door middel van de vragenlijst wilde ik de volgende punten te weten komen:
+                            <br><br>
+                            - Is de speler gaan nadenken over AI en de toekomst van technologie?<br>
+                            - Is de speler zich bewust geworden van de veranderingen in technologie?<br>
+                            - Heeft de speler een band opgebouwd met de AI?
+                        </p>
+                        <a target="_blank" href="img/vragenlijstnl.png" class="button">Vragenlijst Nederlands</a>
+                        <a target="_blank" href="img/vragenlijstengels.png" class="button">Vragenlijst
+                            Engels</a><br><br>
+                        <h5 id="resultaten">Resultaten</h5>
+                        <p>
+                            Uit de vragenlijst heb ik veel positieve reacties ontvangen. Het spel is ook aan het Night
+                            of the Nerds online programma toegevoegd en daardoor hebben nog meer mensen het kunnen
+                            spelen!
+                            <br><br>
+                            Hieronder volgen enkele quotes die ik zelf super leuk vond om te horen!
+                        </p>
+
+                        <div class="slideshow-container">
+
+                            <div class="mySlides">
+                                <q>Ik vraag mij soms wel af wat er met AI kan gebeuren die blijven bestaan, maar geen
+                                    input krijgen. Gaan zij zelf input maken of juist zelf andere mogelijkheden
+                                    exploreren, etc. Is dit uberhaupt mogelijk en wat kunnen hier de gevolgen van
+                                    zijn?</q>
+                            </div>
+
+                            <div class="mySlides">
+                                <q>Ik denk zeker dat er belangrijke vraagstukken zijn rondom de limitaties en mogelijke
+                                    problemen rondom AI. Dit spel kan dienen als een mooie introductie voor dit
+                                    onderwerp.</q>
+                            </div>
+
+                            <div class="mySlides">
+                                <q>Je denkt snel dat het allemaal eng is door rampenfilms over technologie die
+                                    overneemt. Maar dit spel gaf een fijn en leuk gevoel om te spelen. Je begon
+                                    interesse te krijgen in de AI</q>
+                            </div>
+
+                            <div class="mySlides">
+                                <q>Ik wilde meer over de AI te weten komen. Vooral waar hij vandaan kwam. </q>
+                            </div>
+
+                            <div class="mySlides">
+                                <q>It makes you wonder if we will be able to achieve something similar anytime soon</q>
+                            </div>
+
+                            <div class="mySlides">
+                                <q>It made me think about the relationship between humans and technology. To what extend
+                                    can we become "friends" with an AI? Where is the line that divides what is
+                                    exclusively human of what is not? </q>
+                            </div>
+
+                            <div class="mySlides">
+                                <q>You become the protagonist of the interaction with an AI! That's a huge difference
+                                    from hearing "AI will be the next revolution". It let's you participate from that
+                                    revolution. </q>
+                            </div>
+
+                            <a class="prev" onclick="plusSlides(-1)">❮</a>
+                            <a class="next" onclick="plusSlides(1)">❯</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="product-section" id="productfase">
+        <div class="proces-slide">
+            <div class="block-wrapper" data-aos="fade-right" data-aos-duration="1000" data-aos-offset="100">
+                <div class="block-full">
+                    <div class="block-full-text" id="whitetext">
+                        <h3 id="product">Het product</h3>
+                        <p>
+                            Omdat er een ambitieus concept gekozen was had ik er van te voren al rekening mee gehouden
+                            dat het mogelijk was dat niet alles gerealiseerd zou kunnen worden wat er bedacht was. Om
+                            deze reden diende de opgestelde MoSCoW methode als rode draad.Er zijn natuurlijk nog wel wat
+                            dingen waar we nog verbetering in zien. Om deze reden heb ik een toekomstplan opgezet waarin
+                            al de niet haalbare ideeën zijn meegenomen.
+                            <br><br>
+                            Hieronder volgt een lijst van de afgeleverde producten:
+                        </p>
+                        <h1 id="hetspel">AI_dentity: het spel</h1>
+                        <p>
+                            Het grootste en belangrijkste product dat ik samen met de groep aan Greenhouse heb
+                            afgeleverd is de AI_dentity website waar het spel op staat. Hier komen verschillende
+                            expertises in terug. Waar ik me dus vooral mee bezig heb gehouden zijn: storytelling, design
+                            (zowel visueel als auditief als conversational), marketing en onderzoek. Dit alles,
+                            gecombineerd met het aandeel van mijn groepsleden, resulteert in een doordacht en compleet
+                            product.
+                        </p>
+                        <a target="_blank" href="https://www.aidentity.nl/" class="button">AI_dentity</a>
+                        <h1 id="soundtrack">AI_dentity: de soundtrack</h1>
+                        <p>
+                            Om spelers mee te slepen in het spel heb ik een korte soundtrack geschreven. Van
+                            retro-sci-fi nummers tot emotionele muziekstukken, het was een ontzettend leuke uitdaging om
+                            muziek te schrijven voor een spel dat alleen bestaat uit tekst. Hieronder kan je het album
+                            beluisteren.
+                        </p>
+                        <div class="audioplayer">
+                            <div class="artparent">
+                                <img id="art" class="image-regular" src="img/cover.png"
+                                    alt="Albumhoes voor de soundtrack">
+                            </div>
+                            <div class="audioparent">
+                                <div class="track">
+                                    <p class="audiotext">A1: Systemshock</p>
+                                    <audio controls class="sound">
+                                        <source src="sounds/systemshockfinal.wav" type="audio/wav">
+                                    </audio>
+                                </div>
+                                <div class="track">
+                                    <p class="audiotext">A2: David</p>
+                                    <audio controls class="sound">
+                                        <source src="sounds/issomethingwrong.wav" type="audio/wav">
+                                    </audio>
+                                </div>
+                                <div class="track">
+                                    <p class="audiotext">B1: The Internet</p>
+                                    <audio controls class="sound">
+                                        <source src="sounds/theinternet.wav" type="audio/wav">
+                                    </audio>
+                                </div>
+                                <div class="track">
+                                    <p class="audiotext">B2: This is not the way it ends</p>
+                                    <audio controls class="sound">
+                                        <source src="sounds/thisisnotthewayitends.wav" type="audio/wav">
+                                    </audio>
+                                </div>
+                            </div>
+                        </div>
+                        <h1 id="marketing">AI_dentity: de marketing</h1>
+                        <p>
+                            Mijn bedrijfsbegeleider vond het belangrijk dat hij iets mee kon geven aan
+                            klanten of bezoekers van Greenhouse om hen direct te kunnen laten zien wat Labs inhoud. Onze
+                            oplossing hiervoor: een echte floppy disc met een link naar ons spel. Zo hadden we een
+                            visitekaartje dat Tim kan meegeven en een originele manier om ons spel te marketen.
+                        </p>
+                        <div class="image-container">
+                            <img class="image-regular" src="img/floppylook.png" alt="Het design van de floppy disc">
                             <!--<div class="overlay">
                                 <div class="text">Deze mapping is samengesteld door per kaart het gemiddelde te pakken
                                     waar
                                     deze geplaatst werd.</div>
                             </div>-->
                         </div>
+                        <h1 id="hetonderzoek">AI_dentity: het onderzoek</h1>
                         <p>
-                            Uit deze interviews is gekomen dat Artificial Intelligence (AI) en Data Privacy de twee
-                            onderwerpen zijn die voor Greenhouse het meest relevant zijn. AI omdat hier de toekomst in
-                            ligt
-                            en men voor een groot deel nog niet weet wat de potentie van deze techniek is. Data Privacy
-                            omdat er op dit moment veel gebeurt rondom dit onderwerp, denk aan de nieuwe privacywetten
-                            (AVG).
-                            <br><br>
-                            Nadat deze technieken zijn vastgesteld zijn er nog extra interviews gehouden met
-                            verschillende
-                            experts binnen AI en Data Privacy om op deze manier een helder beeld te krijgen van de
-                            mogelijkheden binnen beide afdelingen en al na te denken over een concept door concept
-                            sessies
-                            te houden met concepters.
-                            <br><br>
-                            Zelf heb ik hierbij ook nog onderzoek gedaan naar AI en Data Privacy.
+                            Door de stage heen zijn er verschillende onderzoeken uitgevoerd om tot het eindproduct te
+                            komen. Denk aan het technologisch landschap onderzoek, AI onderzoek en het onderzoek naar
+                            online experiences. Veel van deze onderzoeken zijn helaas, door de corona situatie, niet
+                            meer relevant geweest voor mijn eindproduct. Dit betekent niet dat ze niet relevant meer
+                            zijn voor Greenhouse. Al mijn onderzoeken heb ik hierom samengevoegd in één onderzoeksbundel
+                            die wordt afgeleverd aan Greenhouse.
                         </p>
+                        <a target="_blank" href="files/onderzoeksbundel1.pdf" class="button">Onderzoeksbundel</a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="proces-slide" id="conclusiefase">
+        <div class="block-wrapper" data-aos="fade-right" data-aos-duration="1000" data-aos-offset="100">
+            <div class="block-full">
+                <div class="block-full-text">
+                    <h3 id="conclusie">Conclusie</h3>
+                    <p>
+                        De hoofdvraag van de stage:
+                    </p>
+                    <h4>“Hoe ontwikkel je een online experience die laat zien dat de grens tussen mens en techniek aan
+                        het vervagen is?”
+                    </h4>
+                    <p>
+                        Het ontwikkelen van deze installatie bestond uit een proces met daarin verschillende
+                        onderzoekspunten.
+                        <br><br>
+                        Eerst is er door literatuuronderzoek gekeken welke trends en technieken op dat moment relevant
+                        waren voor de opdracht. Door vervolgens interviews af te nemen met Greenhouse medewerkers is er
+                        geconstateerd dat Artificial Intelligence en data privacy het meest relevant zijn voor
+                        Greenhouse als bedrijf. Om inzicht te krijgen in deze twee trends/ technieken is er
+                        literatuuronderzoek naar gedaan. Uiteindelijk zou blijken dat data privacy een lastig onderwerp
+                        zou worden voor de opdracht. Dit omdat er zorgvuldig omgegaan moet worden met de data en omdat
+                        Greenhouse adverteert door middel van data. Hierdoor is gekozen voor AI.
+                        <br><br>
+                        Door de bovengenoemde onderzoeken was het gemakkelijker om een concept bij dit onderwerp te
+                        bedenken. Dit concept is bedacht doordat het onderwerp “een band met AI” gekozen was door de
+                        coaches en de groep, wij vonden allemaal dat hierin het beste werd weergeven hoe de grens tussen
+                        mens en techniek aan het vervagen is.
+                        <br><br>
+                        Er is een text based spel ontwikkeld waarin de speler een band opbouwt met een AI. Het verhaal
+                        dat voor dit spel geschreven is maakt gebruik van de three act structure en is opgesteld samen
+                        met copywriters van Greenhouse.
+                        <br><br>
+                        Het omzetten van dit spel naar een website is gedaan door middel van BotUI. Dit gaf de
+                        mogelijkheid om in te spelen op visueel en auditief niveau. De andere mogelijkheid, Dialog Flow,
+                        kon dit minder gemakkelijk.
+                        <br><br>
+                        Door het spel te testen met de doelgroep is er een veranderplan opgesteld om het spel te blijven
+                        verbeteren.
+                        <br><br>
+                        Door als laatste het product online te zetten en te laten spelen is er gezien dat het mensen
+                        daadwerkelijk bewust maakt van de vervagende grens tussen mens en techniek.
+                    </p>
+                    <h1 id="aanbevelingen">Aanbevelingen</h1>
+                    <h5>Onderzoek de nieuwe trends en technieken</h5>
+                    <p>
+                        Doordat er in het begin van de stage onderzoek is gedaan naar de huidige trends en technieken
+                        binnen het technologisch landschap is er een lijst opgesteld met trends en technieken die lieten
+                        zien dat de grens tussen mens en techniek aan het vervagen is.
+                        <br><br>
+                        Wanneer Greenhouse ons product in de toekomst mocht willen verbeteren of een nieuw product wil
+                        ontwikkelen met dezelfde intentie, is het belangrijk om onderzoek te doen naar de huidige
+                        trends, technieken en ontwikkelingen binnen het technologisch landschap om zo een relevant
+                        concept te bedenken.
+                        <br><br>
+                        Zorg er ook voor dat de gevonden trends en technieken relevant zijn voor Greenhouse zelf. In dit
+                        geval is dit gedaan door middel van interviews met medewerkers. Deze leverden ontzettend nuttige
+                        data op en maakten de keuze voor het onderwerp een stuk gemakkelijker.
+                        <br><br>
+                        Onderzoek de gekozen trend of techniek grondig, op deze manier leer je meer over het onderwerp
+                        voordat je er mee gaat concepten en is het bedenken van een concept een stuk gemakkelijker.
+                        <br><br>
+                        Op het moment van deze opdracht waren AI en data privacy het meest relevant voor Greenhouse.
+                    </p>
+                    <h5>Structurering van het verhaal</h5>
+                    <p>
+                        Het gebruik maken van de three act structure heeft het schrijven van het verhaal gemakkelijk
+                        gemaakt. Door dit te vervolgens te bespreken met copywriters werd het verhaal een stuk
+                        completer.
+                        <br><br>
+                        Wanneer je zelf geen expert bent in schrijven is het valideren met een bekende methode of met
+                        experts extreem nuttig en maakt het werk ook een stuk gemakkelijker.
+                        <br><br>
+                        <strong>Bepaling tone of voice</strong>
+                        In dit geval is er op het laatst een tone of voice check over de gesprekken gehaald. Het is
+                        beter en makkelijker om dit te doen voordat er geschreven wordt, zo hebben de gesprekken vanaf
+                        het begin meer cohesie.
+                    </p>
+                    <h5>Test het verhaal en het spel</h5>
+                    <p>
+                        Tijdens het ontwikkelproces van het verhaal is er veel getest met medewerkers van Copy en
+                        Greenhouse in het algemeen, maar ook met de doelgroep. Op deze manier zie je of het geschreven
+                        verhaal werkt en wat er nog verbeterd kan worden aan de gehele site.
+                    </p>
+                    <h5>Meet het verhaal</h5>
+                    <p>
+                        Door aan het einde van het spel spelers een vragenlijst te laten invullen is er gezien wat zij
+                        van het spel vonden. Op deze manier is er vastgesteld dat het spel daadwerkelijk mensen heeft
+                        laten nadenken over de grens tussen mens en techniek en over een toekomst met AI.
+                        <br><br>
+                        Er is zo vastgesteld dat het product heeft gewerkt en dus antwoord geeft op de hoofdvraag.
+                        Echter, wanneer u zelf aan de slag wil met het ontwikkelen van een product dat laat zien dat de
+                        grens is vervaagt, doorloop dan het proces op uw eigen manier en onderzoek of er geen betere
+                        trends of technieken zijn op dat moment voor het bedrijf.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="reflectie-section" id="reflectiefase">
+        <div class="proces-slide">
+            <div class="block-wrapper" data-aos="fade-right" data-aos-duration="1000" data-aos-offset="100">
+                <div class="block-full">
+                    <div class="block-full-text" id="whitetext">
+                        <h3 id="reflectie">Reflectie</h3>
+                        <p>
+                            De stageopdracht die Greenhouse voor mij had was ontzettend veelzijdig. In de eerste
+                            instantie zou het vlakken zoals concepting, design, onderzoek en hardware ontwikkeling
+                            bevatten. Maar door de veranderingen die de corona crisis met zich meebracht zijn hier extra
+                            vlakken bijgekomen zoals webdevelopment, storytelling, conversational design en marketing.
+                            <br><br>
+                            Door deze veelzijdige opdracht heb ik het gevoel gekregen dat ik al mijn kwaliteiten en
+                            kennis als 4e jaars media-design student heb kunnen toepassen, in een situatie die heel
+                            ongewoon was. Door deze situatie heb ik aan kunnen tonen dat ik flexibel kan zijn en
+                            oplossingen voor problemen kan bedenken waar we van te voren geen rekening mee hebben kunnen
+                            houden.
+                            <br><br>
+                            Hierbij was het interessant om in een groep te werken van studenten die hun meeloopstage
+                            deden. Doordat ik 2 jaar meer kennis had heb ik het gevoel gekregen dat ik dit ook met hen
+                            kon delen en op deze manier hen ook te helpen naar een succesvolle stage.
+                        </p>
+                        <a target="_blank" href="scrum.html" class="button">Reflectie op de SCRUM methode</a>
                     </div>
                 </div>
             </div>
@@ -291,7 +1319,6 @@
             }
         }
     </script>
-
 </body>
 
 </html>
